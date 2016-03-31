@@ -1,9 +1,18 @@
+######################################################################################
+
+#set max cpc bid for keyword and ad group here
+max_cpc = '0.30'
+
+#######################################################################################
+
 #ask user to provide landing page url.
 import urllib2
 from BeautifulSoup import BeautifulSoup
 
 print "Please type in the landing page url."
 url = raw_input()
+
+#######################################################################################
 
 #extract the number of listings from landing page title
 soup = BeautifulSoup(urllib2.urlopen(url))
@@ -15,6 +24,8 @@ import sys
 if count.isdigit() == False:
     print "[Alert] Cannot proceed further: the landing page has less than 3 listings. Please choose a different landing page with at least 3 listings."
     sys.exit()
+
+#######################################################################################
 
 #prepare keyword components
 yoga = ['yoga']
@@ -109,62 +120,61 @@ cont_mrkr = '/d/'
 ######################################################################################
 
 #extract categories, styles and destination from the URL
-#make combination lists
 import itertools
 
-cat_idx_front = url.find(cat_mrkr)+3
+cat_idx_front = url.find(cat_mrkr)+3 #find the starting index of categories (after /c/)
 
 if (cont_mrkr not in url) and (style_mrkr not in url): #only categories
-    
-    cat_idx_back = len(url)
-    
+    cat_idx_back = len(url) #find the ending index of categories
+
+    cat = url[cat_idx_front:cat_idx_back].replace("-", " ") #replace dash with space
+
     #remove word(s) in category that is already mentioned in prep list
     #e.g. couples yoga retreat -> couples
     #e.g. budget retreats -> budget
     #except for 200/300/500 hour yoga teacher training
-    cat = url[cat_idx_front:cat_idx_back].replace("-", " ")
     cat = ' '.join(i for i in cat.split() if i not in remove_list)
-    cat = [cat] #listify
+    cat = [cat] #listify the category
 
-    destination_f = ''
-    
+    destination_f = '' #no destination
+
 ######################################################################################
 
 elif (cont_mrkr not in url) and (style_mrkr in url): #categories and style
-    
-    cat_idx_back = url.find(style_mrkr)
+    cat_idx_back = url.find(style_mrkr) #find the ending index of categories (before /s/)
 
-    style_idx_front = url.find(style_mrkr)+3
-    style_idx_back = len(url)
+    style_idx_front = url.find(style_mrkr)+3 #find the starting index of style (after /s/)
+    style_idx_back = len(url) #find the ending index of style
     
-    style = url[style_idx_front:style_idx_back].replace('-', " ")
-    style = [style] #listify
+    style = url[style_idx_front:style_idx_back].replace('-', " ") 
+    style = [style] #listify style
     
+    cat = url[cat_idx_front:cat_idx_back].replace("-", " ") #replace dash with space
+
     #remove word(s) in category that is already mentioned in prep list
     #e.g. yoga teacher training -> teacher training
     #e.g. budget retreats -> budget
-    cat = url[cat_idx_front:cat_idx_back].replace("-", " ")
     cat = ' '.join(i for i in cat.split() if i not in remove_list)
-    cat = [cat] #listify
+    cat = [cat] #listify categories
 
-    destination_f = ''
+    destination_f = '' #no destination
 
 ######################################################################################
 
 elif (cont_mrkr in url) and (style_mrkr not in url): #categories and destination
-    
-    cat_idx_back = url.find(cont_mrkr)
+    cat_idx_back = url.find(cont_mrkr) #find the ending index of categories (before /d/)
 
     find = '/'
     cont_idx = max(pos for pos, char in enumerate(url) if char == find)+1 #index of the last slash. last slash is always followed by destination
-    destination = url[cont_idx:].title().replace("-", " ").split() #destination has been listified
-    
+    destination = url[cont_idx:].title().replace("-", " ").split() #replace dash with space, listify destination
+
+    cat = url[cat_idx_front:cat_idx_back].replace("-", " ") #replace dash with space
+
     #remove word(s) in category that is already mentioned in prep list
     #e.g. yoga teacher training -> teacher training
     #e.g. budget retreats -> budget
-    cat = url[cat_idx_front:cat_idx_back].replace("-", " ")
     cat = ' '.join(i for i in cat.split() if i not in remove_list)
-    cat = [cat] #listify
+    cat = [cat] #listify categories
     
     #if there is more than one destination (e.g. Asia and Oceania)
     if 'And' in destination:
@@ -172,30 +182,30 @@ elif (cont_mrkr in url) and (style_mrkr not in url): #categories and destination
         destination1 = ' '.join(destination[:cut])
         destination2 = ' '.join(destination[cut+1:])
         destination_back = ['in '+destination1, destination1, 'in '+destination2, destination2]
-        destination_front = [destination1, destination2]
-        destination_f = destination_front[:] #original destinations without the added modifiers
-            
-        headline1 = count+' '+' '.join(page_title.split()[1:3] + destination_back[0].split())
+        destination_front = [destination1, destination2] 
+
+        destination_f = destination_front[:] #destinations before adding variants
+
+        #headline1 = count+' '+' '.join(page_title.split()[1:3] + destination_back[0].split())
         #headline2 = ' '.join(page_title.split()[1:3] + destination_back[1].split()) + ' 2016'
         #headline3 = count+' '+' '.join(page_title.split()[1:3] + destination_back[2].split())
         #headline4 = ' '.join(page_title.split()[1:3] + destination_back[3].split()) + ' 2016'
-
         #headlines = [headline1, headline2, headline3, headline4]
-
+        #print "[Checking] headlines:", headlines
+        
     #if there is only one destination (e.g. Germany)    
     else: 
         destination1 = ' '.join(destination)
         destination_back = ['in '+destination1, destination1]
         destination_front = [destination1]
-        destination_f = destination_front[:] #original destinations without the added modifiers
-        
+        destination_f = destination_front[:] #destination before adding variants
+
         #headline1 = count+' '+ ' '.join(page_title.split()[1:3] + destination_back[0].split())
         #headline2 = ' '.join(page_title.split()[1:3] + destination_back[1].split()) + ' 2016'
-
         #headlines = [headline1, headline2]
-
         #print "[Checking] headlines:", headlines
         
+        #adding destination name variants
         if destination_front[0] == 'United Arab Emirates':
             destination_front.append('UAE')
             destination_back.append('in UAE')
@@ -297,26 +307,26 @@ elif (cont_mrkr in url) and (style_mrkr not in url): #categories and destination
 ######################################################################################
 
 elif (cont_mrkr in url) and (style_mrkr in url): #categories, style and destination
-    
-    cat_idx_back = url.find(style_mrkr)
+    cat_idx_back = url.find(style_mrkr) #find the ending index of category
 
-    style_idx_front = url.find(style_mrkr)+3
-    style_idx_back = url.find(cont_mrkr)
-    style = url[style_idx_front:style_idx_back]
-
-    style = url[style_idx_front:style_idx_back].replace('-', " ")
-    style = [style] #listify
+    style_idx_front = url.find(style_mrkr)+3 #find the starting index of style
+    style_idx_back = url.find(cont_mrkr) #find the ending index of style
+    style = url[style_idx_front:style_idx_back] #style
+    style = url[style_idx_front:style_idx_back].replace('-', " ") #replace dash with space
+    style = [style] #listify style 
 
     find = '/'
     cont_idx = max(pos for pos, char in enumerate(url) if char == find)+1 #index of the last slash. last slash is always followed by destination
-    destination = url[cont_idx:].title().replace("-", " ").split() #destination has been listified
+    destination = url[cont_idx:].title().replace("-", " ").split() #replace dash with space, listify destination
+    destination_f = destination_front[:] #destination without variants
     
+    cat = url[cat_idx_front:cat_idx_back].replace("-", " ") #replace dash with space
+
     #remove word(s) in category that is already mentioned in prep list
     #e.g. yoga teacher training -> teacher training
     #e.g. budget retreats -> budget
-    cat = url[cat_idx_front:cat_idx_back].replace("-", " ")
     cat = ' '.join(i for i in cat.split() if i not in remove_list)
-    cat = [cat] #listify
+    cat = [cat] #listify category
     
     #if there is more than one destination (e.g. Asia and Oceania)
     if 'And' in destination:
@@ -325,29 +335,27 @@ elif (cont_mrkr in url) and (style_mrkr in url): #categories, style and destinat
         destination2 = ' '.join(destination[cut+1:])
         destination_back = ['in '+destination1, destination1, 'in '+destination2, destination2]
         destination_front = [destination1, destination2]
-        destination_f = destination_front[:] #original destinations without the added modifiers
-        
-        headline1 = count+' '+' '.join(page_title.split()[1:3] + destination_back[0].split())
+            
+        #headline1 = count+' '+' '.join(page_title.split()[1:3] + destination_back[0].split())
         #headline2 = ' '.join(page_title.split()[1:3] + destination_back[1].split()) + ' 2016'
         #headline3 = count+' '+' '.join(page_title.split()[1:3] + destination_back[2].split())
         #headline4 = ' '.join(page_title.split()[1:3] + destination_back[3].split()) + ' 2016'
-
         #headlines = [headline1, headline2, headline3, headline4]
+        #print "[Checking] headlines:", headlines
 
     #if there is only one destination (e.g. Germany)    
     else: 
         destination1 = ' '.join(destination)
         destination_back = ['in '+destination1, destination1]
         destination_front = [destination1]
-        destination_f = destination_front[:] #original destinations without the added modifiers
-        
+        destination_f = destination_front[:] #destination without variants
+
         #headline1 = count+' '+ ' '.join(page_title.split()[1:3] + destination_back[0].split())
         #headline2 = ' '.join(page_title.split()[1:3] + destination_back[1].split()) + ' 2016'
-
         #headlines = [headline1, headline2]
-
         #print "[Checking] headlines:", headlines
-
+        
+        #adding destination name variants
         if destination_front[0] == 'United Arab Emirates':
             destination_front.append('UAE')
             destination_back.append('in UAE')
@@ -446,14 +454,9 @@ elif (cont_mrkr in url) and (style_mrkr in url): #categories, style and destinat
             destination_back.append('in Samui')
             destination_back.append('Samui')
 
-######################################################################################        
-        
-#check variables
-print "[Checking] category:", cat
-print "[Checking] style:", style
-print "[Checking] destination_back:", destination_back
-print "[Checking] destination_front:", destination_front
+###################################################################################### 
 
+#exceptions/variants per category
 #200/300/500 hour yoga teacher training exception
 if 'hour' in cat[0]:
     cat[0] = cat[0].split()
@@ -477,35 +480,59 @@ if 'holidays' in cat[0]:
                      'camp',
                      'camps'] 
     
-#ashrams exception
+#ashrams variant
 if 'ashrams' in cat[0]:
     cat.append('ashram')
 
-#beginner exception
+#beginner variant
 if 'beginner' in cat[0]:
+    cat.append('for beginner')
+    cat.append('for a beginner')
+    
     cat.append('beginners')
+    cat.append('for beginners')
 
-#couple exception
+#couples variant
 if 'couples' in cat[0]:
+    cat.append('for couples')
+
     cat.append('couple')
+    cat.append('for couple')
+    cat.append('for a couple')
     
-#family exception
+#family variant
 if 'family' in cat[0]:
+    cat.append('for family')
+    cat.append('for a family')
+
     cat.append('families')
+    cat.append('for families')
     
-#women exception
+#women variant
 if 'women' in cat[0]:
     cat.append('womens')
-    cat.append('women s')
+    cat.append("women\'s")
+    cat.append('for women')
+        
+    cat.append('woman')
+    cat.append('womans')
+    cat.append("woman\'s")
+    cat.append('for woman')
+    cat.append('for a woman')
 
-#surfing exception
+#surfing variant
 if 'surf' in cat[0]:
     cat.append('surfing')
 
-#singles exception
+#singles variant
 if 'singles' in cat[0]:
-    cat.append('single')
+    cat.append('for singles')
 
+    cat.append('single')
+    cat.append('for single')
+    cat.append('for a single')
+
+#short (weekend & short breaks) exception/variant
 if cat[0] == 'short':
     cat[0] = 'yoga weekend'
     cat.append('weekend yoga')
@@ -520,24 +547,36 @@ if cat[0] == 'short':
     yoga = ['']
     holiday_word2 = ['']
 
+#budget variant
 if 'budget' in cat[0]:
     cat.append('on a budget')
     cat.append('affordable')
     cat.append('cheap')
     cat.append('inexpensive')
 
-#generating keywords
+######################################################################################
+
+#check variables
+print "[Checking] category:", cat
+print "[Checking] style:", style
+print "[Checking] destination_back:", destination_back
+print "[Checking] destination_front:", destination_front
+print "[Checking] destination_f:", destination_f
+
+######################################################################################
+
+#make combination lists and generate keywords
 if (cont_mrkr not in url) and (style_mrkr not in url): #only categories
 
-    a1 = [cat, yoga, holiday_word1, holiday_word2]
-    a2 = [yoga, cat, holiday_word1, holiday_word2]
-    a3 = [cat, holiday_word1, yoga, holiday_word2]
-    a4 = [yoga, holiday_word1, cat, holiday_word2]
-    a5 = [cat, holiday_word1, holiday_word2, yoga]
-    a6 = [yoga, holiday_word1, holiday_word2, cat]
-    a7 = [cat, yoga]
-    a8 = [yoga, cat]
-    
+    a1 = [cat, yoga, holiday_word1, holiday_word2] #ex) budget yoga retreat package
+    a2 = [yoga, cat, holiday_word1, holiday_word2] #ex) yoga for beginners retreat deal
+    a3 = [cat, holiday_word1, yoga, holiday_word2] #ex) budget holiday yoga retreat
+    a4 = [yoga, holiday_word1, cat, holiday_word2] #ex) yoga retreat budget package
+    a5 = [cat, holiday_word1, holiday_word2, yoga] #ex) luxury holiday resort yoga
+    a6 = [yoga, holiday_word1, holiday_word2, cat] #ex) yoga holiday resort budget
+    a7 = [cat, yoga] #ex) detox yoga
+    a8 = [yoga, cat] #ex) yoga and meditation
+
     comb1 = list(set(itertools.product(*a1)))
     comb2 = list(set(itertools.product(*a2)))
     comb3 = list(set(itertools.product(*a3)))
@@ -546,22 +585,21 @@ if (cont_mrkr not in url) and (style_mrkr not in url): #only categories
     comb6 = list(set(itertools.product(*a6)))
     comb7 = list(set(itertools.product(*a7)))
     comb8 = list(set(itertools.product(*a8)))
-    
-    all_comb = comb1 + comb2 + comb3 + comb4 + comb5 + comb6 + comb7 +comb8
-    
-    str_destination = ''
 
+    all_comb = comb1 + comb2 + comb3 + comb4 + comb5 + comb6 + comb7 +comb8
+
+######################################################################################
 
 elif (cont_mrkr not in url) and (style_mrkr in url): #categories and style
     
-    a1 = [style, cat, holiday_word1, holiday_word2]
-    a2 = [cat, style, holiday_word1, holiday_word2]
-    a3 = [style, holiday_word1, cat, holiday_word2]
-    a4 = [cat, holiday_word1, style, holiday_word2]
-    a5 = [style, holiday_word1, holiday_word2, cat]
-    a6 = [cat, holiday_word1, holiday_word2, style]
-    a7 = [style, cat]
-    a8 = [cat, style]
+    a1 = [style, cat, holiday_word1, holiday_word2] #ashtanga yoga luxury retreat package
+    a2 = [cat, style, holiday_word1, holiday_word2] #luxury ashtanga yoga holiday deal
+    a3 = [style, holiday_word1, cat, holiday_word2] #kundalini yoga retreat luxury package
+    a4 = [cat, holiday_word1, style, holiday_word2] #budget retreat ashtanga yoga package
+    a5 = [style, holiday_word1, holiday_word2, cat] #kundalini yoga retreat package on a budget
+    a6 = [cat, holiday_word1, holiday_word2, style] #budget retreat center ashtanga yoga
+    a7 = [style, cat] #hatha yoga luxury
+    a8 = [cat, style] #luxury hatha yoga
 
     comb1 = list(set(itertools.product(*a1)))
     comb2 = list(set(itertools.product(*a2)))
@@ -573,41 +611,40 @@ elif (cont_mrkr not in url) and (style_mrkr in url): #categories and style
     comb8 = list(set(itertools.product(*a8)))
     
     all_comb = comb1 + comb2 + comb3 + comb4 + comb5 + comb6 + comb7 +comb8
-    
-    str_destination = ''
-    
-    
+
+######################################################################################
+
 elif (cont_mrkr in url) and (style_mrkr not in url): #categories and destination
     
-    a1 = [cat, yoga, holiday_word1, holiday_word2, destination_back]
-    a2 = [destination_front, cat, yoga, holiday_word1, holiday_word2]
+    a1 = [cat, yoga, holiday_word1, holiday_word2, destination_back] #ex) luxury yoga retreat package in New Zealand
+    a2 = [destination_front, cat, yoga, holiday_word1, holiday_word2]#ex) New Zealand budget yoga holiday deal
     
-    a3 = [yoga, cat, holiday_word1, holiday_word2, destination_back]
-    a4 = [destination_front, yoga, cat, holiday_word1, holiday_word2]
+    a3 = [yoga, cat, holiday_word1, holiday_word2, destination_back] #ex) yoga budget retreat center in Cambodia
+    a4 = [destination_front, yoga, cat, holiday_word1, holiday_word2]#ex) Cambodia yoga budget retreat center
     
-    a5 = [yoga, holiday_word1, holiday_word2, cat, destination_back]
-    a6 = [destination_front, yoga, holiday_word1, holiday_word2, cat]
+    a5 = [yoga, holiday_word1, holiday_word2, cat, destination_back] #ex) yoga holiday package budget Bali
+    a6 = [destination_front, yoga, holiday_word1, holiday_word2, cat]#ex) Bali yoga holiday package budget
     
-    a7 = [cat, holiday_word1, holiday_word2, yoga, destination_back]
-    a8 = [destination_front, cat, holiday_word1, holiday_word2, yoga]
+    a7 = [cat, holiday_word1, holiday_word2, yoga, destination_back] #ex) luxury holiday retreat yoga in South Africa
+    a8 = [destination_front, cat, holiday_word1, holiday_word2, yoga]#ex) South Africa budget vacation deal yoga
     
-    a9 = [yoga, holiday_word1, cat, holiday_word2, destination_back]
-    a10 = [destination_front, yoga, holiday_word1, cat, holiday_word2]
+    a9 = [yoga, holiday_word1, cat, holiday_word2, destination_back] #ex) yoga retreat budget package California
+    a10 = [destination_front, yoga, holiday_word1, cat, holiday_word2]#ex) California yoga retreat luxury resort
     
-    a11 = [cat, holiday_word1, yoga, holiday_word2, destination_back]
-    a12 = [destination_front, cat, holiday_word1, yoga, holiday_word2]
+    a11 = [cat, holiday_word1, yoga, holiday_word2, destination_back] #ex) budget retreat yoga pakcage Netherlands
+    a12 = [destination_front, cat, holiday_word1, yoga, holiday_word2]#ex) Netherlands luxury holiday yoga retreat
     
-    a13 = [yoga, holiday_word1, holiday_word2, destination_back, cat]
-    a14 = [destination_front, yoga, holiday_word1, holiday_word2, cat]
+    a13 = [yoga, holiday_word1, holiday_word2, destination_back, cat] #ex) yoga retreat deal Bali budget
+    a14 = [destination_front, yoga, holiday_word1, holiday_word2, cat]#ex) Bali yoga vacation package luxury
     
-    a15 = [cat, holiday_word1, holiday_word2, destination_back, yoga]
-    a16 = [destination_front, cat, holiday_word1, holiday_word2, yoga]
+    a15 = [cat, holiday_word1, holiday_word2, destination_back, yoga] #ex) surfing holiday deal NSW yoga
+    a16 = [destination_front, cat, holiday_word1, holiday_word2, yoga]#ex) NSW surfing vacatiion package yoga
     
-    a17 = [yoga, cat, destination_back]
-    a18 = [destination_front, yoga, cat]
+    a17 = [yoga, cat, destination_back] #yoga and surfing Tasmania
+    a18 = [destination_front, yoga, cat]#Tasmania yoga and surfing
     
-    a19 = [cat, yoga, destination_back]
-    a20 = [destination_front, cat, yoga]
+    a19 = [cat, yoga, destination_back] #meditation and yoga Hong Kong
+    a20 = [destination_front, cat, yoga]#Hong Kong meditation and yoga
     
     comb1 = list(set(itertools.product(*a1)))
     comb2 = list(set(itertools.product(*a2))) 
@@ -633,7 +670,7 @@ elif (cont_mrkr in url) and (style_mrkr not in url): #categories and destination
     #join 
     all_comb = comb1 + comb2 + comb3 + comb4 + comb5 + comb6 + comb7 + comb8 + comb9 + comb10 + comb11 + comb12 + comb13 + comb14 + comb15 + comb16 + comb17 + comb18 + comb19 + comb20 
 
-    str_style = ''
+######################################################################################
 
 elif (cont_mrkr in url) and (style_mrkr in url): #categories, style and destination
     
@@ -658,88 +695,97 @@ elif (cont_mrkr in url) and (style_mrkr in url): #categories, style and destinat
     comb4 = list(set(itertools.product(*a4)))
     comb5 = list(set(itertools.product(*a5)))
     comb6 = list(set(itertools.product(*a6)))
+    
     comb9 = list(set(itertools.product(*a9)))
     comb10 = list(set(itertools.product(*a10)))
     comb11 = list(set(itertools.product(*a11)))
     comb12 = list(set(itertools.product(*a12)))
     
-    #join the 4 lists
+    #join
     all_comb = comb1 + comb2 + comb3 + comb4 +comb5 + comb6 + comb9 + comb10 + comb11 + comb12
-
 
 ######################################################################################
 
-#join then split again (eliminates double spaces)
-results = []
-
+#remove keywords like "UK (for women's) yoga retreat"
 for i in range(len(all_comb)):
-    results.append(' '.join(all_comb[i]))
-    results[i] = results[i].split()
-    
+    if (all_comb[i][0] in destination_front) and ('for' in all_comb[i][1]):
+        all_comb[i] = []
+
+all_comb = [x for x in all_comb if x != []] #remove empty strings in all_comb
+
+######################################################################################
+
 #remove adjacent duplicates
 #e.g. retreat retreat
 #e.g. retreat retreats
 #e.g. retreats retreat
 #e.g. yoga yoga
-for i in range(len(results)):
-    a = results[i]
+
+for i in range(len(all_comb)):
+    a = all_comb[i]
     for x in range(len(a)-1):
-        if ((a[x] == a[x+1]) or (a[x]+'s' == a[x+1]) or (a[x] == a[x+1]+'s')):
-            results[i] = a[:x+1]+a[x+2:]
-    results[i] = ' '.join(results[i])
-    
-#sort the result in an alphabetical order 
-results = sorted(set(results))
+        if (a[x] == a[x+1]) or (a[x]+'s' == a[x+1]) or (a[x] == a[x+1]+'s'):
+            all_comb[i] = a[:x+1] + a[x+2:]
+
+all_comb = sorted(set(all_comb)) #remove duplicates and sort the list in an alphabetical order 
+
+######################################################################################
 
 #count how many keywords have been created
-how_many_kw = len(results)
+how_many_kw = len(all_comb)
 
 #add 'and' between cat and yoga for certain categories
-copy = list(results)
+copy = list(all_comb)
 
 if cat[0] in requires_and: 
     for i in range(how_many_kw):
-        copy[i] = copy[i].split()
+        copy[i] = list(copy[i])
         for x in range(len(copy[i])-1):
             if (copy[i][x] in requires_and) and (copy[i][x+1] == 'yoga'):
                 copy[i].insert(x+1, 'and')
             elif (copy[i][x] == 'yoga') and (copy[i][x+1] in requires_and): 
                 copy[i].insert(x+1, 'and')
-        copy[i] = ' '.join(copy[i])
         
-    #align the result in an alphabetical order  
-    results = sorted(results + copy)
-
-#delete keywords with 'on a budget' in the very front of the keyword
-for i in range(len(results)):
-    if results[i][0:12] == 'on a budget ':
-        results[i] = []
-
-results = [x for x in results if x != []]
-
-#add '[' and ']'
-for i in range(len(results)):
-    results[i] = '[' + results[i] + ']'
-
-#remove duplicates, sort in alphabetical order
-results = list(sorted(set(results)))
+    #align the list in an alphabetical order  
+    all_comb = sorted(all_comb + copy)
 
 ######################################################################################
 
-#set max cpc bid for keyword and ad group here
-max_cpc = '0.20'
+#delete some keywords
+for i in range(len(all_comb)): #delete keywords with 'on a budget' in the very front of the keyword
+    if all_comb[i][0] == 'on a budget ':
+        all_comb[i] = []
+    elif all_comb[i][0] == 'for': #delete keywords with 'for women/singles/etc' in the very front of the keyword
+        all_comb[i] = []
 
-#######################################################################################
+all_comb = [x for x in all_comb if x != []] #remove empty strings in all_comb
 
-str_destination = ''
+#remove duplicates, sort in alphabetical order
+all_comb = sorted(set(all_comb))    
 
-#prepare csv file content for keywords
+######################################################################################
+
+#prepare for csv file
+
+#string style
+if style == '': #if there is no style
+    str_style = ''
+
+if style != '': #if there is a style
+    str_style = style[0].split()[0].title()
+
+#string destination
+if destination_f == '': #if there is no destination
+    str_destination = ''
+
 if len(destination_f) == 1: #when there is only 1 destination
     str_destination = destination_f[0]
     
 if len(destination_f) > 1: #when there is more than 1 destination (e.g. The Americas and Carribean)
     str_destination = ' '.join(destination).replace('And', '&') #(e.g. The Americas and Carribean -> The Americas & Carribeans)
 
+#######################################################################################
+    
 #prepare column titles for the csv file
 kw_column_titles = ["Keyword state", 
                     "Keyword", 
@@ -749,55 +795,94 @@ kw_column_titles = ["Keyword state",
                     "Keyword max CPC",
                     "Ad group max CPC"]
 
-#for column 'campaign'
-str_cat = cat[0].title()
+#######################################################################################
 
-if str_destination == '': #when without destination 
-    
-    if style != '': #style and cat
-        str_style = style[0].title() 
-        camp = 'Longtail [Categories] [Style]'
-        
-    elif style == '': #cat only
+#for column 'campaign'
+if str_destination == '': #without destination 
+    if style == '': #cat only
         camp = 'Longtail [Categories]'
+
+    elif style != '': #cat and style
+        camp = 'Longtail [Categories] [Style]'
 
 else: #cat and destination. cat, style and destination
     camp = 'Longtail %s' %str_destination
     
+#######################################################################################
+
+#prepare each column  
+keyword_state = ['enabled'] * len(all_comb) #universal
+match_type = ['Exact'] * len(all_comb) #universal
+keyword_max_cpc = [max_cpc] * len(all_comb) #set on top of the file; same for all keywords
+ad_group_max_cpc = [max_cpc] * len(all_comb) #set on top of the file; same for all keywords
+campaign = [camp] * len(all_comb) #custom per landing page; same for all keywords
+
+
+#ad_group ---> custom per landing page; same for all keywords if number of keywords < 5000 
+#         ---> custom per landing page; different for keywords if number of keywords > 5000  AND len(cat) > 1
+#         --->                          if len(all_comb) > 5000 AND len(cat) = 1, numerical system
+
+#prepare column ad_group
+if len(all_comb) <= 5000:
+    str_cat = cat[0].title()
+    adg = "Longtail %s %s %s" %(str_cat, str_style, str_destination)
     
-#for column 'ad_group'
-adg = ''
+    #eliminate double spaces
+    adg = adg.split()
+    adg = ' '.join(adg)
 
-if str_destination == '': #when without destination 
+    ad_group = [adg] * len(all_comb)
+
+elif len(all_comb) > 5000:
+    ad_group = []
+    for i in range(len(all_comb)):
+        a = all_comb[i]
+        for x in range(len(a)):
+            if a[x] in cat:
+                str_cat = ''.join(a[x]).title()
+                adg = "Longtail %s %s %s" %(str_cat, str_style, str_destination)
+                adg = adg.split()
+                adg = ' '.join(adg)
+                ad_group.append(adg)
+
+######################################################################################
+
+#all_comb -> keywords
+keywords = []
+
+#join, split then join again (eliminates double spaces)
+for i in range(len(all_comb)):
+    keywords.append(' '.join(all_comb[i]))
+    keywords[i] = keywords[i].split()
+    keywords[i] = ' '.join(keywords[i])
     
-    if style != '': #style and cat
-        str_style = style[0].title() 
-        adg = 'Longtail %s %s' %(str_cat, str_style)
-        
-    elif style == '': #cat only
-        adg = 'Longtail %s %s' %(str_cat, yoga[0].title())
+#add '[' and ']' in the result (keywords)
+for i in range(len(keywords)):
+    keywords[i] = '[' + keywords[i] + ']'   
 
-else: #cat, style and destination
-    if style != '': #cat and destination
-        str_style = style[0].title()
-        adg = 'Longtail %s %s %s' %(str_cat, yoga[0].title(), str_destination)
-    else: #cat, style and destination
-        adg = 'Longtail %s %s %s' %(str_cat, str_style, str_destination)
+keywords = sorted(set(keywords))
+######################################################################################
 
-#prepare each column
-keyword_state = ['enabled'] * len(results) #universal
-match_type = ['Exact'] * len(results) #universal
-campaign = [camp] * len(results)
-ad_group = [adg] * len(results)
-keyword_max_cpc = [max_cpc] * len(results) #universal
-ad_group_max_cpc = [max_cpc] * len(results) #universal
+#minor tweaks before zipping
+for i in range(len(campaign)):
+    if 'Usa' in campaign[i]:
+        campaign[i] = campaign[i].replace('Usa', 'USA')
+    elif 'Uk' in campaign[i]:
+        campaign[i] = campaign[i].replace('Uk', 'UK')
+
+for i in range(len(ad_group)):
+    if 'Usa' in ad_group[i]:
+        ad_group[i] = ad_group[i].replace('Usa', 'USA')
+    if 'Uk' in ad_group[i]:
+        ad_group[i] = ad_group[i].replace('Uk', 'UK')
+    if "'\S" in ad_group[i]:
+        ad_group[i] = ad_group[i].replace("'\S", "'\s")
 
 #zip each columns
-
 rows = []
-for i in range(len(results)):
+for i in range(len(keywords)):
     rows.append([keyword_state[i],
-                 results[i],
+                 keywords[i],
                  match_type[i],
                  campaign[i],
                  ad_group[i],
@@ -823,5 +908,4 @@ for row in rows:
 new_csv.close()
 
 print """[Notification] %i longtail keywords for %s %s %s are generated successfully. 
-Please check your current directory for the stored result in a csv file. """ %(len(results), cat, style, destination_front)
-
+Please check your current directory for the stored result in a csv file. """ %(len(keywords), cat, style, destination_front)
