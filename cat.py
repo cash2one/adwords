@@ -511,12 +511,10 @@ if 'family' in cat[0]:
 #women variant
 if 'women' in cat[0]:
     cat.append('womens')
-    cat.append("women\'s")
     cat.append('for women')
         
     cat.append('woman')
     cat.append('womans')
-    cat.append("woman\'s")
     cat.append('for woman')
     cat.append('for a woman')
 
@@ -760,6 +758,10 @@ for i in range(len(all_comb)): #delete keywords with 'on a budget' in the very f
 
 all_comb = [x for x in all_comb if x != []] #remove empty strings in all_comb
 
+for i in range(len(all_comb)):
+    if '' in all_comb[i]:
+        all_comb[i] = tuple(x for x in all_comb[i] if x != '')
+
 #remove duplicates, sort in alphabetical order
 all_comb = sorted(set(all_comb))    
 
@@ -816,7 +818,6 @@ match_type = ['Exact'] * len(all_comb) #universal
 keyword_max_cpc = [max_cpc] * len(all_comb) #set on top of the file; same for all keywords
 ad_group_max_cpc = [max_cpc] * len(all_comb) #set on top of the file; same for all keywords
 campaign = [camp] * len(all_comb) #custom per landing page; same for all keywords
-
 
 #ad_group ---> custom per landing page; same for all keywords if number of keywords < 5000 
 #         ---> custom per landing page; different for keywords if number of keywords > 5000  AND len(cat) > 1
@@ -875,8 +876,8 @@ for i in range(len(ad_group)):
         ad_group[i] = ad_group[i].replace('Usa', 'USA')
     if 'Uk' in ad_group[i]:
         ad_group[i] = ad_group[i].replace('Uk', 'UK')
-    if "'\S" in ad_group[i]:
-        ad_group[i] = ad_group[i].replace("'\S", "'\s")
+    if '\'S' in ad_group[i]:
+        ad_group[i] = ad_group[i].replace('\'S', '\'s')
 
 #zip each columns
 rows = []
