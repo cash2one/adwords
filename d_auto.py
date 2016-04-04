@@ -9,39 +9,50 @@
 ######################################################################################
 
 #framework: universal component lists
-yoga_or_yogi = ['yoga', 'yogi']
+yoga = ['yoga']
 
 holiday_word1 = [
-'holiday',
-'holidays', 
 'retreat',  
 'retreats', 
 'vacation',
 'vacations',
-'package',
-'packages',
-'training',
-'trainings',
+'resort',
+'resorts',
 'camp',
 'camps',
-'resort',
-'resorts']
+'package',
+'packages',
+'center',
+'centers',
+'centre',
+'centres',
+'deal',
+'deals',
+'training',
+'trainings'
+]
 
 holiday_word2 = [
-'holiday',
-'holidays',
-'retreat',
-'retreats',
+'retreat',  
+'retreats', 
 'vacation',
 'vacations',
-'package',
-'packages',
-'training',
-'trainings',
+'resort',
+'resorts',
 'camp',
 'camps',
-'resort',
-'resorts']
+'package',
+'packages',
+'center',
+'centers',
+'centre',
+'centres',
+'deal',
+'deals',
+'training',
+'trainings',
+''
+]
 
 ######################################################################################
 
@@ -214,7 +225,7 @@ elif destination_front[0] == 'Koh Samui':
 ######################################################################################
 
 #set max cpc bid for keyword and ad group here
-max_cpc = '0.20'
+max_cpc = '0.30'
 
 #set ad descriptions here       
 desc11 = "Reviews & Best Price Guarantee!" 
@@ -226,8 +237,8 @@ desc22 = "%s Top Rated Package Deals Online"%count
 ######################################################################################
 
 #prepare keyword components
-a1 = [yoga_or_yogi,holiday_word1,holiday_word2,destination_back]
-a2 = [destination_front,yoga_or_yogi,holiday_word1,holiday_word2]
+a1 = [yoga,holiday_word1,holiday_word2,destination_back]
+a2 = [destination_front,yoga,holiday_word1,holiday_word2]
 
 import itertools
 
@@ -268,6 +279,9 @@ comb2 = list(set(comb2))
 #join the 2 lists
 all_comb = comb + comb2
 
+for i in range(len(all_comb)):
+    all_comb[i] = tuple(x for x in all_comb[i] if x != '')
+
 #join strings within the list
 results = []
 
@@ -276,7 +290,7 @@ for i in range(len(all_comb)):
     i+1
 
 #sort the result in alphabetical order
-results = sorted(results) 
+results = sorted(set(results))
 
 ######################################################################################
 
@@ -317,8 +331,6 @@ for i in range(len(results)):
                  keyword_max_cpc[i],
                  ad_group_max_cpc[i]])
     i+1
-    
-
 
 ######################################################################################
 
@@ -402,3 +414,21 @@ print """[Notification] All %s ads for %s are generated successfully.
 Please check your current directory for the stored result in a csv file. """ %(len(ac_rows_all), destination_front)
 
 ######################################################################################
+
+for i in range(how_many_ads):
+    if len(ad[i]) > 25:
+        print "[Warning] Headline %s longer than 25 chars" %i
+        print ad[i]
+        print len(ad[i])
+    if len(d1) > 35:
+        print "[Warning] Description line 1 longer than 35 chars"
+        print d1[i]
+        print len(d1[i])
+    if len(d2[i]) > 35:
+        print "[Warning] Description line 2 longer than 35 chars"
+        print d2[i]
+        print len(d2[i])
+    if len(display_url[i]) > 35:
+        print "[Warning] Display URL longer than 35 chars"
+        print display_url[i]
+        print len(display_url[i])
