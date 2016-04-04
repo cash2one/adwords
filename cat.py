@@ -183,28 +183,17 @@ elif (cont_mrkr in url) and (style_mrkr not in url): #categories and destination
         destination2 = ' '.join(destination[cut+1:])
         destination_back = ['in '+destination1, destination1, 'in '+destination2, destination2]
         destination_front = [destination1, destination2] 
-
+        
         destination_f = destination_front[:] #destinations before adding variants
-
-        #headline1 = count+' '+' '.join(page_title.split()[1:3] + destination_back[0].split())
-        #headline2 = ' '.join(page_title.split()[1:3] + destination_back[1].split()) + ' 2016'
-        #headline3 = count+' '+' '.join(page_title.split()[1:3] + destination_back[2].split())
-        #headline4 = ' '.join(page_title.split()[1:3] + destination_back[3].split()) + ' 2016'
-        #headlines = [headline1, headline2, headline3, headline4]
-        #print "[Checking] headlines:", headlines
         
     #if there is only one destination (e.g. Germany)    
     else: 
         destination1 = ' '.join(destination)
         destination_back = ['in '+destination1, destination1]
         destination_front = [destination1]
+        
         destination_f = destination_front[:] #destination before adding variants
 
-        #headline1 = count+' '+ ' '.join(page_title.split()[1:3] + destination_back[0].split())
-        #headline2 = ' '.join(page_title.split()[1:3] + destination_back[1].split()) + ' 2016'
-        #headlines = [headline1, headline2]
-        #print "[Checking] headlines:", headlines
-        
         #adding destination name variants
         if destination_front[0] == 'United Arab Emirates':
             destination_front.append('UAE')
@@ -318,6 +307,7 @@ elif (cont_mrkr in url) and (style_mrkr in url): #categories, style and destinat
     find = '/'
     cont_idx = max(pos for pos, char in enumerate(url) if char == find)+1 #index of the last slash. last slash is always followed by destination
     destination = url[cont_idx:].title().replace("-", " ").split() #replace dash with space, listify destination
+    
     destination_f = destination_front[:] #destination without variants
     
     cat = url[cat_idx_front:cat_idx_back].replace("-", " ") #replace dash with space
@@ -335,26 +325,17 @@ elif (cont_mrkr in url) and (style_mrkr in url): #categories, style and destinat
         destination2 = ' '.join(destination[cut+1:])
         destination_back = ['in '+destination1, destination1, 'in '+destination2, destination2]
         destination_front = [destination1, destination2]
-            
-        #headline1 = count+' '+' '.join(page_title.split()[1:3] + destination_back[0].split())
-        #headline2 = ' '.join(page_title.split()[1:3] + destination_back[1].split()) + ' 2016'
-        #headline3 = count+' '+' '.join(page_title.split()[1:3] + destination_back[2].split())
-        #headline4 = ' '.join(page_title.split()[1:3] + destination_back[3].split()) + ' 2016'
-        #headlines = [headline1, headline2, headline3, headline4]
-        #print "[Checking] headlines:", headlines
+        
+        destination_f = destination_front[:]
 
     #if there is only one destination (e.g. Germany)    
     else: 
         destination1 = ' '.join(destination)
         destination_back = ['in '+destination1, destination1]
         destination_front = [destination1]
+        
         destination_f = destination_front[:] #destination without variants
 
-        #headline1 = count+' '+ ' '.join(page_title.split()[1:3] + destination_back[0].split())
-        #headline2 = ' '.join(page_title.split()[1:3] + destination_back[1].split()) + ' 2016'
-        #headlines = [headline1, headline2]
-        #print "[Checking] headlines:", headlines
-        
         #adding destination name variants
         if destination_front[0] == 'United Arab Emirates':
             destination_front.append('UAE')
@@ -542,6 +523,8 @@ if cat[0] == 'short':
     cat.append('short yoga breaks')
     cat.append('yoga short break')
     cat.append('yoga short breaks')
+    cat.append('short yoga retreat')
+    cat.append('short yoga retreats')
     yoga = ['']
     holiday_word2 = ['']
 
@@ -709,7 +692,21 @@ for i in range(len(all_comb)):
     if (all_comb[i][0] in destination_front) and ('for' in all_comb[i][1]):
         all_comb[i] = []
 
-all_comb = [x for x in all_comb if x != []] #remove empty strings in all_comb
+all_comb = [x for x in all_comb if x != []] #remove empty lists in all_comb
+
+######################################################################################
+for i in range(len(all_comb)): #remove empty strings wihtin each list in all_comb
+    all_comb[i] = tuple(x for x in all_comb[i] if x != '')
+
+#delete some keywords
+for i in range(len(all_comb)): #delete keywords with 'on a budget' in the very front of the keyword
+    if 'on a budget' in all_comb[i][0]:
+        all_comb[i] = []
+    elif "for" in all_comb[i][0]:
+        all_comb[i] = []
+        
+all_comb = [x for x in all_comb if x != []] #remove empty lists in all_comb
+all_comb = sorted(set(all_comb))#remove duplicates
 
 ######################################################################################
 
@@ -749,21 +746,8 @@ if cat[0] in requires_and:
 
 ######################################################################################
 
-#delete some keywords
-for i in range(len(all_comb)): #delete keywords with 'on a budget' in the very front of the keyword
-    if all_comb[i][0] == 'on a budget ':
-        all_comb[i] = []
-    elif all_comb[i][0] == 'for': #delete keywords with 'for women/singles/etc' in the very front of the keyword
-        all_comb[i] = []
-
-all_comb = [x for x in all_comb if x != []] #remove empty strings in all_comb
-
-for i in range(len(all_comb)):
-    if '' in all_comb[i]:
-        all_comb[i] = tuple(x for x in all_comb[i] if x != '')
-
 #remove duplicates, sort in alphabetical order
-all_comb = sorted(set(all_comb))    
+all_comb = sorted(set(all_comb))  
 
 ######################################################################################
 
@@ -819,11 +803,13 @@ keyword_max_cpc = [max_cpc] * len(all_comb) #set on top of the file; same for al
 ad_group_max_cpc = [max_cpc] * len(all_comb) #set on top of the file; same for all keywords
 campaign = [camp] * len(all_comb) #custom per landing page; same for all keywords
 
+
 #ad_group ---> custom per landing page; same for all keywords if number of keywords < 5000 
 #         ---> custom per landing page; different for keywords if number of keywords > 5000  AND len(cat) > 1
 #         --->                          if len(all_comb) > 5000 AND len(cat) = 1, numerical system
 
 #prepare column ad_group
+
 if len(all_comb) <= 5000:
     str_cat = cat[0].title()
     adg = "Longtail %s %s %s" %(str_cat, str_style, str_destination)
@@ -862,6 +848,7 @@ for i in range(len(keywords)):
     keywords[i] = '[' + keywords[i] + ']'   
 
 keywords = sorted(set(keywords))
+
 ######################################################################################
 
 #minor tweaks before zipping
@@ -876,8 +863,8 @@ for i in range(len(ad_group)):
         ad_group[i] = ad_group[i].replace('Usa', 'USA')
     if 'Uk' in ad_group[i]:
         ad_group[i] = ad_group[i].replace('Uk', 'UK')
-    if '\'S' in ad_group[i]:
-        ad_group[i] = ad_group[i].replace('\'S', '\'s')
+    if "'\S" in ad_group[i]:
+        ad_group[i] = ad_group[i].replace("'\S", "'\s")
 
 #zip each columns
 rows = []
@@ -910,3 +897,324 @@ new_csv.close()
 
 print """[Notification] %i longtail keywords for %s %s %s are generated successfully. 
 Please check your current directory for the stored result in a csv file. """ %(len(keywords), cat, style, destination_front)
+######################################################################################
+#prepare csv file content for ads
+how_many_ads = len(set(ad_group)) * 4
+
+######################################################################################
+
+#prepare column titles
+ac_column_titles = ["Ad state",
+                    "Ad",
+                    "Description line 1",
+                    "Description line 2",
+                    "Display URL",
+                    "Final URL",
+                    "Device preference type",
+                    "Campaign",
+                    "Ad group",
+                    "Ad type"]
+
+######################################################################################
+
+if len(set(ad_group)) == 1:
+    headlines = []
+    desc1 = []
+    desc2 = []
+
+    #ad descriptions
+
+    a = str_cat
+
+    #healines and description line 1 & 2
+    if str_destination == '': #without destination
+
+        if style == '': #cat only
+
+            headline1 = "%s Yoga Retreats" %a
+            headline2 = "Yoga %s Retreats" %a
+            headlines.append(headline1)
+            headlines.append(headline2)
+
+            desc11 = 'Reviews & Best Price Guarantee!'
+            desc21 = 'Reviews & Best Price Guarantee!'
+            desc1.append(desc11)
+            desc1.append(desc21)
+
+            desc12 = 'Book Your Dream Retreat Today'
+            desc22 = 'Compare and Book Top Rated Litings'
+            desc2.append(desc12)
+            desc2.append(desc22)
+
+
+        elif style != '': #cat and style
+
+            headline1 = "%s Yoga Retreats" %str_style
+            headline2 = "%s Yoga Packages" %str_style
+            headlines.append(headline1)
+            headlines.append(headline2)
+
+            desc11 = "Book Online %s Retreats." %a
+            desc21 = "View %s %s Retreats Now." %(count, a)
+            desc1.append(desc11)
+            desc1.append(desc21)
+
+            desc12 = 'Reviews & Best Price Guarantee!'
+            desc22 = 'Reviews & Best Price Guarantee!'
+            desc2.append(desc12)
+            desc2.append(desc22)
+
+    else: #with destination 
+
+        if style == '': #cat and destination
+
+            if len(destination_f) == 1: #when there is only 1 destination
+
+                headline1 = "Yoga Retreats %s" %str_destination
+                headline2 = "%s Yoga Retreats" %str_destination
+                headlines.append(headline1)
+                headlines.append(headline2)
+
+            elif len(destination_f) > 1: #when there are two destinations
+                headline1 = "Yoga Retreats %s" %destination_front[0]
+                headline2 = "Yoga Retreats %s" %destination_front[1]
+                headlines.append(headline1)
+                headlines.append(headline2)
+
+            desc11 = "%s Retreats Book Online." %a
+            desc21 = "View %s %s Yoga Retreats." %(count, a)
+            desc1.append(desc11)
+            desc1.append(desc21)
+
+            desc21 = "Reviews & Best Price Guarantee!"
+            desc22 = 'Compare and Book Top Rated Listings'
+            desc2.append(desc21)
+            desc2.append(desc22)
+
+        #cat, style and destination
+        elif style != '':
+
+            if len(destination_f) == 1: #when there is only 1 destination
+                headline1 = "Yoga Retreats %s" %str_destination
+                headline2 = "%s Yoga Retreats" %str_destination
+                headlines.append(headline1)
+                headlines.append(headline2)
+
+            elif len(destination_f) > 1: #when there are two destinations
+                headline1 = "Yoga Retreats %s" %destination_front[0]
+                headline2 = "Yoga Retreats %s" %destination_front[1]
+                headlines.append(headline1)
+                headlines.append(headline2)
+
+            desc11 = "%s %s Yoga Deals." %(a, str_style)
+            desc12 = "%s Yoga %s Retreat." %(str_style, a)
+            desc1.append(desc11)
+            desc1.append(desc12)
+
+            desc21 = "Reviews & Best Price Guarantee!"
+            desc22 = "Compare and Book Top Rated Listings"
+            desc2.append(desc21)
+            desc2.append(desc22)
+    
+    if 'Yoga' in str_cat:
+        str_cat = str_cat.split()[1]
+        
+    #prepare each column
+    ad_state = ['enabled'] * how_many_ads #universal
+    ad = headlines * (how_many_ads / 2) #universal
+    d1 = desc1 * (how_many_ads / 2)
+    d2 = desc2 * (how_many_ads / 2)
+    display_url = ['www.bookyogaretreats.com/%s'%str_cat] * how_many_ads
+    final_url = [url] * how_many_ads
+    device = ['All'] * (how_many_ads / 2) + ['Mobile'] * (how_many_ads / 2)
+    campaign = [camp] * how_many_ads
+    ad_group2 = [adg] * how_many_ads
+    ad_type = ['Text ad'] * how_many_ads #universal
+
+######################################################################################
+
+if len(set(ad_group)) > 1:
+    
+    headlines = []
+    desc1 = []
+    desc2 = []
+    cats = []
+    adgs = []
+    
+    for i in range(len(set(ad_group))): #extract ad_group name
+        for x in range(len(cat)):
+            if cat[x].title() in list(set(ad_group))[i]:
+                cats.append(cat[x])
+                
+    cats = list(sorted(set(cats)))
+
+    for i in range(len(cats)):
+        a = cats[i].title()
+        
+        #healines and description line 1 & 2
+        if str_destination == '': #without destination
+
+            if style == '': #cat only
+
+                headline1 = "%s Yoga Retreats" %a
+                headline2 = "Yoga Retreats %s" %a
+                headlines.append(headline1)
+                headlines.append(headline2)
+
+                desc11 = 'Reviews & Best Price Guarantee!'
+                desc21 = 'Reviews & Best Price Guarantee!'
+                desc1.append(desc11)
+                desc1.append(desc21)
+
+                desc12 = 'Book Your Dream Retreat Today'
+                desc22 = 'Compare and Book Top Rated Litings'
+                desc2.append(desc12)
+                desc2.append(desc22)
+
+
+            elif style != '': #cat and style
+
+                headline1 = "%s Yoga Retreats" %str_style
+                headline2 = "%s Yoga Packages" %str_style
+                headlines.append(headline1)
+                headlines.append(headline2)
+
+                desc11 = "Book Online %s Retreats!" %a
+                desc21 = "View %s %s Retreats Now!" %(count, a)
+                desc1.append(desc11)
+                desc1.append(desc21)
+
+                desc12 = 'Reviews & Best Price Guarantee!'
+                desc22 = 'Reviews & Best Price Guarantee!'
+                desc2.append(desc12)
+                desc2.append(desc22)
+
+        else: #with destination 
+
+            if style == '': #cat and destination
+
+                if len(destination_f) == 1: #when there is only 1 destination
+
+                    headline1 = "Yoga Retreats %s" %str_destination
+                    headline2 = "%s Yoga Retreats" %str_destination
+                    headlines.append(headline1)
+                    headlines.append(headline2)
+
+                elif len(destination_f) > 1: #when there are two destinations
+                    headline1 = "Yoga Retreats %s" %destination_front[0]
+                    headline2 = "Yoga Retreats %s" %destination_front[1]
+                    headlines.append(headline1)
+                    headlines.append(headline2)
+
+                desc11 = "Retreats %s Book Online." %a
+                desc21 = "View %s %s Yoga Retreats." %(count, a)
+                desc1.append(desc11)
+                desc1.append(desc21)
+
+                desc21 = "Reviews & Best Price Guarantee"
+                desc22 = 'Compare and Book Top Rated Listings'
+                desc2.append(desc21)
+                desc2.append(desc22)
+
+            #cat, style and destination
+            elif style != '':
+
+                if len(destination_f) == 1: #when there is only 1 destination
+                    headline1 = "Yoga Retreats %s" %str_destination
+                    headline2 = "%s Yoga Retreats" %str_destination
+                    headlines.append(headline1)
+                    headlines.append(headline2)
+
+                elif len(destination_f) > 1: #when there are two destinations
+                    headline1 = "Yoga Retreats %s" %destination_front[0]
+                    headline2 = "Yoga Retreats %s" %destination_front[1]
+                    headlines.append(headline1)
+                    headlines.append(headline2)
+
+                desc11 = "%s %s Yoga Deals." %(a, str_style)
+                desc12 = "%s Yoga %s Retreat." %(str_style, a)
+                desc1.append(desc11)
+                desc1.append(desc12)
+                
+                desc21 = "Reviews & Best Price Guarantee"
+                desc22 = "Compare and Book Top Rated Listings"
+                desc2.append(desc21)
+                desc2.append(desc22)
+            
+            aa = 'Longtail %s %s %s' %(cats[i].title(), str_style, str_destination)
+            adgs.append(aa)
+            adgs.append(aa)
+
+    for i in range(len(adgs)):
+        adgs[i] = ' '.join(adgs[i].split())
+
+    if 'Yoga' in str_cat:
+        str_cat = str_cat.split()[1]
+        
+    #prepare each column
+    ad_state = ['enabled'] * how_many_ads #universal
+    ad = headlines * 2 #universal
+    d1 = desc1 * 2
+    d2 = desc2 * 2
+    display_url = ['www.bookyogaretreats.com/%s'%str_cat] * how_many_ads
+    final_url = [url] * how_many_ads
+    device = ['All'] * (how_many_ads / 2) + ['Mobile'] * (how_many_ads / 2)
+    campaign = [camp] * how_many_ads
+    ad_group2 = adgs * (how_many_ads / len(adgs))
+    ad_type = ['Text ad'] * how_many_ads #universal
+    
+######################################################################################
+
+#zip column
+i=0
+ac_rows1 =[]
+for i in range(how_many_ads):
+    ac_rows1.append([ad_state[i],
+                    ad[i],
+                    d1[i],
+                    d2[i],
+                    display_url[i],
+                    final_url[i],
+                    device[i],
+                    campaign[i],
+                    ad_group2[i],
+                    ad_type[i]])
+
+ac_rows_all = ac_rows1 
+
+######################################################################################
+
+#export ads into a csv file
+file_name = "%s %s %s ads.csv" %(cat[:5], style, destination_front)
+new_csv = open(file_name, 'wb')
+open_file_object = csv.writer(new_csv)
+
+#rows
+open_file_object.writerow(ac_column_titles)
+
+#columns
+open_file_object.writerows(ac_rows_all)
+new_csv.close()
+
+print """[Notification] All %s ads for %s %s %s are generated successfully. 
+Please check your current directory for the stored result in a csv file. """ %(len(ac_rows_all), cat, style, destination_front)
+
+######################################################################################
+
+for i in range(how_many_ads):
+    if len(ad[i]) > 25:
+        print "[Warning] Headline %s longer than 25 chars" %i
+        print ad[i]
+        print len(ad[i])
+    if len(d1) > 35:
+        print "[Warning] Description line 1 longer than 35 chars"
+        print d1[i]
+        print len(d1[i])
+    if len(d2[i]) > 35:
+        print "[Warning] Description line 2 longer than 35 chars"
+        print d2[i]
+        print len(d2[i])
+    if len(display_url[i]) > 35:
+        print "[Warning] Display URL longer than 35 chars"
+        print display_url[i]
+        print len(display_url[i])
