@@ -1,16 +1,22 @@
 ######################################################################################
 
-#set max cpc bid for keyword and ad group here
-max_cpc = '0.30'
-
-#######################################################################################
-
 #ask user to provide landing page url.
 import urllib2
 from BeautifulSoup import BeautifulSoup
 
 print "Please type in the landing page url."
 url = raw_input()
+print ""
+
+#######################################################################################
+import sys
+
+#set max cpc bid for keyword and ad group here
+print "Please type in the max cpc for the landing page."
+max_cpc = float(raw_input())
+
+if type(max_cpc) != float:
+    sys.exit("Please type in a price in form of 0.00")
 
 #######################################################################################
 
@@ -19,11 +25,9 @@ soup = BeautifulSoup(urllib2.urlopen(url))
 page_title = str(soup.title.string)
 count = page_title.split()[0]
 
-import sys 
-
 if count.isdigit() == False:
-    print "[Alert] Cannot proceed further: the landing page has less than 3 listings. Please choose a different landing page with at least 3 listings."
-    sys.exit()
+    #print ""
+    sys.exit("[Alert] Cannot proceed further: the landing page has less than 3 listings. Please choose a different landing page with at least 3 listings.")
 
 #######################################################################################
 
@@ -538,7 +542,8 @@ if 'budget' in cat[0]:
 ######################################################################################
 
 #check variables
-print "[Checking] category:", cat
+print """
+[Checking] category:""", cat
 print "[Checking] style:", style
 print "[Checking] destination_back:", destination_back
 print "[Checking] destination_front:", destination_front
@@ -895,8 +900,10 @@ for row in rows:
 
 new_csv.close()
 
-print """[Notification] %i longtail keywords for %s %s %s are generated successfully. 
-Please check your current directory for the stored result in a csv file. """ %(len(keywords), cat, style, destination_front)
+print """
+[Notification] %i longtail keywords for %s %s %s are generated successfully. 
+Please check your current directory for the stored result in a csv file. 
+""" %(len(keywords), cat, style, destination_front)
 ######################################################################################
 #prepare csv file content for ads
 how_many_ads = len(set(ad_group)) * 4
@@ -916,13 +923,12 @@ ac_column_titles = ["Ad state",
                     "Ad type"]
 
 ######################################################################################
+#headliens + description 1 + description 2
 
-if len(set(ad_group)) == 1:
+if len(set(ad_group)) == 1: #if there is only one ad group (keywords < 5000)
     headlines = []
     desc1 = []
     desc2 = []
-
-    #ad descriptions
 
     a = str_cat
 
@@ -991,8 +997,7 @@ if len(set(ad_group)) == 1:
             desc2.append(desc21)
             desc2.append(desc22)
 
-        #cat, style and destination
-        elif style != '':
+        elif style != '':#cat, style and destination
 
             if len(destination_f) == 1: #when there is only 1 destination
                 headline1 = "Yoga Retreats %s" %str_destination
@@ -1024,7 +1029,7 @@ if len(set(ad_group)) == 1:
     ad = headlines * (how_many_ads / 2) #universal
     d1 = desc1 * (how_many_ads / 2)
     d2 = desc2 * (how_many_ads / 2)
-    display_url = ['www.bookyogaretreats.com/%s'%str_cat] * how_many_ads
+    display_url = ['www.bookyogaretreats.com/%s'%str_cat.replace(' ', '')] * how_many_ads
     final_url = [url] * how_many_ads
     device = ['All'] * (how_many_ads / 2) + ['Mobile'] * (how_many_ads / 2)
     campaign = [camp] * how_many_ads
@@ -1156,7 +1161,7 @@ if len(set(ad_group)) > 1:
     ad = headlines * 2 #universal
     d1 = desc1 * 2
     d2 = desc2 * 2
-    display_url = ['www.bookyogaretreats.com/%s'%str_cat] * how_many_ads
+    display_url = ['www.bookyogaretreats.com/%s'%str_cat.replace(' ', '')] * how_many_ads
     final_url = [url] * how_many_ads
     device = ['All'] * (how_many_ads / 2) + ['Mobile'] * (how_many_ads / 2)
     campaign = [camp] * how_many_ads
@@ -1197,24 +1202,31 @@ open_file_object.writerows(ac_rows_all)
 new_csv.close()
 
 print """[Notification] All %s ads for %s %s %s are generated successfully. 
-Please check your current directory for the stored result in a csv file. """ %(len(ac_rows_all), cat, style, destination_front)
+Please check your current directory for the stored result in a csv file. 
+""" %(len(ac_rows_all), cat, style, destination_front)
 
 ######################################################################################
 
 for i in range(how_many_ads):
     if len(ad[i]) > 25:
-        print "[Warning] Headline %s longer than 25 chars" %i
+        print "[Warning] Headline %i longer than 25 chars" %(i+1)
         print ad[i]
         print len(ad[i])
+        print ""
     if len(d1) > 35:
         print "[Warning] Description line 1 longer than 35 chars"
         print d1[i]
         print len(d1[i])
+        print ""
     if len(d2[i]) > 35:
         print "[Warning] Description line 2 longer than 35 chars"
         print d2[i]
         print len(d2[i])
+        print ""
     if len(display_url[i]) > 35:
         print "[Warning] Display URL longer than 35 chars"
         print display_url[i]
         print len(display_url[i])
+        print ""
+
+######################################################################################
