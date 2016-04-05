@@ -745,6 +745,7 @@ if cat[0] in requires_and:
                 copy[i].insert(x+1, 'and')
             elif (copy[i][x] == 'yoga') and (copy[i][x+1] in requires_and): 
                 copy[i].insert(x+1, 'and')
+        copy[i] = tuple(copy[i])
         
     #align the list in an alphabetical order  
     all_comb = sorted(all_comb + copy)
@@ -752,7 +753,7 @@ if cat[0] in requires_and:
 ######################################################################################
 
 #remove duplicates, sort in alphabetical order
-all_comb = sorted(set(all_comb))  
+all_comb = sorted(set(all_comb)) 
 
 ######################################################################################
 
