@@ -926,249 +926,116 @@ ac_column_titles = ["Ad state",
 ######################################################################################
 #headliens + description 1 + description 2
 
-if len(set(ad_group)) == 1: #if there is only one ad group (keywords < 5000)
-    headlines = []
-    desc1 = []
-    desc2 = []
+headlines = []
+desc1 = []
+desc2 = []
 
-    a = str_cat
+a = str_cat
 
-    #healines and description line 1 & 2
-    if str_destination == '': #without destination
+#healines and description line 1 & 2
+if str_destination == '': #without destination
 
-        if style == '': #cat only
+    if style == '': #cat only
 
-            headline1 = "%s Yoga Retreats" %a
-            headline2 = "Yoga %s Retreats" %a
+        headline1 = "%s Yoga Retreats" %a
+        headline2 = "Yoga %s Retreats" %a
+        headlines.append(headline1)
+        headlines.append(headline2)
+
+        desc11 = 'Reviews & Best Price Guarantee!'
+        desc21 = 'Reviews & Best Price Guarantee!'
+        desc1.append(desc11)
+        desc1.append(desc21)
+
+        desc12 = 'Book Your Dream Retreat Today'
+        desc22 = 'Compare and Book Top Rated Litings'
+        desc2.append(desc12)
+        desc2.append(desc22)
+
+
+    elif style != '': #cat and style
+
+        headline1 = "%s Yoga Retreats" %str_style
+        headline2 = "%s Yoga Packages" %str_style
+        headlines.append(headline1)
+        headlines.append(headline2)
+
+        desc11 = "Book Online %s Retreats." %a
+        desc21 = "View %s %s Retreats Now." %(count, a)
+        desc1.append(desc11)
+        desc1.append(desc21)
+
+        desc12 = 'Reviews & Best Price Guarantee!'
+        desc22 = 'Reviews & Best Price Guarantee!'
+        desc2.append(desc12)
+        desc2.append(desc22)
+
+else: #with destination 
+
+    if style == '': #cat and destination
+
+        if len(destination_f) == 1: #when there is only 1 destination
+
+            headline1 = "Yoga Retreats %s" %str_destination
+            headline2 = "%s Yoga Retreats" %str_destination
             headlines.append(headline1)
             headlines.append(headline2)
 
-            desc11 = 'Reviews & Best Price Guarantee!'
-            desc21 = 'Reviews & Best Price Guarantee!'
-            desc1.append(desc11)
-            desc1.append(desc21)
-
-            desc12 = 'Book Your Dream Retreat Today'
-            desc22 = 'Compare and Book Top Rated Litings'
-            desc2.append(desc12)
-            desc2.append(desc22)
-
-
-        elif style != '': #cat and style
-
-            headline1 = "%s Yoga Retreats" %str_style
-            headline2 = "%s Yoga Packages" %str_style
+        elif len(destination_f) > 1: #when there are two destinations
+            headline1 = "Yoga Retreats %s" %destination_front[0]
+            headline2 = "Yoga Retreats %s" %destination_front[1]
             headlines.append(headline1)
             headlines.append(headline2)
 
-            desc11 = "Book Online %s Retreats." %a
-            desc21 = "View %s %s Retreats Now." %(count, a)
-            desc1.append(desc11)
-            desc1.append(desc21)
+        desc11 = "%s Retreats Book Online." %a
+        desc21 = "View %s %s Yoga Retreats." %(count, a)
+        desc1.append(desc11)
+        desc1.append(desc21)
 
-            desc12 = 'Reviews & Best Price Guarantee!'
-            desc22 = 'Reviews & Best Price Guarantee!'
-            desc2.append(desc12)
-            desc2.append(desc22)
+        desc21 = "Reviews & Best Price Guarantee!"
+        desc22 = 'Compare and Book Top Rated Listings'
+        desc2.append(desc21)
+        desc2.append(desc22)
 
-    else: #with destination 
+    elif style != '':#cat, style and destination
 
-        if style == '': #cat and destination
+        if len(destination_f) == 1: #when there is only 1 destination
+            headline1 = "Yoga Retreats %s" %str_destination
+            headline2 = "%s Yoga Retreats" %str_destination
+            headlines.append(headline1)
+            headlines.append(headline2)
 
-            if len(destination_f) == 1: #when there is only 1 destination
+        elif len(destination_f) > 1: #when there are two destinations
+            headline1 = "Yoga Retreats %s" %destination_front[0]
+            headline2 = "Yoga Retreats %s" %destination_front[1]
+            headlines.append(headline1)
+            headlines.append(headline2)
 
-                headline1 = "Yoga Retreats %s" %str_destination
-                headline2 = "%s Yoga Retreats" %str_destination
-                headlines.append(headline1)
-                headlines.append(headline2)
+        desc11 = "%s %s Yoga Deals." %(a, str_style)
+        desc12 = "%s Yoga %s Retreat." %(str_style, a)
+        desc1.append(desc11)
+        desc1.append(desc12)
 
-            elif len(destination_f) > 1: #when there are two destinations
-                headline1 = "Yoga Retreats %s" %destination_front[0]
-                headline2 = "Yoga Retreats %s" %destination_front[1]
-                headlines.append(headline1)
-                headlines.append(headline2)
+        desc21 = "Reviews & Best Price Guarantee!"
+        desc22 = "Compare and Book Top Rated Listings"
+        desc2.append(desc21)
+        desc2.append(desc22)
 
-            desc11 = "%s Retreats Book Online." %a
-            desc21 = "View %s %s Yoga Retreats." %(count, a)
-            desc1.append(desc11)
-            desc1.append(desc21)
-
-            desc21 = "Reviews & Best Price Guarantee!"
-            desc22 = 'Compare and Book Top Rated Listings'
-            desc2.append(desc21)
-            desc2.append(desc22)
-
-        elif style != '':#cat, style and destination
-
-            if len(destination_f) == 1: #when there is only 1 destination
-                headline1 = "Yoga Retreats %s" %str_destination
-                headline2 = "%s Yoga Retreats" %str_destination
-                headlines.append(headline1)
-                headlines.append(headline2)
-
-            elif len(destination_f) > 1: #when there are two destinations
-                headline1 = "Yoga Retreats %s" %destination_front[0]
-                headline2 = "Yoga Retreats %s" %destination_front[1]
-                headlines.append(headline1)
-                headlines.append(headline2)
-
-            desc11 = "%s %s Yoga Deals." %(a, str_style)
-            desc12 = "%s Yoga %s Retreat." %(str_style, a)
-            desc1.append(desc11)
-            desc1.append(desc12)
-
-            desc21 = "Reviews & Best Price Guarantee!"
-            desc22 = "Compare and Book Top Rated Listings"
-            desc2.append(desc21)
-            desc2.append(desc22)
+if 'Yoga' in str_cat:
+    str_cat = str_cat.split()[1]
     
-    if 'Yoga' in str_cat:
-        str_cat = str_cat.split()[1]
-        
-    #prepare each column
-    ad_state = ['enabled'] * how_many_ads #universal
-    ad = headlines * (how_many_ads / 2) #universal
-    d1 = desc1 * (how_many_ads / 2)
-    d2 = desc2 * (how_many_ads / 2)
-    display_url = ['www.bookyogaretreats.com/%s'%str_cat.replace(' ', '')] * how_many_ads
-    final_url = [url] * how_many_ads
-    device = ['All'] * (how_many_ads / 2) + ['Mobile'] * (how_many_ads / 2)
-    campaign = [camp] * how_many_ads
-    ad_group2 = [adg] * how_many_ads
-    ad_type = ['Text ad'] * how_many_ads #universal
+#prepare each column
+ad_state = ['enabled'] * how_many_ads #universal
+ad = headlines * (how_many_ads / 2) #universal
+d1 = desc1 * (how_many_ads / 2)
+d2 = desc2 * (how_many_ads / 2)
+display_url = ['www.bookyogaretreats.com/%s'%str_cat.replace(' ', '')] * how_many_ads
+final_url = [url] * how_many_ads
+device = ['All'] * (how_many_ads / 2) + ['Mobile'] * (how_many_ads / 2)
+campaign = [camp] * how_many_ads
+ad_group2 = [adg] * how_many_ads
+ad_type = ['Text ad'] * how_many_ads #universal
 
-######################################################################################
-
-if len(set(ad_group)) > 1:
-    
-    headlines = []
-    desc1 = []
-    desc2 = []
-    cats = []
-    adgs = []
-    
-    for i in range(len(set(ad_group))): #extract ad_group name
-        for x in range(len(cat)):
-            if cat[x].title() in list(set(ad_group))[i]:
-                cats.append(cat[x])
-                
-    cats = list(sorted(set(cats)))
-
-    for i in range(len(cats)):
-        a = cats[i].title()
-        
-        #healines and description line 1 & 2
-        if str_destination == '': #without destination
-
-            if style == '': #cat only
-
-                headline1 = "%s Yoga Retreats" %a
-                headline2 = "Yoga Retreats %s" %a
-                headlines.append(headline1)
-                headlines.append(headline2)
-
-                desc11 = 'Reviews & Best Price Guarantee!'
-                desc21 = 'Reviews & Best Price Guarantee!'
-                desc1.append(desc11)
-                desc1.append(desc21)
-
-                desc12 = 'Book Your Dream Retreat Today'
-                desc22 = 'Compare and Book Top Rated Litings'
-                desc2.append(desc12)
-                desc2.append(desc22)
-
-
-            elif style != '': #cat and style
-
-                headline1 = "%s Yoga Retreats" %str_style
-                headline2 = "%s Yoga Packages" %str_style
-                headlines.append(headline1)
-                headlines.append(headline2)
-
-                desc11 = "Book Online %s Retreats!" %a
-                desc21 = "View %s %s Retreats Now!" %(count, a)
-                desc1.append(desc11)
-                desc1.append(desc21)
-
-                desc12 = 'Reviews & Best Price Guarantee!'
-                desc22 = 'Reviews & Best Price Guarantee!'
-                desc2.append(desc12)
-                desc2.append(desc22)
-
-        else: #with destination 
-
-            if style == '': #cat and destination
-
-                if len(destination_f) == 1: #when there is only 1 destination
-
-                    headline1 = "Yoga Retreats %s" %str_destination
-                    headline2 = "%s Yoga Retreats" %str_destination
-                    headlines.append(headline1)
-                    headlines.append(headline2)
-
-                elif len(destination_f) > 1: #when there are two destinations
-                    headline1 = "Yoga Retreats %s" %destination_front[0]
-                    headline2 = "Yoga Retreats %s" %destination_front[1]
-                    headlines.append(headline1)
-                    headlines.append(headline2)
-
-                desc11 = "Retreats %s Book Online." %a
-                desc21 = "View %s %s Yoga Retreats." %(count, a)
-                desc1.append(desc11)
-                desc1.append(desc21)
-
-                desc21 = "Reviews & Best Price Guarantee"
-                desc22 = 'Compare and Book Top Rated Listings'
-                desc2.append(desc21)
-                desc2.append(desc22)
-
-            #cat, style and destination
-            elif style != '':
-
-                if len(destination_f) == 1: #when there is only 1 destination
-                    headline1 = "Yoga Retreats %s" %str_destination
-                    headline2 = "%s Yoga Retreats" %str_destination
-                    headlines.append(headline1)
-                    headlines.append(headline2)
-
-                elif len(destination_f) > 1: #when there are two destinations
-                    headline1 = "Yoga Retreats %s" %destination_front[0]
-                    headline2 = "Yoga Retreats %s" %destination_front[1]
-                    headlines.append(headline1)
-                    headlines.append(headline2)
-
-                desc11 = "%s %s Yoga Deals." %(a, str_style)
-                desc12 = "%s Yoga %s Retreat." %(str_style, a)
-                desc1.append(desc11)
-                desc1.append(desc12)
-                
-                desc21 = "Reviews & Best Price Guarantee"
-                desc22 = "Compare and Book Top Rated Listings"
-                desc2.append(desc21)
-                desc2.append(desc22)
-            
-            aa = 'Longtail %s %s %s' %(cats[i].title(), str_style, str_destination)
-            adgs.append(aa)
-            adgs.append(aa)
-
-    for i in range(len(adgs)):
-        adgs[i] = ' '.join(adgs[i].split())
-
-    if 'Yoga' in str_cat:
-        str_cat = str_cat.split()[1]
-        
-    #prepare each column
-    ad_state = ['enabled'] * how_many_ads #universal
-    ad = headlines * 2 #universal
-    d1 = desc1 * 2
-    d2 = desc2 * 2
-    display_url = ['www.bookyogaretreats.com/%s'%str_cat.replace(' ', '')] * how_many_ads
-    final_url = [url] * how_many_ads
-    device = ['All'] * (how_many_ads / 2) + ['Mobile'] * (how_many_ads / 2)
-    campaign = [camp] * how_many_ads
-    ad_group2 = adgs * (how_many_ads / len(adgs))
-    ad_type = ['Text ad'] * how_many_ads #universal
-    
 ######################################################################################
 
 #zip column
