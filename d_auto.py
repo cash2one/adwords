@@ -62,8 +62,19 @@ from BeautifulSoup import BeautifulSoup
 
 print "Please type in the landing page url."
 url = raw_input()
+print ""
 
 ######exception for non-url inputs goes here######## 
+
+import sys
+
+#set max cpc bid for keyword and ad group here
+print "Please type in the max cpc for the landing page."
+max_cpc = float(raw_input())
+print ""
+
+if type(max_cpc) != float:
+    sys.exit("Please type in a price in form of 0.00")
 
 ######################################################################################
 
@@ -72,11 +83,9 @@ soup = BeautifulSoup(urllib2.urlopen(url))
 page_title = str(soup.title.string)
 count = page_title.split()[0]
 
-import sys 
-
 if count.isdigit() == False:
-    print "[Alert] Cannot proceed further: the landing page has less than 3 listings. Please choose a different landing page with at least 3 listings."
-    sys.exit()
+    #print
+    sys.exit("[Alert] Cannot proceed further: the landing page has less than 3 listings. Please choose a different landing page with at least 3 listings.")
 
 ######################################################################################
 
@@ -95,13 +104,14 @@ else:
         destination_back = ['in '+destination1, destination1, 'in '+destination2, destination2]
         destination_front = [destination1, destination2]
         
+        print ""
         print "[Checking] destination_back:", destination_back
         print "[Checking] destination_front:", destination_front
         
-        headline1 = count+' '+' '.join(page_title.split()[1:3] + destination_back[0].split())
-        headline2 = ' '.join(page_title.split()[1:3] + destination_back[1].split()) + ' 2016'
-        headline3 = count+' '+' '.join(page_title.split()[1:3] + destination_back[2].split())
-        headline4 = ' '.join(page_title.split()[1:3] + destination_back[3].split()) + ' 2016'
+        headline1 = count+' '+' '.join(page_title.split()[1:3] + destination_front[0].split())
+        headline2 = ' '.join(page_title.split()[1:3] + destination_front[1].split()) + ' 2016'
+        headline3 = count+' '+' '.join(page_title.split()[1:3] + destination_front[0].split())
+        headline4 = ' '.join(page_title.split()[1:3] + destination_front[1].split()) + ' 2016'
         
         headlines = [headline1, headline2, headline3, headline4]
     
@@ -114,8 +124,8 @@ else:
         print "[Checking] destination_back:", destination_back
         print "[Checking] destination_front:", destination_front
 
-        headline1 = count+' '+ ' '.join(page_title.split()[1:3] + destination_back[0].split())
-        headline2 = ' '.join(page_title.split()[1:3] + destination_back[1].split()) + ' 2016'
+        headline1 = count+' '+ ' '.join(page_title.split()[1:3] + destination_front[0].split())
+        headline2 = ' '.join(page_title.split()[1:3] + destination_front[0].split()) + ' 2016'
         
         headlines = [headline1, headline2]
 
@@ -223,9 +233,6 @@ elif destination_front[0] == 'Koh Samui':
 
 
 ######################################################################################
-
-#set max cpc bid for keyword and ad group here
-max_cpc = '0.30'
 
 #set ad descriptions here       
 desc11 = "Reviews & Best Price Guarantee!" 
@@ -350,6 +357,7 @@ for row in rows:
 
 new_csv.close()
 
+print ""
 print """[Notification] %i longtail keywords for %s are generated successfully. 
 Please check your current directory for the stored result in a csv file. """ %(len(results), destination_front)
 
@@ -412,23 +420,29 @@ new_csv.close()
 
 print """[Notification] All %s ads for %s are generated successfully. 
 Please check your current directory for the stored result in a csv file. """ %(len(ac_rows_all), destination_front)
-
+print ""
 ######################################################################################
 
 for i in range(how_many_ads):
     if len(ad[i]) > 25:
-        print "[Warning] Headline %s longer than 25 chars" %i
+        print "[Warning] Headline %i longer than 25 chars" %(i+1)
         print ad[i]
         print len(ad[i])
+        print ""
     if len(d1) > 35:
         print "[Warning] Description line 1 longer than 35 chars"
         print d1[i]
         print len(d1[i])
+        print ""
     if len(d2[i]) > 35:
         print "[Warning] Description line 2 longer than 35 chars"
         print d2[i]
         print len(d2[i])
+        print ""
     if len(display_url[i]) > 35:
         print "[Warning] Display URL longer than 35 chars"
         print display_url[i]
         print len(display_url[i])
+        print ""
+
+######################################################################################
