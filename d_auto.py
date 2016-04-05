@@ -322,7 +322,7 @@ keyword_state = ['enabled'] * len(results)
 #keyword -> results
 match_type = ['Exact'] * len(results)
 campaign = ['Longtail %s'%str_destination] * len(results)
-ad_group = ['Longtail %s %s'%(str_destination, page_title.split()[2])] * len(results)
+ad_group = ['Longtail %s %s'%('Retreats', str_destination)] * len(results)
 keyword_max_cpc = [max_cpc] * len(results)
 ad_group_max_cpc = [max_cpc] * len(results)
 
@@ -387,7 +387,7 @@ display_url = ['www.bookyogaretreats.com/%s'%url[dest_index:].title()] * how_man
 final_url = [url] * how_many_ads
 device = ['All'] * (how_many_ads / 2) + ['Mobile'] * (how_many_ads / 2) 
 campaign = ['Longtail %s'%str_destination] * how_many_ads
-ad_group = ['Longtail %s %s'%(str_destination, page_title.split()[2])] * how_many_ads
+ad_group = ['Longtail %s %s'%('Retreats', str_destination)] * how_many_ads
 ad_type = ['Text ad'] * how_many_ads
 
 #zip column
