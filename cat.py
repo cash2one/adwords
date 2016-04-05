@@ -816,27 +816,14 @@ campaign = [camp] * len(all_comb) #custom per landing page; same for all keyword
 
 #prepare column ad_group
 
-if len(all_comb) <= 5000:
-    str_cat = cat[0].title()
-    adg = "Longtail %s %s %s" %(str_cat, str_style, str_destination)
-    
-    #eliminate double spaces
-    adg = adg.split()
-    adg = ' '.join(adg)
+str_cat = cat[0].title()
+adg = "Longtail %s %s %s" %(str_cat, str_style, str_destination)
 
-    ad_group = [adg] * len(all_comb)
+#eliminate double spaces
+adg = adg.split()
+adg = ' '.join(adg)
 
-elif len(all_comb) > 5000:
-    ad_group = []
-    for i in range(len(all_comb)):
-        a = all_comb[i]
-        for x in range(len(a)):
-            if a[x] in cat:
-                str_cat = ''.join(a[x]).title()
-                adg = "Longtail %s %s %s" %(str_cat, str_style, str_destination)
-                adg = adg.split()
-                adg = ' '.join(adg)
-                ad_group.append(adg)
+ad_group = [adg] * len(all_comb)
 
 ######################################################################################
 
@@ -869,8 +856,6 @@ for i in range(len(ad_group)):
         ad_group[i] = ad_group[i].replace('Usa', 'USA')
     if 'Uk' in ad_group[i]:
         ad_group[i] = ad_group[i].replace('Uk', 'UK')
-    if "'\S" in ad_group[i]:
-        ad_group[i] = ad_group[i].replace("'\S", "'\s")
 
 #zip each columns
 rows = []
@@ -1035,6 +1020,20 @@ device = ['All'] * (how_many_ads / 2) + ['Mobile'] * (how_many_ads / 2)
 campaign = [camp] * how_many_ads
 ad_group2 = [adg] * how_many_ads
 ad_type = ['Text ad'] * how_many_ads #universal
+
+######################################################################################
+#minor tweaks before zipping
+for i in range(len(campaign)):
+    if 'Usa' in campaign[i]:
+        campaign[i] = campaign[i].replace('Usa', 'USA')
+    elif 'Uk' in campaign[i]:
+        campaign[i] = campaign[i].replace('Uk', 'UK')
+
+for i in range(len(ad_group2)):
+    if 'Usa' in ad_group2[i]:
+        ad_group2[i] = ad_group2[i].replace('Usa', 'USA')
+    if 'Uk' in ad_group2[i]:
+        ad_group2[i] = ad_group2[i].replace('Uk', 'UK')
 
 ######################################################################################
 
