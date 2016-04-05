@@ -816,7 +816,7 @@ campaign = [camp] * len(all_comb) #custom per landing page; same for all keyword
 
 #prepare column ad_group
 
-if len(all_comb) <= 5000:
+if len(all_comb) <= 19994:
     str_cat = cat[0].title()
     adg = "Longtail %s %s %s" %(str_cat, str_style, str_destination)
     
@@ -826,7 +826,7 @@ if len(all_comb) <= 5000:
 
     ad_group = [adg] * len(all_comb)
 
-elif len(all_comb) > 5000:
+elif len(all_comb) > 19994:
     ad_group = []
     for i in range(len(all_comb)):
         a = all_comb[i]
@@ -1168,9 +1168,25 @@ if len(set(ad_group)) > 1:
     campaign = [camp] * how_many_ads
     ad_group2 = adgs * (how_many_ads / len(adgs))
     ad_type = ['Text ad'] * how_many_ads #universal
-    
+
 ######################################################################################
 
+#minor tweaks before zipping
+for i in range(len(campaign)):
+    if 'Usa' in campaign[i]:
+        campaign[i] = campaign[i].replace('Usa', 'USA')
+    elif 'Uk' in campaign[i]:
+        campaign[i] = campaign[i].replace('Uk', 'UK')
+
+for i in range(len(ad_group2)):
+    if 'Usa' in ad_group2[i]:
+        ad_group2[i] = ad_group2[i].replace('Usa', 'USA')
+    if 'Uk' in ad_group2[i]:
+        ad_group2[i] = ad_group2[i].replace('Uk', 'UK')
+    if "'\S" in ad_group2[i]:
+        ad_group2[i] = ad_group2[i].replace("'\S", "'\s")
+
+######################################################################################
 #zip column
 i=0
 ac_rows1 =[]
