@@ -724,7 +724,7 @@ all_comb = sorted(set(all_comb))#remove duplicates
 
 for i in range(len(all_comb)):
     a = all_comb[i]
-    for x in range(len(a)-1):
+    for x in range(len(`a)-1):
         if (a[x] == a[x+1]) or (a[x]+'s' == a[x+1]) or (a[x] == a[x+1]+'s'):
             all_comb[i] = a[:x+1] + a[x+2:]
 
