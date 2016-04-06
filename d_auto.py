@@ -231,16 +231,6 @@ elif destination_front[0] == 'Koh Samui':
     destination_back.append('in Samui')
     destination_back.append('Samui')
 
-
-######################################################################################
-
-#set ad descriptions here       
-desc11 = "Reviews & Best Price Guarantee!" 
-desc12 = "Reserve Your Dream Retreat Today"
-
-desc21 = "Reviews & Best Price Guarantee!"
-desc22 = "%s Top Rated Package Deals Online"%count
-
 ######################################################################################
 
 #prepare keyword components
@@ -301,14 +291,19 @@ results = sorted(set(results))
 
 ######################################################################################
 
-#prepare csv file content for keywords
+#prepare csv file  for keywords
+
+#if there is only one destination
 if len(destination_back) == 1:
     str_destination = destination_back[0]
-    
+
+#if there are more than one destination    
 else:
     str_destination = ' '.join(destination).replace('And', '&')
 
-#prepare column titles for the csv file
+######################################################################################
+
+#column titles for keywords
 kw_column_titles = ["Keyword state", 
                     "Keyword", 
                     "Match type",
@@ -317,7 +312,9 @@ kw_column_titles = ["Keyword state",
                     "Keyword max CPC",
                     "Ad group max CPC"]
 
-#prepare each column
+######################################################################################                    
+
+#prepare column values
 keyword_state = ['enabled'] * len(results)
 #keyword -> results
 match_type = ['Exact'] * len(results)
@@ -326,8 +323,29 @@ ad_group = ['Longtail %s %s'%('Retreats', str_destination)] * len(results)
 keyword_max_cpc = [max_cpc] * len(results)
 ad_group_max_cpc = [max_cpc] * len(results)
 
+######################################################################################
+
+#tweaks before zipping
+for i in range(len(campaign)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
+    if 'Usa' in campaign[i]:
+        campaign[i] = campaign[i].replace('Usa', 'USA')
+    elif 'Uk' in campaign[i]:
+        campaign[i] = campaign[i].replace('Uk', 'UK')
+    elif 'United Kingdom' in campaign[i]:
+        campaign[i] = campaign[i].replace('United Kingdom', 'UK')
+
+for i in range(len(ad_group)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
+    if 'Usa' in ad_group[i]:
+        ad_group[i] = ad_group[i].replace('Usa', 'USA')
+    elif 'Uk' in ad_group[i]:
+        ad_group[i] = ad_group[i].replace('Uk', 'UK')
+    elif 'United Kingdom' in ad_group[i]:
+        ad_group[i] = ad_group[i].replace('United Kingdom', 'UK')
+
+######################################################################################
+
 #zip each columns
-i=0
+
 rows = []
 for i in range(len(results)):
     rows.append([keyword_state[i],
@@ -337,7 +355,6 @@ for i in range(len(results)):
                  ad_group[i],
                  keyword_max_cpc[i],
                  ad_group_max_cpc[i]])
-    i+1
 
 ######################################################################################
 
@@ -363,10 +380,21 @@ Please check your current directory for the stored result in a csv file. """ %(l
 
 ######################################################################################
 
-#prepare csv file content for ads
+#prepare csv file for ads
+
+#set ad descriptions here       
+desc11 = "Reviews & Best Price Guarantee!" 
+desc12 = "Reserve Your Dream Retreat Today"
+
+desc21 = "Reviews & Best Price Guarantee!"
+desc22 = "%s Top Rated Package Deals Online"%count
+
+#how many ads?
 how_many_ads = len(destination_f) * 4
 
-#prepare column titles
+######################################################################################
+
+#prepare column titles for ads
 ac_column_titles = ["Ad state",
                     "Ad",
                     "Description line 1",
@@ -378,7 +406,9 @@ ac_column_titles = ["Ad state",
                     "Ad group",
                     "Ad type"]
 
-#prepare each column
+######################################################################################
+
+#prepare column values for ads
 ad_state = ['enabled'] * how_many_ads
 ad = headlines * 2
 d1 = ([desc11] * 2 + [desc21] * 2) * len(destination_f)
@@ -389,6 +419,48 @@ device = ['All'] * (how_many_ads / 2) + ['Mobile'] * (how_many_ads / 2)
 campaign = ['Longtail %s'%str_destination] * how_many_ads
 ad_group = ['Longtail %s %s'%('Retreats', str_destination)] * how_many_ads
 ad_type = ['Text ad'] * how_many_ads
+
+######################################################################################
+
+#tweaks before zipping
+for i in range(len(campaign)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
+    if 'Usa' in campaign[i]:
+        campaign[i] = campaign[i].replace('Usa', 'USA')
+    elif 'Uk' in campaign[i]:
+        campaign[i] = campaign[i].replace('Uk', 'UK')
+    elif 'United Kingdom' in campaign[i]:
+        campaign[i] = campaign[i].replace('United Kingdom', 'UK')
+
+for i in range(len(ad_group)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
+    if 'Usa' in ad_group[i]:
+        ad_group[i] = ad_group[i].replace('Usa', 'USA')
+    elif 'Uk' in ad_group[i]:
+        ad_group[i] = ad_group[i].replace('Uk', 'UK')
+    elif 'United Kingdom' in ad_group[i]:
+        ad_group[i] = ad_group[i].replace('United Kingdom', 'UK')
+
+for i in range(len(ad)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
+
+    if 'Usa' in ad[i]:
+        ad[i] = ad[i].replace('Usa', 'USA')
+    elif 'Uk' in ad[i]:
+        ad[i] = ad[i].replace('Uk', 'UK')
+    elif 'United Kingdom' in ad[i]:
+        ad[i] = ad[i].replace('United Kingdom', 'UK')
+
+    if len(ad[i]) > 25: #yoga retreats the americas -> yoga retreats americas
+        if 'The' in ad[i]:
+            ad[i] = ad[i].replace("The", '')
+
+for i in range(len(display_url)): #www.../United-Kingom -> www.../UK
+    if 'United-Kingdom' in display_url[i]:
+        display_url[i] = 'www.bookyogaretreats.com/UK'
+    elif 'Canary-Islands' in display_url[i]:
+        display_url[i] = 'www.bookyogaretreats.com/Spain'
+
+
+
+######################################################################################
 
 #zip column
 ac_rows_all =[]
