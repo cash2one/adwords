@@ -451,20 +451,21 @@ if 'hour' in cat[0]:
 
 #yoga holidays exception
 if 'holidays' in cat[0]:
-    cat[0] = 'yoga holiday'
-    cat.append('yoga holidays')
-    yoga = ['']
+    cat[0] = 'holidays'
+    cat.append('holiday')
     holiday_word1 = ['retreat',
                      'retreats',
-                     'vacation',
-                     'vacations',
-                     'package',
-                     'packages',
-                     'resort',
+                     'resort', 
                      'resorts',
                      'camp',
-                     'camps'] 
-    
+                     'camps',
+                     'package', 
+                     'packages', 
+                     'deal',
+                     'deals',
+                     ''] 
+    holiday_word2 = ['']
+
 #ashrams variant
 if 'ashrams' in cat[0]:
     cat.append('ashram')
@@ -817,6 +818,7 @@ campaign = [camp] * len(all_comb) #custom per landing page; same for all keyword
 #prepare column ad_group
 
 str_cat = cat[0].title()
+
 adg = "Longtail %s %s %s" %(str_cat, str_style, str_destination)
 
 #eliminate double spaces
@@ -844,18 +846,22 @@ keywords = sorted(set(keywords))
 
 ######################################################################################
 
-#minor tweaks before zipping
-for i in range(len(campaign)):
+#tweaks before zipping
+for i in range(len(campaign)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
     if 'Usa' in campaign[i]:
         campaign[i] = campaign[i].replace('Usa', 'USA')
     elif 'Uk' in campaign[i]:
         campaign[i] = campaign[i].replace('Uk', 'UK')
+    elif 'United Kingdom' in campaign[i]:
+        campaign[i] = campaign[i].replace('United Kingdom', 'UK')
 
-for i in range(len(ad_group)):
+for i in range(len(ad_group)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
     if 'Usa' in ad_group[i]:
         ad_group[i] = ad_group[i].replace('Usa', 'USA')
-    if 'Uk' in ad_group[i]:
+    elif 'Uk' in ad_group[i]:
         ad_group[i] = ad_group[i].replace('Uk', 'UK')
+    elif 'United Kingdom' in ad_group[i]:
+        ad_group[i] = ad_group[i].replace('United Kingdom', 'UK')
 
 #zip each columns
 rows = []
@@ -1008,7 +1014,7 @@ else: #with destination
 
 if 'Yoga' in str_cat:
     str_cat = str_cat.split()[1]
-    
+
 #prepare each column
 ad_state = ['enabled'] * how_many_ads #universal
 ad = headlines * (how_many_ads / 2) #universal
@@ -1022,18 +1028,41 @@ ad_group2 = [adg] * how_many_ads
 ad_type = ['Text ad'] * how_many_ads #universal
 
 ######################################################################################
-#minor tweaks before zipping
-for i in range(len(campaign)):
+#tweaks before zipping
+for i in range(len(campaign)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
     if 'Usa' in campaign[i]:
         campaign[i] = campaign[i].replace('Usa', 'USA')
     elif 'Uk' in campaign[i]:
         campaign[i] = campaign[i].replace('Uk', 'UK')
+    elif 'United Kingdom' in campaign[i]:
+        campaign[i] = campaign[i].replace('United Kingdom', 'UK')
 
-for i in range(len(ad_group2)):
+for i in range(len(ad_group2)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
     if 'Usa' in ad_group2[i]:
         ad_group2[i] = ad_group2[i].replace('Usa', 'USA')
-    if 'Uk' in ad_group2[i]:
+    elif 'Uk' in ad_group2[i]:
         ad_group2[i] = ad_group2[i].replace('Uk', 'UK')
+    elif 'United Kingdom' in ad_group2[i]:
+        ad_group2[i] = ad_group2[i].replace('United Kingdom', 'UK')
+
+for i in range(len(ad)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
+
+    if 'Usa' in ad[i]:
+        ad[i] = ad[i].replace('Usa', 'USA')
+    elif 'Uk' in ad[i]:
+        ad[i] = ad[i].replace('Uk', 'UK')
+    elif 'United Kingdom' in ad[i]:
+        ad[i] = ad[i].replace('United Kingdom', 'UK')
+
+    if len(ad[i]) > 25: #yoga retreats the americas -> yoga retreats americas
+        if 'The' in ad[i]:
+            ad[i] = ad[i].replace("The", '')
+
+for i in range(len(display_url)): #www.../United-Kingom -> www.../UK
+    if 'United-Kingdom' in display_url[i]:
+        display_url[i] = 'www.bookyogaretreats.com/UK'
+    elif 'Canary-Islands' in display_url[i]:
+        display_url[i] = 'www.bookyogaretreats.com/Spain'
 
 ######################################################################################
 
