@@ -298,7 +298,7 @@ holiday_word2 = [
 'deals',
 '']
 
-# months = [
+months = [month, 'in ' + month]
 # 'January',
 # 'February',
 # 'March',
@@ -313,15 +313,19 @@ holiday_word2 = [
 # 'December',
 # '']
 
-# year = ['2016', '']
+year = [year]
 
 ######################################################################################
 
 #structure and combination
-a1 = [yoga, holiday_word1, holiday_word2] #months, year] #ex) yoga retreat holiday package
+a1 = [yoga, holiday_word1, holiday_word2, months, year] #months, year] #ex) yoga retreat holiday package
+a2 = [yoga, holiday_word1, holiday_word2, year, [month]]
 
 import itertools
-comb = list(itertools.product(*a1))
+aa1 = list(itertools.product(*a1))
+aa2 = list(itertools.product(*a2))
+
+comb = aa1 + aa2
 
 ######################################################################################
 
@@ -332,14 +336,6 @@ for i in range(len(comb)): #remove all empty strings
     comb[i] = tuple(comb[i].split())
 
 all_comb = comb
-
-for i in range(len(all_comb)): #remove adjacent duplicates
-    a = all_comb[i]
-    for x in range(len(a)-1):
-        if (a[x] == a[x+1]) or (a[x]+'s' == a[x+1]) or (a[x] == a[x+1]+'s'):
-            all_comb[i] = a[:x+1] + a[x+2:]
-
-all_comb = sorted(set(all_comb)) #remove duplicates and sort the list in an alphabetical order 
 
 def remove_duplicates(values): #aux
     output = []
@@ -352,31 +348,26 @@ def remove_duplicates(values): #aux
             seen.add(value)
     return output
 
-for i in range(len(all_comb)): #remove all duplicate words 
+for i in range(len(all_comb)): #remove all duplicate words within each keyword
     all_comb[i] = tuple(remove_duplicates(all_comb[i]))
-    all_comb[i] = ' '.join(all_comb[i])
+    all_comb[i] = '[' + ' '.join(all_comb[i]) + ']'
+
+all_comb = sorted(set(all_comb)) #remove duplicates and sort the list in an alphabetical order 
     
-my = []
-ym = []
-
-for i in range(len(all_comb)):
-    my.append('[' + all_comb[i] + " " + month + " " + year + ']')
-    ym.append('[' + all_comb[i] + " " + year + " " + month + ']')
-
-all_combs = my+ym
+all_combs = all_comb
 
 ######################################################################################
 
 #export keywords onto a csv file
 import csv
 
-file_name = "%s Generic.csv" %all_comb[0]
+file_name = "%s Generic.csv" %all_combs[0]
 
 with open(file_name, 'wb') as f:
     writer = csv.writer(f)
     for i in range(len(all_combs)):
         writer.writerow([all_combs[i]])
 
-print "[Notification] %s generic keywords for %s are generated successfully. Please check your current directory for the output in a CSV file." %(len(all_comb), year)
+print "[Notification] %s generic keywords for %s are generated successfully. Please check your current directory for the output in a CSV file." %(len(all_comb), month + year[0])
 
 ######################################################################################
