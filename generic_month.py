@@ -295,7 +295,9 @@ holiday_word2 = [
 'deals',
 '']
 
-# months = [
+months = [month, 'in ' + month]
+
+
 # 'January',
 # 'February',
 # 'March',
@@ -315,7 +317,7 @@ holiday_word2 = [
 ######################################################################################
 
 #structure and combination
-a1 = [yoga, holiday_word1, holiday_word2] #months, year] #ex) yoga retreat holiday package
+a1 = [yoga, holiday_word1, holiday_word2, months] #months, year] #ex) yoga retreat holiday package
 
 import itertools
 comb = list(itertools.product(*a1))
@@ -328,15 +330,13 @@ for i in range(len(comb)): #remove all empty strings
     comb[i] = ' '.join(comb[i])
     comb[i] = tuple(comb[i].split())
 
-all_comb = comb
+all_comb = list(set(comb))
 
 for i in range(len(all_comb)): #remove adjacent duplicates
     a = all_comb[i]
     for x in range(len(a)-1):
         if (a[x] == a[x+1]) or (a[x]+'s' == a[x+1]) or (a[x] == a[x+1]+'s'):
             all_comb[i] = a[:x+1] + a[x+2:]
-
-all_comb = sorted(set(all_comb)) #remove duplicates and sort the list in an alphabetical order 
 
 def remove_duplicates(values): #aux
     output = []
@@ -352,9 +352,9 @@ def remove_duplicates(values): #aux
 for i in range(len(all_comb)): #remove all duplicate words 
     all_comb[i] = tuple(remove_duplicates(all_comb[i]))
     all_comb[i] = ' '.join(all_comb[i]) 
-    all_comb[i] = '[' + all_comb[i] + " " + month + ']'
-    
-    
+    all_comb[i] = '[' + all_comb[i] + ']'
+ 
+all_comb = sorted(set(all_comb)) #remove duplicates and sort the list in an alphabetical order    
 ######################################################################################
 
 #export keywords onto a csv file
