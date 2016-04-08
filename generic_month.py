@@ -5,12 +5,12 @@
 
 import sys
 
-#set max cpc bid for keyword and ad group here
-print "Please type in the max cpc for the landing page."
-max_cpc = float(raw_input())
+# #set max cpc bid for keyword and ad group here
+# print "Please type in the max cpc for the landing page."
+# max_cpc = float(raw_input())
 
-if type(max_cpc) != float:
-    sys.exit("Please type in a price in form of 0.00")
+# if type(max_cpc) != float:
+#     sys.exit("Please type in a price in form of 0.00")
 
 ######################################################################################
 
@@ -360,7 +360,7 @@ all_comb = sorted(set(all_comb)) #remove duplicates and sort the list in an alph
 #export keywords onto a csv file
 import csv
 
-file_name = "%s Generic.csv" %all_comb[0]
+file_name = "Generic %s.csv" %month
 
 with open(file_name, 'wb') as f:
     writer = csv.writer(f)
