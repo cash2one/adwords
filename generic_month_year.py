@@ -5,12 +5,12 @@
 
 import sys
 
-#set max cpc bid for keyword and ad group here
-print "Please type in the max cpc for the landing page."
-max_cpc = float(raw_input())
+# #set max cpc bid for keyword and ad group here
+# print "Please type in the max cpc for the landing page."
+# max_cpc = float(raw_input())
 
-if type(max_cpc) != float:
-    sys.exit("Please type in a price in form of 0.00")
+# if type(max_cpc) != float:
+#     sys.exit("Please type in a price in form of 0.00")
 
 ######################################################################################
 
@@ -299,6 +299,7 @@ holiday_word2 = [
 '']
 
 months = [month, 'in ' + month]
+
 # 'January',
 # 'February',
 # 'March',
@@ -313,13 +314,11 @@ months = [month, 'in ' + month]
 # 'December',
 # '']
 
-year = [year]
-
 ######################################################################################
 
 #structure and combination
-a1 = [yoga, holiday_word1, holiday_word2, months, year] #months, year] #ex) yoga retreat holiday package
-a2 = [yoga, holiday_word1, holiday_word2, year, [month]]
+a1 = [yoga, holiday_word1, holiday_word2, months, [year]] #months, year] #ex) yoga retreat holiday package
+a2 = [yoga, holiday_word1, holiday_word2, [year], [month]]
 
 import itertools
 aa1 = list(itertools.product(*a1))
@@ -337,6 +336,12 @@ for i in range(len(comb)): #remove all empty strings
 
 all_comb = comb
 
+for i in range(len(all_comb)): #remove adjacent duplicates
+    a = all_comb[i]
+    for x in range(len(a)-1):
+        if (a[x] == a[x+1]) or (a[x]+'s' == a[x+1]) or (a[x] == a[x+1]+'s'):
+            all_comb[i] = a[:x+1] + a[x+2:]
+            
 def remove_duplicates(values): #aux
     output = []
     seen = set()
@@ -361,7 +366,7 @@ all_combs = all_comb
 #export keywords onto a csv file
 import csv
 
-file_name = "%s Generic.csv" %all_combs[0]
+file_name = "Generic %s %s.csv" %(month, year)
 
 with open(file_name, 'wb') as f:
     writer = csv.writer(f)
