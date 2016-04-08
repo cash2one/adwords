@@ -5,12 +5,12 @@
 
 import sys
 
-#set max cpc bid for keyword and ad group here
-print "Please type in the max cpc for the landing page."
-max_cpc = float(raw_input())
+# #set max cpc bid for keyword and ad group here
+# print "Please type in the max cpc for the landing page."
+# max_cpc = float(raw_input())
 
-if type(max_cpc) != float:
-    sys.exit("Please type in a price in form of 0.00")
+# if type(max_cpc) != float:
+#     sys.exit("Please type in a price in form of 0.00")
 
 ######################################################################################
 
@@ -317,8 +317,8 @@ holiday_word2 = [
 ######################################################################################
 
 #structure and combination
-a1 = [yoga, holiday_word1, holiday_word2, year] #ex) yoga retreat holiday package
-a2 = [year, yoga, holiday_word1, holiday_word2]
+a1 = [yoga, holiday_word1, holiday_word2, [year]] #ex) yoga retreat holiday package
+a2 = [[year], yoga, holiday_word1, holiday_word2]
 
 import itertools
 aa1 = list(itertools.product(*a1))
@@ -364,13 +364,13 @@ all_comb = sorted(set(all_comb)) #remove duplicates and sort the list in an alph
 #export keywords onto a csv file
 import csv
 
-file_name = "%s Generic.csv" %all_comb[0]
+file_name = "Generic %s.csv" %year
 
 with open(file_name, 'wb') as f:
     writer = csv.writer(f)
     for i in range(len(all_comb)):
         writer.writerow([all_comb[i]])
 
-print "[Notification] %s generic keywords for %s are generated successfully. Please check your current directory for the output in a CSV file." %(len(all_comb), month)
+print "[Notification] %s generic keywords for %s are generated successfully. Please check your current directory for the output in a CSV file." %(len(all_comb), year)
 
 ######################################################################################
