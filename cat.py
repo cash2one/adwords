@@ -121,6 +121,17 @@ cat_mrkr = '/c/'
 style_mrkr = '/s/'
 cont_mrkr = '/d/'
 
+def remove_duplicates(values): #aux
+    output = []
+    seen = set()
+    for value in values:
+        # If value has not been encountered yet,
+        # ... add it to both list and set.
+        if value not in seen:
+            output.append(value)
+            seen.add(value)
+    return output
+
 ######################################################################################
 
 #extract categories, styles and destination from the URL
@@ -1014,6 +1025,11 @@ else: #with destination
 
 if 'Yoga' in str_cat:
     str_cat = str_cat.split()[1]
+
+
+for i in range(len(desc1)):
+    if (len(desc1[i]) > 35) and ('View' in desc1[i]):
+        desc1[i] = desc1[i].replace("View ", '')
 
 #prepare each column
 ad_state = ['enabled'] * how_many_ads #universal
