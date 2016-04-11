@@ -964,13 +964,13 @@ if len(set(ad_group)) == 1: #if there is only one ad group (keywords < 5000)
             headlines.append(headline1)
             headlines.append(headline2)
 
-            desc11 = "Book Online %s Retreats." %a
-            desc21 = "View %s %s Retreats Now." %(count, a)
+            desc11 = "Book Online %s Retreats!" %a
+            desc21 = "View %s %s Retreats Now!" %(count, a)
             desc1.append(desc11)
             desc1.append(desc21)
 
-            desc12 = 'Reviews & Best Price Guarantee!'
-            desc22 = 'Reviews & Best Price Guarantee!'
+            desc12 = 'Reviews & Best Price Guarantee'
+            desc22 = 'Reviews & Best Price Guarantee'
             desc2.append(desc12)
             desc2.append(desc22)
 
@@ -991,12 +991,12 @@ if len(set(ad_group)) == 1: #if there is only one ad group (keywords < 5000)
                 headlines.append(headline1)
                 headlines.append(headline2)
 
-            desc11 = "%s Retreats Book Online." %a
-            desc21 = "View %s %s Yoga Retreats." %(count, a)
+            desc11 = "%s Retreats Book Online!" %a
+            desc21 = "View %s %s Yoga Retreats!" %(count, a)
             desc1.append(desc11)
             desc1.append(desc21)
 
-            desc21 = "Reviews & Best Price Guarantee!"
+            desc21 = "Reviews & Best Price Guarantee"
             desc22 = 'Compare and Book Top Rated Listings'
             desc2.append(desc21)
             desc2.append(desc22)
@@ -1015,12 +1015,12 @@ if len(set(ad_group)) == 1: #if there is only one ad group (keywords < 5000)
                 headlines.append(headline1)
                 headlines.append(headline2)
 
-            desc11 = "%s %s Yoga Deals." %(a, str_style)
-            desc12 = "%s Yoga %s Retreat." %(str_style, a)
+            desc11 = "%s %s Yoga Deals!" %(a, str_style)
+            desc12 = "%s Yoga %s Retreat!" %(str_style, a)
             desc1.append(desc11)
             desc1.append(desc12)
 
-            desc21 = "Reviews & Best Price Guarantee!"
+            desc21 = "Reviews & Best Price Guarantee"
             desc22 = "Compare and Book Top Rated Listings"
             desc2.append(desc21)
             desc2.append(desc22)
@@ -1093,8 +1093,8 @@ if len(set(ad_group)) > 1:
                 desc1.append(desc11)
                 desc1.append(desc21)
 
-                desc12 = 'Reviews & Best Price Guarantee!'
-                desc22 = 'Reviews & Best Price Guarantee!'
+                desc12 = 'Reviews & Best Price Guarantee'
+                desc22 = 'Reviews & Best Price Guarantee'
                 desc2.append(desc12)
                 desc2.append(desc22)
 
@@ -1115,8 +1115,8 @@ if len(set(ad_group)) > 1:
                     headlines.append(headline1)
                     headlines.append(headline2)
 
-                desc11 = "Retreats %s Book Online." %a
-                desc21 = "View %s %s Yoga Retreats." %(count, a)
+                desc11 = "Retreats %s Book Online!" %a
+                desc21 = "View %s %s Yoga Retreats!" %(count, a)
                 desc1.append(desc11)
                 desc1.append(desc21)
 
@@ -1140,8 +1140,8 @@ if len(set(ad_group)) > 1:
                     headlines.append(headline1)
                     headlines.append(headline2)
 
-                desc11 = "%s %s Yoga Deals." %(a, str_style)
-                desc12 = "%s Yoga %s Retreat." %(str_style, a)
+                desc11 = "%s %s Yoga Deals!" %(a, str_style)
+                desc12 = "%s Yoga %s Retreat!" %(str_style, a)
                 desc1.append(desc11)
                 desc1.append(desc12)
                 
@@ -1253,7 +1253,7 @@ for i in range(how_many_ads):
         print ad[i]
         print len(ad[i])
         print ""
-    if len(d1) > 35:
+    if len(d1[i]) > 35:
         print "[Warning] Description line 1 longer than 35 chars"
         print d1[i]
         print len(d1[i])
