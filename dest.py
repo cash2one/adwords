@@ -131,6 +131,10 @@ else:
 
 print "[Checking] headlines:", headlines
 
+for i in range(len(headlines)):
+    if (len(headlines[i]) > 25) and ('2016' in headlines[i]):
+        headlines[i] = headlines[i].replace(' 2016', '')
+        
 destination_f = destination_front[:]
 
 if destination_front[0] == 'United Arab Emirates':
@@ -450,15 +454,15 @@ for i in range(len(ad)): #Usa -> USA, Uk -> UK, United Kingdom -> UK
 
     if len(ad[i]) > 25: #yoga retreats the americas -> yoga retreats americas
         if 'The' in ad[i]:
-            ad[i] = ad[i].replace("The", '')
+            ad[i] = ad[i].replace("The Americas", 'Americas')
 
 for i in range(len(display_url)): #www.../United-Kingom -> www.../UK
     if 'United-Kingdom' in display_url[i]:
         display_url[i] = 'www.bookyogaretreats.com/UK'
     elif 'Canary-Islands' in display_url[i]:
         display_url[i] = 'www.bookyogaretreats.com/Spain'
-
-
+    elif 'Training' in display_url[i]:
+        display_url[i] = 'www.bookyogaretreats.com/Teacher'
 
 ######################################################################################
 
