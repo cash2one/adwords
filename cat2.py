@@ -724,7 +724,7 @@ all_comb = sorted(set(all_comb))#remove duplicates
 
 for i in range(len(all_comb)):
     a = all_comb[i]
-    for x in range(len(`a)-1):
+    for x in range(len(a)-1):
         if (a[x] == a[x+1]) or (a[x]+'s' == a[x+1]) or (a[x] == a[x+1]+'s'):
             all_comb[i] = a[:x+1] + a[x+2:]
 
@@ -1027,7 +1027,11 @@ if len(set(ad_group)) == 1: #if there is only one ad group (keywords < 5000)
     
     if 'Yoga' in str_cat:
         str_cat = str_cat.split()[1]
-        
+   
+    for i in range(len(desc1)):
+        if (len(desc1[i]) > 35) and ('View' in desc1[i]):
+            desc1[i] = desc1[i].replace("View ", '')  
+               
     #prepare each column
     ad_state = ['enabled'] * how_many_ads #universal
     ad = headlines * (how_many_ads / 2) #universal
@@ -1159,7 +1163,11 @@ if len(set(ad_group)) > 1:
 
     if 'Yoga' in str_cat:
         str_cat = str_cat.split()[1]
-        
+    
+    for i in range(len(desc1)):
+        if (len(desc1[i]) > 35) and ('View' in desc1[i]):
+            desc1[i] = desc1[i].replace("View ", '')  
+            
     #prepare each column
     ad_state = ['enabled'] * how_many_ads #universal
     ad = headlines * 2 #universal
