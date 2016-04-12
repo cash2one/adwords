@@ -352,6 +352,19 @@ def remove_duplicates(values): #aux
             output.append(value)
             seen.add(value)
     return output
+    
+#remove keywords with plural/singular duplicates within them 
+#e.g. yoga retreat budget retreat, yoga retreats budget retreat
+
+for i in range(len(all_comb)): #yoga retreat budget retreat
+    all_comb[i] = tuple(remove_duplicates(all_comb[i]))
+
+for i in range(len(all_comb)): #yoga retreats budget retreat, yoga retreat budget retreats
+    if (all_comb[i][-1]+'s' == all_comb[i][1]) or (all_comb[i][-1] == all_comb[i][1]+'s'): 
+        all_comb[i] = []
+
+all_comb = [x for x in all_comb if x != []] #remove empty lists in all_comb
+
 
 for i in range(len(all_comb)): #remove all duplicate words within each keyword
     all_comb[i] = tuple(remove_duplicates(all_comb[i]))
