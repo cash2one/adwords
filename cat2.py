@@ -121,6 +121,17 @@ cat_mrkr = '/c/'
 style_mrkr = '/s/'
 cont_mrkr = '/d/'
 
+def remove_duplicates(values): #aux
+    output = []
+    seen = set()
+    for value in values:
+        # If value has not been encountered yet,
+        # ... add it to both list and set.
+        if value not in seen:
+            output.append(value)
+            seen.add(value)
+    return output
+
 ######################################################################################
 
 #extract categories, styles and destination from the URL
@@ -729,6 +740,18 @@ for i in range(len(all_comb)):
             all_comb[i] = a[:x+1] + a[x+2:]
 
 all_comb = sorted(set(all_comb)) #remove duplicates and sort the list in an alphabetical order 
+
+#remove keywords with plural/singular duplicates within them 
+#e.g. yoga retreat budget retreat, yoga retreats budget retreat
+
+for i in range(len(all_comb)): #yoga retreat budget retreat
+    all_comb[i] = tuple(remove_duplicates(all_comb[i]))
+
+for i in range(len(all_comb)): #yoga retreats budget retreat, yoga retreat budget retreats
+    if (all_comb[i][-1]+'s' == all_comb[i][1]) or (all_comb[i][-1] == all_comb[i][1]+'s'): 
+        all_comb[i] = []
+
+all_comb = [x for x in all_comb if x != []] #remove empty lists in all_comb
 
 ######################################################################################
 
