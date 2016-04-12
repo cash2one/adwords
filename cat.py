@@ -741,6 +741,19 @@ for i in range(len(all_comb)):
 
 all_comb = sorted(set(all_comb)) #remove duplicates and sort the list in an alphabetical order 
 
+
+#remove keywords with plural/singular duplicates within them 
+#e.g. yoga retreat budget retreat, yoga retreats budget retreat
+
+for i in range(len(all_comb)): #yoga retreat budget retreat
+    all_comb[i] = tuple(remove_duplicates(all_comb[i]))
+
+for i in range(len(all_comb)): #yoga retreats budget retreat, yoga retreat budget retreats
+    if (all_comb[i][-1]+'s' == all_comb[i][1]) or (all_comb[i][-1] == all_comb[i][1]+'s'): 
+        all_comb[i] = []
+
+all_comb = [x for x in all_comb if x != []] #remove empty lists in all_comb
+
 ######################################################################################
 
 #count how many keywords have been created
