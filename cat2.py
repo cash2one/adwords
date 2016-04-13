@@ -975,7 +975,7 @@ if len(set(ad_group)) == 1: #if there is only one ad group (keywords < 5000)
             desc1.append(desc21)
 
             desc12 = 'Book Your Dream Retreat Today'
-            desc22 = 'Compare and Book Top Rated Litings'
+            desc22 = 'Compare and Book Top Rated Listings'
             desc2.append(desc12)
             desc2.append(desc22)
 
@@ -1103,7 +1103,7 @@ if len(set(ad_group)) > 1:
                 desc1.append(desc21)
 
                 desc12 = 'Book Your Dream Retreat Today'
-                desc22 = 'Compare and Book Top Rated Litings'
+                desc22 = 'Compare and Book Top Rated Listings'
                 desc2.append(desc12)
                 desc2.append(desc22)
 
