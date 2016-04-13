@@ -461,10 +461,6 @@ for i in range(len(display_url)): #www.../United-Kingom -> www.../UK
         display_url[i] = 'www.bookyogaretreats.com/UK'
     elif 'Canary-Islands' in display_url[i]:
         display_url[i] = 'www.bookyogaretreats.com/Spain'
-    elif 'Training' in display_url[i]:
-        display_url[i] = 'www.bookyogaretreats.com/Teacher'
-    elif ('OnABudget' in display_url[i]) or ('Cheap' in display_url[i]) or ('Inexpensive in display_url[i]') or ('Affordable' in display_url[i]):
-        display_url[i] = 'www.bookyogaretreats.com/Budget'
 
 ######################################################################################
 
