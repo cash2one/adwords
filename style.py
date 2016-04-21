@@ -1,5 +1,30 @@
 #BookYogaRetreats
-#Style Only Keywords
+#For Landing Pages with Style Only
+
+#Only Generates Longtail Keywords (exact match)
+#No ad copies, no column titles (i.e. not readily prepared for bulk upload in googld adwords)
+
+#Bascially you just run the script, provide the style of yoga (e.g. Ashtanga, Hatha, etc)
+#and the max cpc, and the code outputs one csv file containing the longtail keywords (exact match)
+#for the provided style (e.g. Ashtanga yoga retreat package).
+#Then you copy paste those keywords in to the keyword tab 
+#in adwords in an appropriate ad group, instead of doing 
+#a bulk upload as you would with dest.py, cat.py or cat2.py.
+#It has been designed this way as it was deemed more efficeint, since there are less 
+#popular landing pages only consisting of Style
+
+######################################################################################
+
+#Coverage
+# Categories Style Destination
+#   0          0       0        (null)
+#   0          0       1        (covered in dest.py)
+#   0          1       0        (covered in this code)
+#   0          1       1        (will be covered in this code in the future)
+#   1          0       0        (covered in cat.py)
+#   1          0       1        (covered in cat.py)
+#   1          1       0        (covered in cat.py)
+#   1          1       1        (covered in cat.py)
 
 ######################################################################################
 
