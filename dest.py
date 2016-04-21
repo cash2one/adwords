@@ -1,10 +1,36 @@
 ######################################################################################
 
 #BookYogaRetreats
-#Destination Landing Pages Only
-#This file automatically generates longtail keywords and ads for a given landing page 
-#(destination landing pages only) in two seperate csv files. 
+#Automatic Longtail Keyword & Ad Copy Generator for Destination Landing Pages Only in BookYogaRetreats
+
+#This code is used where the landing page ONLY contains destination.
+#This means no category and no style, even when combined with a destination.
+
+#The script has two inputs:
+#(a) landing page url
+#(b) max cpc
+
+#For a provided landing page with only destination, this code will automatically generate:
+#(a) longtail keywords (exact match) with provided max cpc
+#(b) ad copies 
+
+#The script exports two seperate csv files in the current directory:
+#(a) one file consists of the longtail keywords (exact match)
+#(b) the other file consists of the ad copies
 #Both files are readily prepared for bulk upload in Google Adwords.
+
+######################################################################################
+
+#Coverage
+# Categories Style Destination
+#   0          0       0        (null)
+#   0          0       1        (covered in this code)
+#   0          1       0        (covered in style.py)
+#   0          1       1        (will be covered in style.py)
+#   1          0       0        (covered in cat.py)
+#   1          0       1        (covered in cat.py)
+#   1          1       0        (covered in cat.py)
+#   1          1       1        (covered in cat.py)
 
 ######################################################################################
 
