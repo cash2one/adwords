@@ -1,6 +1,51 @@
 ######################################################################################
 
-#ask user to provide landing page url.
+#BookYogaRetreats
+#Automatic Longtail Keyword & Ad Copy Generator for Caterogires Landing Pages in BookYogaRetreats
+
+#### ONLY USE THIS CODE FOR LANDING PAGES THAT YIELD LESS THAN OR EQUAL TO 19994 LONGTAIL KEYWORDS ####
+#### PLEASE SEE THE DESCRIPTION BELOW TO UNDERSTAND WHY ####
+
+#This code is used where: 
+#(a) the landing page contains a category
+#(b) the total number of longtail keywords for the landing page is less than or equal to 19994, 
+#which is the maximum number of possible keywords in a single ad group.
+
+#For landing pages that yield more than 19994 longtail keywords, cat2.py can be used,
+#where it will automatically generate multiple ad groups and assign the generated 
+#longtail keywords in each of the ad groups accoridngly.
+#On the other hand, this script only generates one ad group and assigns all the longtail keywords
+#in to that single ad group.
+
+#The script has two inputs:
+#(a) landing page url
+#(b) max cpc
+
+#For a provided landing page with a category, this code will automatically generate:
+#(a) longtail keywords (exact match) with provided max cpc
+#(b) ad copies 
+
+#The script exports two seperate csv files in the current directory:
+#(a) one file consists of the longtail keywords (exact match)
+#(b) the other file consists of the ad copies
+#Both files are readily prepared for bulk upload in Google Adwords.
+
+######################################################################################
+
+#Coverage
+# Categories Style Destination
+#   0          0       0        (null)
+#   0          0       1        (covered in dest.py)
+#   0          1       0        (covered in style.py)
+#   0          1       1        (will be covered in style.py)
+#   1          0       0        (covered in this code)
+#   1          0       1        (covered in this code)
+#   1          1       0        (covered in this code)
+#   1          1       1        (covered in this code)
+
+######################################################################################
+
+#ask user to provide landing page url
 import urllib2
 from BeautifulSoup import BeautifulSoup
 
@@ -9,6 +54,8 @@ url = raw_input()
 print ""
 
 #######################################################################################
+
+#ask user to provide a max cpc for the longtail keywords
 import sys
 
 #set max cpc bid for keyword and ad group here
@@ -704,7 +751,7 @@ elif (cont_mrkr in url) and (style_mrkr in url): #categories, style and destinat
 
 ######################################################################################
 
-#remove keywords like "UK (for women's) yoga retreat"
+#remove keywords like "UK for women's yoga retreat"
 for i in range(len(all_comb)):
     if (all_comb[i][0] in destination_front) and ('for' in all_comb[i][1]):
         all_comb[i] = []
@@ -712,7 +759,9 @@ for i in range(len(all_comb)):
 all_comb = [x for x in all_comb if x != []] #remove empty lists in all_comb
 
 ######################################################################################
-for i in range(len(all_comb)): #remove empty strings wihtin each list in all_comb
+
+#remove empty strings wihtin each list in all_comb
+for i in range(len(all_comb)): 
     all_comb[i] = tuple(x for x in all_comb[i] if x != '')
 
 #delete some keywords
@@ -723,7 +772,7 @@ for i in range(len(all_comb)): #delete keywords with 'on a budget' in the very f
         all_comb[i] = []
         
 all_comb = [x for x in all_comb if x != []] #remove empty lists in all_comb
-all_comb = sorted(set(all_comb))#remove duplicates
+all_comb = sorted(set(all_comb)) #remove duplicates
 
 ######################################################################################
 
