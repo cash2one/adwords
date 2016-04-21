@@ -1,5 +1,49 @@
 ######################################################################################
 
+#BookYogaRetreats
+#Automatic Longtail Keyword & Ad Copy Generator for Caterogires Landing Pages in BookYogaRetreats
+
+#### ONLY USE THIS CODE FOR LANDING PAGES THAT YIELDS MORE THAN 19994 LONGTAIL KEYWORDS ####
+#### PLEASE SEE THE DESCRIPTION BELOW TO UNDERSTAND WHY ####
+
+#This code is used where: 
+#(a) the landing page contains a category
+#(b) the total number of longtail keywords for the landing page is more than 19994, 
+#which is the maximum number of possible keywords in a single ad group.
+
+#For landing pages that yield less than 19994 longtail keywords, cat.py can be used,
+#where it will only generate one ad group.
+#On the other hand, this script automatically generates multiple ad groups and assign the generated 
+#longtail keywords in each of the ad groups accordingly.
+
+#The script has two inputs:
+#(a) landing page url
+#(b) max cpc
+
+#For a provided landing page with a category, this code will automatically generate:
+#(a) longtail keywords (exact match) with provided max cpc
+#(b) ad copies 
+
+#The script exports two seperate csv files in the current directory:
+#(a) one file consists of the longtail keywords (exact match)
+#(b) the other file consists of the ad copies
+#Both files are readily prepared for bulk upload in Google Adwords.
+
+######################################################################################
+
+#Coverage
+# Categories Style Destination
+#   0          0       0        (null)
+#   0          0       1        (covered in dest.py)
+#   0          1       0        (covered in style.py)
+#   0          1       1        (will be covered in style.py)
+#   1          0       0        (covered in this code)
+#   1          0       1        (covered in this code)
+#   1          1       0        (covered in this code)
+#   1          1       1        (covered in this code)
+
+######################################################################################
+
 #ask user to provide landing page url.
 import urllib2
 from BeautifulSoup import BeautifulSoup
@@ -9,6 +53,8 @@ url = raw_input()
 print ""
 
 #######################################################################################
+
+#ask user to provide a max cpc for the longtail keywords
 import sys
 
 #set max cpc bid for keyword and ad group here
