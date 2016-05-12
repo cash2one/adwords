@@ -1,21 +1,87 @@
-url = ''
+######################################################################################
 
-if 
+max_budget = '100000000' #100 euros
+max_cpc = '1000000' #1 euro
+match_type = 'EXACT' #BROAD, PHRASE, OR EXACT
 
+results = ['banana', 'yoga', 'appled']
+
+######################################################################################
+
+import urllib2
+from BeautifulSoup import BeautifulSoup
+
+url = 'https://www.bookyogaretreats.com/all/d/asia-and-oceania/australia'
+
+#extract the number of listings from landing page title
+soup = BeautifulSoup(urllib2.urlopen(url))
+page_title = str(soup.title.string)
+count = page_title.split()[0]
+
+if count.isdigit() == False:
+    sys.exit("[Alert] Cannot proceed further: the landing page has less than 3 listings. Please choose a different landing page with at least 3 listings.")
+
+######################################################################################
+
+if ('/d/' in url) and ('/c/' not in url) and ('/s/' not in url): #destination only
+
+    yoga = ['yoga']
+
+    holiday_word1 = [
+    'retreat',  
+    'retreats', 
+    'vacation',
+    'vacations',
+    'resort',
+    'resorts',
+    'camp',
+    'camps',
+    'package',
+    'packages',
+    'center',
+    'centers',
+    'centre',
+    'centres',
+    'deal',
+    'deals',
+    'training',
+    'trainings'
+    ]
+
+    holiday_word2 = [
+    'retreat',  
+    'retreats', 
+    'vacation',
+    'vacations',
+    'resort',
+    'resorts',
+    'camp',
+    'camps',
+    'package',
+    'packages',
+    'center',
+    'centers',
+    'centre',
+    'centres',
+    'deal',
+    'deals',
+    'training',
+    'trainings',
+    ''
+    ]
+
+######################################################################################
 
 
 import datetime
 import uuid
 from googleads import adwords
 
-max_budget = '100000000' #100 euros
-max_cpc = '1000000' #1 euro
-
 camps = ['USA', 'UK', 'Malaysia', 'India']
 campaign_ids = []
 
 ad_group_names = ['Retreats', 'Holidays', 'Yoga Weekends', 'Budget']
-ag_names = []
+ad_group_ids = []
 
 
 #create campaigns
@@ -120,19 +186,19 @@ if __name__ == '__main__':
     ad_group_service = client.GetService('AdGroupService', version='v201603')
 
 
-    for i in range(len(campaign_ids)):
+    for i in range(len(campaign_ids)): #iterate through each and all campaigns
         campaign_id = campaign_ids[i]
         destination = camps[i]
         #print destination
         
 
-        for i in range(len(ad_group_names)):
+        for i in range(len(ad_group_names)): #iterate through each and all ad groups
 
             #ag_names.append(ad_group_names[i] + destination)
             #print ag_names[i]
 
             # Construct operations and add ad groups.
-            operations = [{
+            operations = [{ 
                 'operator': 'ADD',
                 'operand': {
                     'campaignId': campaign_id,
@@ -207,4 +273,36 @@ if __name__ == '__main__':
             for ad_group in ad_groups['value']:
               print ('Ad group with name \'%s\' and id \'%s\' was added.'
                      % (ad_group['name'], ad_group['id']))
+              ad_group_ids.append(str(ad_group['id']))
 
+print ad_group_ids
+
+
+
+if __name__ == '__main__':
+    adwords_client = adwords.AdWordsClient.LoadFromStorage()
+
+    client = adwords_client
+
+    ad_group_criterion_service = client.GetService(
+        'AddGroupCriterionService', version='v201603')
+
+    for i in range(len(ad_group_ids)):
+        AD_GROUP_ID = ad_group_ids[i]
+
+
+        for i in range(len(results)):
+            keyword1 = {
+                'xsi_type': 'BiddableAdGroupCriterion',
+                'adGroupId': AD_GROUP_ID,
+                'criterion': {
+                'xsi_type': 'Keyword',
+                'matchType': match_type,
+                'text': results[i]
+                },
+
+                # These fields are optional.
+                'userStatus': 'ENABLED',
+                # 'finalUrls': {
+                # 'urls': ['http://example.com/mars']
+                }
