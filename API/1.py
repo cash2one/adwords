@@ -280,16 +280,16 @@ print ad_group_ids
 
 
 if __name__ == '__main__':
+
     adwords_client = adwords.AdWordsClient.LoadFromStorage()
 
     client = adwords_client
 
     ad_group_criterion_service = client.GetService(
-        'AddGroupCriterionService', version='v201603')
+      'AdGroupCriterionService', version='v201603')
 
     for i in range(len(ad_group_ids)):
         AD_GROUP_ID = ad_group_ids[i]
-
 
         for i in range(len(results)):
             keyword1 = {
