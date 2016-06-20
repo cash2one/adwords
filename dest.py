@@ -90,7 +90,7 @@ print "Please type in the landing page url."
 url = raw_input()
 print ""
 
-######exception for non-url inputs goes here######## 
+######exception for non-url input goes here######## 
 
 import sys
 
