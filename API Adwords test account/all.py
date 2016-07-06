@@ -27,6 +27,13 @@ section of our README.
 
 """
 
+
+
+
+
+
+
+
 import datetime
 import uuid
 from googleads import adwords
@@ -189,7 +196,7 @@ def main(client):
 
 
     else:
-      print 'No campaigns were found.'
+      print ('No campaigns were found.')
     offset += PAGE_SIZE
     selector['paging']['startIndex'] = str(offset)
     more_pages = offset < int(page['totalNumEntries'])
@@ -268,7 +275,7 @@ if __name__ == '__main__':
 
 
 
-print campaign_ids
+print (campaign_ids)
 
 #########################################################################
 
@@ -314,7 +321,7 @@ while more_pages:
       ad_group_ids.append(ad_group['id'])
 
   else:
-    print 'No ad groups were found.'
+    print ('No ad groups were found.')
 
   offset += PAGE_SIZE
   selector['paging']['startIndex'] = str(offset)
@@ -322,6 +329,7 @@ while more_pages:
 
 #########################################################################
 
+"""
 ad_group_dict_id = {}
 ad_group_dict_type= {}
 
@@ -344,8 +352,9 @@ for i in range(len(ad_group_ids)):
   ad_group_dict_type['%s' %str(ad_group_names[i])] = '%s' %type1
 
 
-print ad_group_dict_type
+print (ad_group_dict_type)
 
+"""
 # for i in range(len(ad_group_ids):
 #   ad_group_dict_type['%s' %ad_group_names[i]] = '%s' %ad_group_ids
 
