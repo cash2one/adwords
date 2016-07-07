@@ -98,6 +98,3 @@ done_urls = [
 "www.bookyogaretreats.com/all/d/asia-and-oceania/thailand",
 "https://www.bookyogaretreats.com/all/d/asia-and-oceania"
 ]
-
-
-
