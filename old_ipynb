@@ -1,0 +1,495 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "ready_dict and ready_ids have the same length (thats a good thing)\n"
+     ]
+    }
+   ],
+   "source": [
+    "done_urls = [\n",
+    "\"www.bookyogaretreats.com/all/c/short/d/europe\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/philippines\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/india/goa\",\n",
+    "\"www.bookyogaretreats.com/all/c|/budget-retreats/d/asia-and-oceania\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/croatia\",\n",
+    "\"www.bookyogaretreats.com/all/c/budget-retreats/d/the-americas-and-caribbean/usa\",\n",
+    "\"www.bookyogaretreats.com/all/c/budget-retreats/d/europe/united-kingdom\",\n",
+    "\"www.bookyogateachertraining.com/all/s/yoga-vinyasa\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/europe\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa/hawaii\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa/florida\",\n",
+    "\"www.bookyogaretreats.com/all/s/vinyasa-yoga\",\n",
+    "\"www.bookyogaretreats.com/all/c/yoga-detox-retreats\",\n",
+    "\"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico\",\n",
+    "\"www.bookyogaretreats.com/all/c/short/d/the-americas-and-caribbean/usa/california\",\n",
+    "\"www.bookyogateachertraining.com/all/d/europe\",\n",
+    "\"www.bookyogaretreats.com/all/c/budget-retreats/d/asia-and-oceania/indonesia/bali\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2017-02-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/indonesia\",\n",
+    "\"www.bookyogaretreats.com/all/c/yoga-meditation-retreats\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/india\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2017-03-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/all/c/yoga-meditation-retreats/d/the-americas-and-caribbean/usa/florida\",\n",
+    "\"www.bookyogaretreats.com/all/c/budget-retreats/d/the-americas-and-caribbean\",\n",
+    "\"www.bookyogaretreats.com/all/c/yoga-surf/d/the-americas-and-caribbean/costa-rica\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2016-05-15&flexible=15\",\n",
+    "\"www.bookyogateachertraining.com/all/d/asia-and-oceania/thailand\",\n",
+    "\"www.bookyogaretreats.com/all/c/short\",\n",
+    "\"www.bookyogaretreats.com/all/c/short/d/the-americas-and-caribbean/usa\",\n",
+    "\"www.bookyogaretreats.com/all/s/bikram-hot-yoga\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/india\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2016-12-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/india/goa\",\n",
+    "\"www.bookyogaretreats.com/all/c/budget-retreats/d/asia-and-oceania/thailand\",\n",
+    "\"www.bookyogaretreats.com/all/c/beach-retreats/d/the-americas-and-caribbean\",\n",
+    "\"www.bookyogaretreats.com/all/c/yoga-surf\",\n",
+    "\"www.bookyogaretreats.com/all/c/budget-retreats\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/vietnam\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/europe/united-kingdom\",\n",
+    "\"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/hawaii\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2016-06-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/united-kingdom/england\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/indonesia/bali\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/france\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/europe/greece\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/greece\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2016-07-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2016-10-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2016-09-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/africa-and-the-middle-east/morocco\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2016-11-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2017-01-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/all/d/the-americas-and-caribbean\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/nepal\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa/california\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/india/kerala\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2016-08-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/thailand\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/spain/ibiza\",\n",
+    "\"www.bookyogaretreats.com/all/c/short/d/the-americas-and-caribbean\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/spain/mallorca\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/bali\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/europe/spain/canary-islands\",\n",
+    "\"www.bookyogaretreats.com/all/c/yoga-surf/d/asia-and-oceania/indonesia/bali\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/spain\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/europe/spain\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/europe/portugal\",\n",
+    "\"www.bookyogaretreats.com/all/s/ashtanga-yoga\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/india/kerala\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/italy\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/vietnam\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/new-zealand\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/spain/canary-islands\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/europe/spain/ibiza\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/sri-lanka\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/costa-rica\",\n",
+    "\"www.bookyogateachertraining.com/\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/australia\",\n",
+    "\"www.bookyogaretreats.com/?arrival_date=2016-04-15&flexible=15\",\n",
+    "\"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/USA\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/portugal\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka\",\n",
+    "\"www.bookyogaretreats.com\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/cambodia\",\n",
+    "\"www.bookyogateachertraining.com/all/d/the-americas-and-caribbean\",\n",
+    "\"www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco\",\n",
+    "\"www.bookyogaretreats.com/all/d/africa-and-the-middle-east\",\n",
+    "\"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica\",\n",
+    "\"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/australia\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia\",\n",
+    "\"www.bookyogateachertraining.com/all/d/the-americas-and-caribbean/costa-rica\",\n",
+    "\"www.bookyogaretreats.com/all/d/europe/united-kingdom\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania/thailand\",\n",
+    "\"www.bookyogaretreats.com/all/d/asia-and-oceania\"\n",
+    "]\n",
+    "\n",
+    "import csv\n",
+    "import codecs\n",
+    "\n",
+    "file_name = '20160708.csv'\n",
+    "\n",
+    "basic_dict = {} #{destination id : destination name}\n",
+    "ready_dict = {} #{destinaiton name: [destination id, destination type, number of listings, url, country name]}\n",
+    "\n",
+    "names = []\n",
+    "ready_names = []\n",
+    "ready_urls = []\n",
+    "ready_ids = []\n",
+    "\n",
+    "#setup basic_dict (everything)\n",
+    "#ready_urls (only ones without adgroups)\n",
+    "#ready_ids (only ones without adgroups)\n",
+    "\n",
+    "with codecs.open(file_name, 'r', encoding = 'utf-8', errors = 'ignore') as csvfile:\n",
+    "    reader=csv.DictReader(csvfile)\n",
+    "    for row in reader:\n",
+    "        names.append(row['name'])\n",
+    "        basic_dict[int(row['destination_id'])] = row['name']\n",
+    "        if row['concat'] not in done_urls: #only for urls that do not have adgroups yet\n",
+    "            ready_urls.append(row['concat']) #add all urls\n",
+    "            ready_ids.append(int(row['destination_id']))\n",
+    "\n",
+    "#setup ready_dict \n",
+    "#['key'] = destination_id\n",
+    "#ready_dict['key'][0] = destination name\n",
+    "#ready_dict['key'][1] = destination type\n",
+    "#ready_dict['key'][2] = number of listings\n",
+    "#ready_dict['key'][3] = URL (landing page)\n",
+    "#ready_dict['key'][4] = country name\n",
+    "#ready_dict['key'][5] = destination slug\n",
+    "#ready_dict['key'][6] = parent slug\n",
+    "\n",
+    "with codecs.open(file_name, 'r', encoding = 'utf-8', errors = 'ignore') as csvfile:\n",
+    "    reader=csv.DictReader(csvfile)\n",
+    "    for row in reader:\n",
+    "        if row['concat'] not in done_urls:\n",
+    "            ready_dict[int(row['destination_id'])] = [row['name'], row['type1'], row['nr_listings'], row['concat'], basic_dict[int(row['parent_id1'])], row['slug1'], row['slug2']]\n",
+    "        \n",
+    "if (len(ready_dict) == len(ready_ids)) == True:\n",
+    "    print('ready_dict and ready_ids have the same length (thats a good thing)')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ready_ids[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[' Matale District',\n",
+       " 'state',\n",
+       " '9',\n",
+       " 'www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka/matale-district',\n",
+       " 'Sri Lanka',\n",
+       " 'matale-district',\n",
+       " 'sri-lanka']"
+      ]
+     },
+     "execution_count": 51,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ready_dict[2541]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "#prepare text ads\n",
+    "\n",
+    "headline1 = []\n",
+    "headline2 = []\n",
+    "\n",
+    "desc11 = []\n",
+    "desc12 = []\n",
+    "\n",
+    "desc21 = []\n",
+    "desc22 = []\n",
+    "\n",
+    "display_url = []\n",
+    "final_url = []\n",
+    "\n",
+    "campaign = []\n",
+    "ad_group = []\n",
+    "\n",
+    "#ad_state\n",
+    "#device_preference\n",
+    "#ad_type\n",
+    "\n",
+    "for i in range(len(ready_ids)):\n",
+    "    headline1.append('Book Yoga Retreats Online')\n",
+    "    headline2.append('Best Yoga Retreats 2016')\n",
+    "    \n",
+    "    desc11.append('%s Deals in %s!' %(ready_dict[ready_ids[i]][2], ready_dict[ready_ids[i]][0]))\n",
+    "    desc12.append('Top Rated & Best Price Guarantee')\n",
+    "    \n",
+    "    desc21.append('%s Deals in %s!' %(ready_dict[ready_ids[i]][2], ready_dict[ready_ids[i]][0]))\n",
+    "    desc22.append('Compare and Book from Top Packages')\n",
+    "    \n",
+    "    display_url.append('www.BookYogaRetreats.com/%s' %ready_dict[ready_ids[i]][5].title())\n",
+    "    final_url.append(ready_dict[ready_ids[i]][3])\n",
+    "\n",
+    "    ad_group.append('Longtail Retreats %s' %ready_dict[ready_ids[i]][0])\n",
+    "\n",
+    "for i in range(len(ready_ids)):\n",
+    "    if ready_dict[ready_ids[i]][1] == 'country':\n",
+    "        campaign.append(\"Longtail %s\" %ready_dict[ready_ids[i]][0])\n",
+    "    if ready_dict[ready_ids[i]][1] == 'state':\n",
+    "        campaign.append(\"Longtail %s - %s\" %(ready_dict[ready_ids[i]][4], ready_dict[ready_ids[i]][0]))\n",
+    "    \n",
+    "for i in range(len(ad_group)):\n",
+    "    ad_group[i] = ad_group[i].replace(\"  \", \" \")\n",
+    "    campaign[i] = campaign[i].replace(\"  \", \" \")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "for i in range(len(display_url)):\n",
+    "    display_url[i] = display_url[i].replace('-', '')\n",
+    "    if len(display_url[i]) > 35:\n",
+    "        display_url[i] = 'www.BookYogaRetreats.com'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "all lists have the same length (thats a good thing)\n"
+     ]
+    }
+   ],
+   "source": [
+    "for item in headline1:\n",
+    "    if len(item) > 25:\n",
+    "        print(item)\n",
+    "        \n",
+    "for item in headline2:\n",
+    "    if len(item) > 25:\n",
+    "        print(item)\n",
+    "\n",
+    "for i in range(len(desc11)):\n",
+    "    if len(desc11[i]) > 38:\n",
+    "        desc11[i] = ''.join([i for i in desc11[i] if not i.isdigit()])\n",
+    "        desc11[i] = desc11[i].replace(' Deals', 'Deals')\n",
+    "        if len(desc11[i]) > 38:\n",
+    "            desc11[i] = desc11[i].replace(\"Deals in \", '')\n",
+    "\n",
+    "for i in range(len(desc11)):\n",
+    "    if len(desc11[i]) > 38:\n",
+    "        print(desc11[i], len(desc11[i]))\n",
+    "    \n",
+    "for i in range(len(desc21)):\n",
+    "    if len(desc21[i]) > 38:\n",
+    "        desc21[i] = ''.join(i for i in desc21[i] if not i.isdigit())\n",
+    "        desc21[i] = desc21[i].replace(' Deals', 'Deals')\n",
+    "        if len(desc21[i]) > 38:\n",
+    "            desc21[i] = desc21[i].replace('Deals in ', '')\n",
+    "            \n",
+    "for i in range(len(desc21)):\n",
+    "    if len(desc21[i]) > 38:\n",
+    "        print(desc21[i], len(desc21[i]))\n",
+    "        \n",
+    "if (len(headline1) == len(headline2) == len(desc11) == len(desc12) == len(desc21) == len(desc22)) == True:\n",
+    "    print('all lists have the same length (thats a good thing)')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "headlines = (headline1 + headline2) * 2\n",
+    "d1 = (desc11 + desc21) * 2\n",
+    "d2 = (desc12 + desc22) * 2\n",
+    "\n",
+    "display_url = display_url * 4\n",
+    "final_url = final_url * 4\n",
+    "campaign = campaign * 4\n",
+    "ad_group = ad_group * 4\n",
+    "\n",
+    "how_many_ads = len(headlines)\n",
+    "\n",
+    "ad_state = ['enabled'] * how_many_ads\n",
+    "ad_type = ['Text ad'] * how_many_ads\n",
+    "\n",
+    "dev_all = ['All'] * int(how_many_ads/2)\n",
+    "dev_mobile = ['Mobile'] * int(how_many_ads/2)\n",
+    "dev_pref = dev_all + dev_mobile "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 56,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "len(headlines) == len(d1) == len(d2) == len(display_url) == len(final_url) == len(campaign) == len(ad_group) == len(ad_state) == len(ad_type) == len(dev_pref) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "ad_column_titles = [\"Ad state\",\n",
+    "                    \"Ad\",\n",
+    "                    \"Description line 1\",\n",
+    "                    \"Description line 2\",\n",
+    "                    \"Display URL\",\n",
+    "                    \"Final URL\",\n",
+    "                    \"Device preference type\",\n",
+    "                    \"Campaign\",\n",
+    "                    \"Ad group\",\n",
+    "                    \"Ad type\"] "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "ad_rows = []\n",
+    "\n",
+    "for i in range(how_many_ads):\n",
+    "    ad_rows.append(\n",
+    "        [ad_state[i],\n",
+    "        headlines[i],\n",
+    "        d1[i],\n",
+    "        d2[i],\n",
+    "        display_url[i],\n",
+    "        final_url[i],\n",
+    "        dev_pref[i],\n",
+    "        campaign[i],\n",
+    "        ad_group[i],\n",
+    "        ad_type[i]])        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "export_name = 'SQL Ads.csv'\n",
+    "new_export = open(export_name, 'w')\n",
+    "export_object = csv.writer(new_export)\n",
+    "\n",
+    "export_object.writerow(ad_column_titles)\n",
+    "export_object.writerows(ad_rows)\n",
+    "\n",
+    "new_export.close()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.5.1"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
