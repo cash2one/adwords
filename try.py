@@ -102,7 +102,7 @@ done_urls = [
 import csv
 import codecs
 
-file_name = '20160712.csv'
+file_name = 'testing.csv'
 
 basic_dict = {} 
 ready_dict = {}
@@ -143,7 +143,6 @@ with codecs.open(file_name, 'r', encoding = 'utf-8', errors = 'ignore') as csvfi
     for row in reader:
         if row['concat'] not in done_urls:
             ready_dict[int(row['destination_id'])] = [row['name'], row['type1'], int(row['nr_listings']), row['concat'], basic_dict[int(row['parent_id1'])], row['slug1'], row['slug2'], row['name2'], 'in '+ row['name']]
-            ready_dict_names[row['slug1']] = [row['name'], row['type1']]
 
 #prepare text ads
 
@@ -612,10 +611,11 @@ if __name__ == '__main__':
     for campaign in campaigns['value']:
       print ('Campaign with name \'%s\' and id \'%s\' was added.'
              % (campaign['name'], campaign['id']))
+      campaign_ids.append(campaign['id'])
 
 #########################################################################
 
-#2. get campaigns + open ad groups
+#2. open ad groups
 
 #!/usr/bin/python
 #
@@ -655,45 +655,45 @@ logging.getLogger('suds.transport').setLevel(logging.DEBUG)
 PAGE_SIZE = 100
 
 
-def main(client):
-  # Initialize appropriate service.
-  campaign_service = client.GetService('CampaignService', version='v201603')
+# def main(client):
+#   # Initialize appropriate service.
+#   campaign_service = client.GetService('CampaignService', version='v201603')
 
-  # Construct selector and get all campaigns.
-  offset = 0
-  selector = {
-      'fields': ['Id', 'Name', 'Status'],
-      'paging': {
-          'startIndex': str(offset),
-          'numberResults': str(PAGE_SIZE)
-      }
-  }
+#   # Construct selector and get all campaigns.
+#   offset = 0
+#   selector = {
+#       'fields': ['Id', 'Name', 'Status'],
+#       'paging': {
+#           'startIndex': str(offset),
+#           'numberResults': str(PAGE_SIZE)
+#       }
+#   }
 
-  more_pages = True
-  while more_pages:
-    page = campaign_service.get(selector)
+#   more_pages = True
+#   while more_pages:
+#     page = campaign_service.get(selector)
 
-    # Display results.
-    if 'entries' in page:
-      for campaign in page['entries']:
-        print ('Campaign with id \'%s\', name \'%s\', and status \'%s\' was '
-               'found.' % (campaign['id'], campaign['name'],
-                           campaign['status']))
-        campaign_ids.append(str(campaign['id']))
-        campaign_names.append(str(campaign['name'])[9:])
+#     # Display results.
+#     if 'entries' in page:
+#       for campaign in page['entries']:
+#         print ('Campaign with id \'%s\', name \'%s\', and status \'%s\' was '
+#                'found.' % (campaign['id'], campaign['name'],
+#                            campaign['status']))
+#         campaign_ids.append(str(campaign['id']))
+#         campaign_names.append(str(campaign['name'])[9:])
 
 
-    else:
-      print ('No campaigns were found.')
-    offset += PAGE_SIZE
-    selector['paging']['startIndex'] = str(offset)
-    more_pages = offset < int(page['totalNumEntries'])
-    time.sleep(1)
+#     else:
+#       print ('No campaigns were found.')
+#     offset += PAGE_SIZE
+#     selector['paging']['startIndex'] = str(offset)
+#     more_pages = offset < int(page['totalNumEntries'])
+#     time.sleep(1)
 
 
 if __name__ == '__main__':
   adwords_client = adwords.AdWordsClient.LoadFromStorage()
-  main(adwords_client)
+  #main(adwords_client)
 
 
   # Initialize appropriate service.
@@ -708,7 +708,7 @@ if __name__ == '__main__':
       'operand': {
           'campaignId': campaign_id,
           #'name': 'Earth to Mars Cruises #%s' % uuid.uuid4(),
-          'name': '%s' %ad_group_name,
+          'name': '%s' %groups[i],
           #'label': 'type=dest' .  
           'status': 'ENABLED',
           'biddingStrategyConfiguration': {
@@ -758,58 +758,56 @@ if __name__ == '__main__':
         print ('Ad group with name \'%s\' and id \'%s\' was added.'
                % (ad_group['name'], ad_group['id']))
 
-
-
-print (campaign_ids)
+#print (campaign_ids)
 
 #########################################################################
 
-#3. get ad groups
+# #3. get ad groups
 
-from googleads import adwords
+# from googleads import adwords
 
-PAGE_SIZE = 500
+# PAGE_SIZE = 500
 
-ad_group_service = client.GetService('AdGroupService', version='v201603')
+# ad_group_service = client.GetService('AdGroupService', version='v201603')
 
 
-for i in range(len(campaign_ids)):
+# for i in range(len(campaign_ids)):
 
-  campaign_id = campaign_ids[i]
+#   campaign_id = campaign_ids[i]
 
-  offset = 0
-  selector = {
-    'fields': ['Id', 'Name', 'Status'],
-    'predicates': [
-        {
-            'field': 'CampaignId',
-            'operator': 'EQUALS',
-            'values': [campaign_id]
-        }
-    ],
-    'paging': {
-        'startIndex': str(offset),
-        'numberResults': str(PAGE_SIZE)
-    }
-}
-more_pages = True
-while more_pages:
-  page = ad_group_service.get(selector)
+#   offset = 0
+#   selector = {
+#     'fields': ['Id', 'Name', 'Status'],
+#     'predicates': [
+#         {
+#             'field': 'CampaignId',
+#             'operator': 'EQUALS',
+#             'values': [campaign_id]
+#         }
+#     ],
+#     'paging': {
+#         'startIndex': str(offset),
+#         'numberResults': str(PAGE_SIZE)
+#     }
+# }
+# more_pages = True
+# while more_pages:
+#   page = ad_group_service.get(selector)
 
-  # Display results.
-  if 'entries' in page:
-    for ad_group in page['entries']:
-      print ('Ad group with name \'%s\', id \'%s\' and status \'%s\' was '
-             'found.' % (ad_group['name'], ad_group['id'],
-                         ad_group['status']))
-      ad_group_names.append(ad_group['name'])
-      ad_group_ids.append(ad_group['id'])
+#   # Display results.
+#   if 'entries' in page:
+#     for ad_group in page['entries']:
+#       print ('Ad group with name \'%s\', id \'%s\' and status \'%s\' was '
+#              'found.' % (ad_group['name'], ad_group['id'],
+#                          ad_group['status']))
+#       ad_group_names.append(ad_group['name'])
+#       ad_group_ids.append(ad_group['id'])
 
-  else:
-    print ('No ad groups were found.')
+#   else:
+#     print ('No ad groups were found.')
 
-  offset += PAGE_SIZE
-  selector['paging']['startIndex'] = str(offset)
-  more_pages = offset < int(page['totalNumEntries'])
+#   offset += PAGE_SIZE
+#   selector['paging']['startIndex'] = str(offset)
+#   more_pages = offset < int(page['totalNumEntries'])
 
-#########################################################################
+# #########################################################################
