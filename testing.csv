@@ -1,0 +1,11 @@
+destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,parent_id2,type2,slug2,name2,parent_id3,type3,slug3,concat,name
+5,3,55000,NZD,2373,state,coromandel,2805,country,new-zealand,New Zealand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/new-zealand/coromandel,Coromandel
+9,8,15000,NZD,2373,state,takaka,2805,country,new-zealand,New Zealand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/new-zealand/takaka,Takaka
+11,11,33600,EUR,3276,state,colares,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/colares,Colares
+19,5,590000,SEK,2389,state,skinnskatteberg,2968,country,sweden,Sweden,0,continent,europe,www.bookyogaretreats.com/all/d/europe/sweden/skinnskatteberg,Skinnskatteberg
+21,3,9000000,INR,2585,state,mumbai,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/mumbai,Mumbai
+22,4,60000,EUR,2948,state,sabine-hills,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/sabine-hills,Sabine Hills
+23,3,3252000,INR,2585,state,wayanad,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/wayanad,Wayanad
+34,20,46000,USD,3340,state,cabuya,3490,country,costa-rica,Costa Rica,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/cabuya,Cabuya
+41,3,4000000,INR,2585,state,kullu,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/kullu,Kullu
+51,3,53500,EUR,2965,state,antalya,3258,country,turkey,Turkey,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/turkey/antalya,Antalya
