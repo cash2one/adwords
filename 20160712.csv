@@ -7,6 +7,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 22,4,60000,EUR,2948,state,sabine-hills,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/sabine-hills,"Sabine Hills"
 23,3,3252000,INR,2585,state,wayanad,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/wayanad,Wayanad
 34,20,46000,USD,3340,state,cabuya,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/cabuya,Cabuya
+41,3,4000000,INR,2585,state,kullu,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/kullu,Kullu
 51,3,53500,EUR,2965,state,antalya,3258,country,turkey,Turkey,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/turkey/antalya,Antalya
 53,4,58000,EUR,3235,state,grasse,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/grasse,Grasse
 60,13,3500000,INR,2585,state,bardez,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/bardez,Bardez
@@ -15,6 +16,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 64,13,3500000,INR,2585,state,arambol,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/arambol,Arambol
 68,12,40000,USD,2585,state,badrinath,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/badrinath,Badrinath
 69,5,129000,EUR,2948,state,tyrrhenian-sea,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/tyrrhenian-sea,"Tyrrhenian Sea"
+72,3,49900,USD,3470,state,siskiyou,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/siskiyou,Siskiyou
 74,85,13000,USD,3340,state,puntarenas,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/puntarenas,Puntarenas
 80,3,195000,USD,3466,state,mancora,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/mancora,Mancora
 81,4,78900,EUR,1747,state,split,2968,country,croatia,Croatia,0,continent,europe,www.bookyogaretreats.com/all/d/europe/croatia/split,Split
@@ -30,7 +32,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 128,29,30000,EUR,2585,state,dharamsala,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/dharamsala,Dharamsala
 136,7,60000,USD,3466,state,san-martin,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/san-martin,"San Martin"
 137,5,33500,USD,2790,state,hue,2805,country,vietnam,Vietnam,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/vietnam/hue,Hue
-138,3,78500,USD,3466,state,limatambo,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/limatambo,Limatambo
+138,4,78500,USD,3466,state,limatambo,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/limatambo,Limatambo
 144,8,58000,EUR,3235,state,southern-france,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/southern-france,"Southern France"
 145,5,50000,USD,2554,state,santiago-atitlan,3490,country,guatemala,Guatemala,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/guatemala/santiago-atitlan,"Santiago Atitlan"
 148,6,49900,GBP,3383,state,lincolnshire,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/lincolnshire,Lincolnshire
@@ -47,6 +49,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 199,14,1700000,INR,2585,state,rajasthan,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/rajasthan,Rajasthan
 206,10,135700,USD,2585,state,nelangmangala,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/nelangmangala,Nelangmangala
 214,11,45000,EUR,2585,state,agonda,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/agonda,Agonda
+217,3,35000,USD,2585,state,manali,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/manali,Manali
 218,3,76300,USD,2585,state,palakkad,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/palakkad,Palakkad
 226,6,700000,INR,2585,state,maharashtra,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/maharashtra,Maharashtra
 243,3,53000,EUR,2874,state,thessaloniki,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/thessaloniki,Thessaloniki
@@ -54,7 +57,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 247,9,35400,EUR,2585,state,palolem,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/palolem,Palolem
 253,3,47000,EUR,2389,state,smaland,2968,country,sweden,Sweden,0,continent,europe,www.bookyogaretreats.com/all/d/europe/sweden/smaland,Smaland
 254,7,125000,EUR,2585,state,chowara,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/chowara,Chowara
-256,5,21000,EUR,2675,state,basque-country,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/basque-country,"Basque Country"
+256,6,10500,EUR,2675,state,basque-country,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/basque-country,"Basque Country"
 258,7,800000,INR,2585,state,pondicherry,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/pondicherry,Pondicherry
 264,3,52000,CHF,2799,state,valais,2968,country,switzerland,Switzerland,0,continent,europe,www.bookyogaretreats.com/all/d/europe/switzerland/valais,Valais
 266,4,800000,ZAR,3189,state,western-cape,3258,country,south-africa,"South Africa",0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/south-africa/western-cape,"Western Cape"
@@ -81,7 +84,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 455,14,59000,EUR,2585,state,junas-waddo,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/junas-waddo,"Junas Waddo"
 457,11,48000,EUR,2948,state,siena,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/siena,Siena
 458,3,49500,CAD,3484,state,laurentides,3490,country,canada,Canada,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/canada/laurentides,Laurentides
-461,22,60800,USD,3340,state,nosara,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/nosara,Nosara
+461,12,60800,USD,3340,state,nosara,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/nosara,Nosara
 477,3,29500,EUR,3235,state,limousin,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/limousin,Limousin
 502,8,77000,EUR,2372,state,kalutara,2805,country,sri-lanka,"Sri Lanka",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka/kalutara,Kalutara
 508,4,14500,USD,3535,state,north-male-atoll,2805,country,maldives,Maldives,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/maldives/north-male-atoll,"North Malé Atoll"
@@ -96,7 +99,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 591,8,50500,USD,3340,state,playa-grande,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/playa-grande,"Playa Grande"
 604,5,85000,USD,3470,state,kohala,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/kohala,Kohala
 609,3,1110000,THB,3513,state,koh-lanta,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/koh-lanta,"Koh Lanta"
-621,4,28600,USD,3470,state,san-diego,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/san-diego,"San Diego"
+621,9,27500,USD,3470,state,san-diego,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/san-diego,"San Diego"
 624,3,41000,GBP,3235,state,morzine,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/morzine,Morzine
 628,8,47500,USD,3470,state,central-coast,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/central-coast,"Central Coast"
 673,4,68000,GBP,2948,state,castel-giorgio,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/castel-giorgio,"Castel Giorgio"
@@ -105,7 +108,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 709,10,15000,NZD,2373,state,golden-bay,2805,country,new-zealand,"New Zealand",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/new-zealand/golden-bay,"Golden Bay"
 714,4,47500,GBP,2948,state,bari,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/bari,Bari
 715,6,1450000,PHP,3522,state,camiguin,2805,country,philippines,Philippines,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/philippines/camiguin,Camiguin
-716,8,47500,USD,3470,state,san-luis-obispo,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/san-luis-obispo,"San Luis Obispo"
+716,12,47500,USD,3470,state,san-luis-obispo,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/san-luis-obispo,"San Luis Obispo"
 720,4,29500,EUR,2826,state,north-brabant,2968,country,netherlands,Netherlands,0,continent,europe,www.bookyogaretreats.com/all/d/europe/netherlands/north-brabant,"North Brabant"
 722,5,92500,USD,3340,state,chirripo,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/chirripo,Chirripó
 735,4,38500,EUR,3276,state,st-isidoro,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/st-isidoro,"St. Isidoro"
@@ -137,7 +140,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 872,10,283500,MXN,2650,state,oaxaca,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/oaxaca,Oaxaca
 874,3,95000,USD,3298,state,saint-ann,3490,country,jamaica,Jamaica,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/jamaica/saint-ann,"Saint Ann"
 885,4,1750000,PHP,3522,state,palawan,2805,country,philippines,Philippines,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/philippines/palawan,Palawan
-886,9,75000,USD,2650,state,puerto-vallarta,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/puerto-vallarta,"Puerto Vallarta"
+886,8,84900,USD,2650,state,puerto-vallarta,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/puerto-vallarta,"Puerto Vallarta"
 887,9,65000,USD,3340,state,punta-banco,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/punta-banco,"Punta Banco"
 895,9,19600,EUR,2948,state,costa-smeralda,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/costa-smeralda,"Costa Smeralda"
 899,10,35000,GBP,3383,state,arundel,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/arundel,Arundel
@@ -165,7 +168,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 995,3,32000,EUR,2617,state,wexford,2968,country,ireland,Ireland,0,continent,europe,www.bookyogaretreats.com/all/d/europe/ireland/wexford,Wexford
 1017,7,43000,GBP,2965,state,dalyan,3258,country,turkey,Turkey,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/turkey/dalyan,Dalyan
 1026,3,35700,GBP,3383,state,leicester,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/leicester,Leicester
-1031,16,23500,EUR,2968,country,belgium,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/belgium,Belgium
+1031,15,23500,EUR,2968,country,belgium,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/belgium,Belgium
 1035,3,47500,GBP,3383,state,argyll,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/argyll,Argyll
 1039,15,45000,EUR,3276,state,oleiros,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/oleiros,Oleiros
 1074,3,39000,EUR,2948,state,forli-cesena,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/forli-cesena,Forlì-Cesena
@@ -187,7 +190,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 1307,4,140900,USD,2358,state,paro,2805,country,bhutan,Bhutan,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/bhutan/paro,Paro
 1312,10,40300,EUR,3437,state,casablanca,3258,country,morocco,Morocco,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco/casablanca,Casablanca
 1313,7,490000,THB,3513,state,koh-yao-archipelago,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/koh-yao-archipelago,"Koh Yao Archipelago"
-1324,14,48000,EUR,2968,country,malta,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/malta,Malta
+1324,13,48000,EUR,2968,country,malta,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/malta,Malta
 1327,4,26000,USD,3184,state,bocas-del-toro,3490,country,panama,Panama,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/panama/bocas-del-toro,"Bocas del Toro"
 1331,3,156000,USD,2358,state,punakha,2805,country,bhutan,Bhutan,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/bhutan/punakha,Punakha
 1333,9,26600,USD,2464,state,rivas,3490,country,nicaragua,Nicaragua,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/nicaragua/rivas,Rivas
@@ -222,7 +225,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 1461,10,29900,EUR,2675,state,lanzarote,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/lanzarote,Lanzarote
 1465,4,62000,GBP,2675,state,la-gomera,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/la-gomera,"La Gomera"
 1468,4,58000,EUR,3235,state,var,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/var,Var
-1486,3,26600,EUR,3235,state,loire-valley,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/loire-valley,"Loire Valley"
+1486,4,26600,EUR,3235,state,loire-valley,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/loire-valley,"Loire Valley"
 1489,4,40000,EUR,3235,state,poitou-charentes,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/poitou-charentes,Poitou-Charentes
 1497,6,449000,CZK,3143,state,pocatky,2968,country,czech-republic,"Czech Republic",0,continent,europe,www.bookyogaretreats.com/all/d/europe/czech-republic/pocatky,Pocatky
 1501,5,60000,USD,3470,state,palm-beach,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/palm-beach,"Palm Beach"
@@ -259,9 +262,9 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 1683,3,185000,USD,2585,state,jodhpur,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/jodhpur,Jodhpur
 1687,5,58000,EUR,2874,state,peloponnese,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/peloponnese,Peloponnese
 1693,8,41000,USD,2354,state,pengosekan,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/pengosekan,Pengosekan
-1694,15,395250000,IDR,2354,state,kuta,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/kuta,Kuta
+1694,16,395250000,IDR,2354,state,kuta,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/kuta,Kuta
 1695,4,48000,EUR,2675,state,lanjaron,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/lanjaron,Lanjarón
-1696,4,51200,GBP,2675,state,caceres,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/caceres,Caceres
+1696,3,51200,GBP,2675,state,caceres,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/caceres,Caceres
 1703,9,20000,EUR,2874,state,south-aegean,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/south-aegean,"South Aegean"
 1705,3,39000,EUR,2948,state,emilia-romagna,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/emilia-romagna,Emilia-Romagna
 1708,11,47500,USD,3470,state,central-coast-california,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/central-coast-california,"Central Coast California"
@@ -298,10 +301,10 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 1828,11,24000,GBP,3383,state,sussex,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/sussex,Sussex
 1830,5,49000,EUR,2530,state,lasko,2968,country,slovenia,Slovenia,0,continent,europe,www.bookyogaretreats.com/all/d/europe/slovenia/lasko,Lasko
 1832,5,49000,EUR,2530,state,hum,2968,country,slovenia,Slovenia,0,continent,europe,www.bookyogaretreats.com/all/d/europe/slovenia/hum,Hum
-1850,39,13900,USD,3470,state,hawaii,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/hawaii,Hawaii
+1850,41,13900,USD,3470,state,hawaii,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/hawaii,Hawaii
 1862,11,59000,EUR,3437,state,atlas-mountains,3258,country,morocco,Morocco,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco/atlas-mountains,"Atlas Mountains"
 1864,3,1900000,THB,3513,state,doi-saket,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/doi-saket,"Doi Saket"
-1867,20,33600,EUR,3276,state,sintra,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/sintra,Sintra
+1867,19,33600,EUR,3276,state,sintra,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/sintra,Sintra
 1871,11,38500,GBP,3235,state,haute-savoie,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/haute-savoie,Haute-Savoie
 1893,8,87000,EUR,3506,state,reykjavik,2968,country,iceland,Iceland,0,continent,europe,www.bookyogaretreats.com/all/d/europe/iceland/reykjavik,Reykjavik
 1895,5,80000,USD,3466,state,amazon--2,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/amazon--2,Amazon
@@ -311,6 +314,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 1913,3,1200000,THB,3513,state,taling-ngam,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/taling-ngam,"Taling Ngam"
 1914,7,320000,ZAR,3189,state,kwazulu-natal,3258,country,south-africa,"South Africa",0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/south-africa/kwazulu-natal,KwaZulu-Natal
 1919,8,39900,EUR,3276,state,silver-coast,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/silver-coast,"Silver Coast"
+1924,3,1050000,THB,3513,state,patong,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/patong,Patong
 1931,3,16000,USD,3470,state,paw-paw,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/paw-paw,"Paw Paw"
 1933,3,122500,EUR,1747,state,korcula,2968,country,croatia,Croatia,0,continent,europe,www.bookyogaretreats.com/all/d/europe/croatia/korcula,Korcula
 1942,3,68200,EUR,1747,state,mljet,2968,country,croatia,Croatia,0,continent,europe,www.bookyogaretreats.com/all/d/europe/croatia/mljet,Mljet
@@ -326,20 +330,21 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2035,6,63000,USD,2354,state,seraya,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/seraya,Seraya
 2036,4,40000,GBP,969,state,sinai-peninsula,3258,country,egypt,Egypt,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/egypt/sinai-peninsula,"Sinai Peninsula"
 2037,23,298000,THB,3513,state,chiang-mai,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/chiang-mai,"Chiang Mai"
-2039,3,12000,USD,3470,state,north-san-juan,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/north-san-juan,"North San Juan"
+2039,4,12000,USD,3470,state,north-san-juan,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/north-san-juan,"North San Juan"
 2040,9,57500,EUR,1747,state,dalmatia,2968,country,croatia,Croatia,0,continent,europe,www.bookyogaretreats.com/all/d/europe/croatia/dalmatia,Dalmatia
 2042,5,700000,THB,3513,state,mae-rim,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/mae-rim,"Mae Rim"
 2049,10,47000,AUD,2722,state,victoria,2805,country,australia,Australia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/australia/victoria,Victoria
 2052,4,54700,EUR,2675,state,aragon,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/aragon,Aragon
 2061,9,30000,EUR,2675,state,corralejo,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/corralejo,Corralejo
-2064,22,854500,THB,3513,state,sri-thanu,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/sri-thanu,"Sri Thanu"
-2066,18,88800,USD,3340,state,nicoya,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/nicoya,Nicoya
+2064,21,854500,THB,3513,state,sri-thanu,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/sri-thanu,"Sri Thanu"
+2066,8,100000,USD,3340,state,nicoya,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/nicoya,Nicoya
 2071,4,12100,USD,3470,state,wisconsin,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/wisconsin,Wisconsin
 2073,3,58000,EUR,3235,state,cannes,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/cannes,Cannes
 2078,3,38800,EUR,1031,state,flemish-region,2968,country,belgium,Belgium,0,continent,europe,www.bookyogaretreats.com/all/d/europe/belgium/flemish-region,"Flemish Region"
-2081,29,24000,EUR,3276,state,aljezur,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/aljezur,Aljezur
+2081,30,24000,EUR,3276,state,aljezur,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/aljezur,Aljezur
 2083,4,115700,EUR,2585,state,coimbatore,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/coimbatore,Coimbatore
 2086,11,35000,GBP,2948,state,florence,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/florence,Florence
+2087,3,67000,EUR,3276,state,carrapateira,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/carrapateira,Carrapateira
 2089,7,45000,EUR,1747,state,istria,2968,country,croatia,Croatia,0,continent,europe,www.bookyogaretreats.com/all/d/europe/croatia/istria,Istria
 2098,7,16500,USD,3470,state,buckingham,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/buckingham,Buckingham
 2101,3,24000,GBP,3383,state,snowdonia,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/snowdonia,Snowdonia
@@ -347,7 +352,8 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2108,3,45000,NZD,2373,state,north-island,2805,country,new-zealand,"New Zealand",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/new-zealand/north-island,"North Island"
 2110,37,30000,EUR,2675,state,fuerteventura,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/fuerteventura,Fuerteventura
 2121,8,59500,USD,3340,state,heredia,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/heredia,Heredia
-2133,6,190000,USD,3470,state,kauai,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/kauai,Kauai
+2124,5,450000,THB,3513,state,khao-lak,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/khao-lak,"Khao Lak"
+2133,8,190000,USD,3470,state,kauai,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/kauai,Kauai
 2138,3,85000,EUR,1747,state,vis-split-dalmatia,2968,country,croatia,Croatia,0,continent,europe,www.bookyogaretreats.com/all/d/europe/croatia/vis-split-dalmatia,"Vis, Split-Dalmatia"
 2154,4,21000,USD,2456,state,petra,3258,country,jordan,Jordan,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/jordan/petra,Petra
 2155,4,49000,USD,2365,state,nungwi,3258,country,tanzania,Tanzania,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/tanzania/nungwi,Nungwi
@@ -361,7 +367,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2186,18,29900,EUR,2675,state,las-palmas,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/las-palmas,"Las Palmas"
 2187,9,52000,EUR,2675,state,axarquia,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/axarquia,Axarquía
 2194,14,89400,USD,3340,state,talamanca,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/talamanca,Talamanca
-2196,83,220000000,IDR,2354,state,ubud,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/ubud,Ubud
+2196,85,220000000,IDR,2354,state,ubud,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/ubud,Ubud
 2201,5,49000,USD,2365,state,unguja,3258,country,tanzania,Tanzania,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/tanzania/unguja,Unguja
 2205,4,58000,EUR,3235,state,french-riviera-cote-d'azur,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/french-riviera-cote-d'azur,"French Riviera-Cote d'Azur"
 2207,9,850000,THB,3513,state,krabi,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/krabi,Krabi
@@ -369,35 +375,35 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2233,4,49000,USD,2365,state,north-zanzibar,3258,country,tanzania,Tanzania,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/tanzania/north-zanzibar,"North Zanzibar"
 2234,3,37000,USD,3470,state,georgia-1,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/georgia-1,Georgia
 2240,21,3537000,THB,3513,state,rawai,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/rawai,Rawai
-2242,4,48000,GBP,3513,state,bophut,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/bophut,Bophut
+2242,4,2200000,THB,3513,state,bophut,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/bophut,Bophut
 2247,3,22000,EUR,3513,state,pai,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/pai,Pai
 2248,10,24000,GBP,3383,state,east-sussex,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/east-sussex,"East Sussex"
 2255,4,1450000,PHP,3522,state,mambajao,2805,country,philippines,Philippines,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/philippines/mambajao,Mambajao
 2256,4,2331000,THB,3513,state,nai-muang,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/nai-muang,"Nai Muang"
 2260,22,28500,EUR,2675,state,palma,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/palma,Palma
 2263,5,1450000,PHP,3522,state,agoho,2805,country,philippines,Philippines,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/philippines/agoho,Agoho
-2268,9,12000,USD,3470,state,northern-california,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/northern-california,"Northern California"
+2268,47,12000,USD,3470,state,northern-california,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/northern-california,"Northern California"
 2269,3,45500,AUD,2722,state,margaret-river,2805,country,australia,Australia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/australia/margaret-river,"Margaret River"
 2273,9,95000,USD,2354,state,tegalalang,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/tegalalang,Tegalalang
 2275,4,27500,GBP,3383,state,surrey,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/surrey,Surrey
 2302,7,93000,USD,2854,state,rio-de-janeiro,3490,country,brazil,Brazil,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/brazil/rio-de-janeiro,"Rio de Janeiro"
 2332,5,37500,GBP,2675,state,totana,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/totana,Totana
 2341,3,135000,USD,3340,state,puerto-jimenez,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/puerto-jimenez,"Puerto Jiménez"
-2354,283,84000000,IDR,2805,country,indonesia,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia,Indonesia
+2354,286,84000000,IDR,2805,country,indonesia,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia,Indonesia
 2355,16,32000,USD,2354,state,singaraja,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/singaraja,Singaraja
 2357,3,26000,GBP,3383,state,london,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/london,London
 2358,4,140900,USD,2805,country,bhutan,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/bhutan,Bhutan
 2360,23,5000,USD,2805,country,nepal,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/nepal,Nepal
-2365,14,49000,USD,3258,country,tanzania,0,continent,africa-and-the-middle-east,"Africa & the Middle East",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/tanzania,Tanzania
+2365,15,49000,USD,3258,country,tanzania,0,continent,africa-and-the-middle-east,"Africa & the Middle East",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/tanzania,Tanzania
 2372,45,27500,USD,2805,country,sri-lanka,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka,"Sri Lanka"
 2373,24,15000,NZD,2805,country,new-zealand,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/new-zealand,"New Zealand"
 2377,4,7900000,JPY,2805,country,japan,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/japan,Japan
 2380,10,55000,EUR,3276,state,pinhal-interior-sul,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/pinhal-interior-sul,"Pinhal Interior Sul"
 2383,6,39900,USD,3470,state,massachusetts,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/massachusetts,Massachusetts
-2386,7,490000,THB,3513,state,phang-nga-bay,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/phang-nga-bay,"Phang Nga Bay"
-2389,12,47000,EUR,2968,country,sweden,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/sweden,Sweden
+2386,12,450000,THB,3513,state,phang-nga-bay,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/phang-nga-bay,"Phang Nga Bay"
+2389,13,47000,EUR,2968,country,sweden,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/sweden,Sweden
 2394,10,36900,EUR,2948,state,abruzzo,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/abruzzo,Abruzzo
-2398,12,31000,EUR,3276,state,sagres,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/sagres,Sagres
+2398,13,31000,EUR,3276,state,sagres,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/sagres,Sagres
 2400,10,37500,GBP,2675,state,sierra-espuna-mountains,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/sierra-espuna-mountains,"Sierra Espuna Mountains"
 2403,5,95000,EUR,3276,state,odiaxere,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/odiaxere,Odiaxere
 2412,18,32000,USD,2354,state,north-bali,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/north-bali,"North Bali"
@@ -408,7 +414,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2421,4,166700,USD,3340,state,san-juanillo,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/san-juanillo,"San Juanillo"
 2422,4,107500,AUD,2722,state,suffolk-park,2805,country,australia,Australia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/australia/suffolk-park,"Suffolk Park"
 2424,4,124900,AUD,2722,state,byron-shire,2805,country,australia,Australia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/australia/byron-shire,"Byron Shire"
-2427,6,44500,USD,3470,state,sonoma,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/sonoma,Sonoma
+2427,7,44500,USD,3470,state,sonoma,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/sonoma,Sonoma
 2433,5,130000,USD,3466,state,pisac,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/pisac,Pisac
 2434,3,47500,USD,3466,state,amantani,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/amantani,Amantani
 2435,10,79700,USD,2585,state,uttar-pradesh,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/uttar-pradesh,"Uttar Pradesh"
@@ -423,7 +429,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2465,5,47500,GBP,3383,state,scotland,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/scotland,Scotland
 2474,9,69900,USD,2354,state,central-bali,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/central-bali,"Central Bali"
 2476,5,29000,AUD,2722,state,sunshine-coast,2805,country,australia,Australia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/australia/sunshine-coast,"Sunshine Coast"
-2488,4,17000,USD,3490,country,colombia,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/colombia,Colombia
+2488,5,13500,USD,3490,country,colombia,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/colombia,Colombia
 2490,4,42000,GBP,3513,state,ranong,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/ranong,Ranong
 2492,8,72900,EUR,2354,state,tejakula,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/tejakula,Tejakula
 2503,8,47500,GBP,2675,state,sierra-nevada,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/sierra-nevada,"Sierra Nevada"
@@ -434,7 +440,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2518,15,19500,EUR,2675,state,alpujarras,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/alpujarras,Alpujarras
 2519,4,29500,USD,3470,state,washington,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/washington,Washington
 2525,7,45000,EUR,1747,state,split-dalmatia,2968,country,croatia,Croatia,0,continent,europe,www.bookyogaretreats.com/all/d/europe/croatia/split-dalmatia,Split-Dalmatia
-2527,86,1000000,INR,2585,state,kerala,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/kerala,Kerala
+2527,83,1000000,INR,2585,state,kerala,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/kerala,Kerala
 2530,6,49000,EUR,2968,country,slovenia,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/slovenia,Slovenia
 2532,4,58000,USD,2372,state,kandy,2805,country,sri-lanka,"Sri Lanka",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka/kandy,Kandy
 2533,4,84900,EUR,2948,state,taranto,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/taranto,Taranto
@@ -442,10 +448,10 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2535,11,77000,EUR,2372,state,central-province,2805,country,sri-lanka,"Sri Lanka",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka/central-province,"Central Province"
 2536,3,28000,EUR,2826,state,domburg,2968,country,netherlands,Netherlands,0,continent,europe,www.bookyogaretreats.com/all/d/europe/netherlands/domburg,Domburg
 2537,8,10500,GBP,3383,state,oxfordshire,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/oxfordshire,Oxfordshire
-2541,9,70000,USD,2372,state,matale-district,2805,country,sri-lanka,"Sri Lanka",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka/matale-district," Matale District"
+2541,9,70000,USD,2372,state,matale-district,2805,country,sri-lanka,"Sri Lanka",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka/matale-district,"Matale District"
 2542,3,58000,USD,2372,state,kandy-district,2805,country,sri-lanka,"Sri Lanka",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka/kandy-district,"Kandy District"
 2544,80,10500,GBP,3383,state,england,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/england,England
-2546,13,27000,USD,2585,state,varkala,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/varkala,Varkala
+2546,10,27000,USD,2585,state,varkala,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/varkala,Varkala
 2547,8,82000,ILS,3258,country,israel,0,continent,africa-and-the-middle-east,"Africa & the Middle East",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/israel,Israel
 2550,16,45000,EUR,3437,state,marrakesh-tensift-el-haouz,3258,country,morocco,Morocco,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco/marrakesh-tensift-el-haouz,"Marrakesh-Tensift-El Haouz"
 2553,3,45000,GBP,969,state,dahab,3258,country,egypt,Egypt,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/egypt/dahab,Dahab
@@ -458,42 +464,43 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2568,7,50000,USD,3470,state,vermont,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/vermont,Vermont
 2570,11,55000,EUR,3276,state,castelo-branco,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/castelo-branco,"Castelo Branco"
 2575,3,119900,USD,3184,state,panama-city,3490,country,panama,Panama,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/panama/panama-city,"Panama City"
-2576,33,1500000,INR,2585,state,ram-jhula,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/ram-jhula,"Ram Jhula"
+2576,27,1500000,INR,2585,state,ram-jhula,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/ram-jhula,"Ram Jhula"
 2579,27,29000,USD,2585,state,kovalam,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/kovalam,Kovalam
 2580,15,26000,EUR,2874,state,paros,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/paros,Paros
 2583,8,60000,USD,3466,state,tarapoto,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/tarapoto,Tarapoto
-2585,470,9000,EUR,2805,country,india,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/india,India
+2585,465,9000,EUR,2805,country,india,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/india,India
 2591,4,39900,EUR,3276,state,pinhal-litoral,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/pinhal-litoral,"Pinhal Litoral"
 2597,26,19600,EUR,2948,state,sardinia,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/sardinia,Sardinia
+2599,4,54900,USD,3470,state,napa,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/napa,Napa
 2600,7,1365000,THB,3513,state,chiang-rai,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/chiang-rai,"Chiang Rai"
 2601,3,145000,AUD,2805,country,cook-islands,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/cook-islands,"Cook Islands"
-2605,12,490000,THB,3513,state,phang-nga,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/phang-nga,"Phang Nga"
+2605,17,450000,THB,3513,state,phang-nga,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/phang-nga,"Phang Nga"
 2607,3,215000,USD,1575,state,vanua-levu,2805,country,fiji,Fiji,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/fiji/vanua-levu,"Vanua Levu"
 2611,7,82000,EUR,2874,state,oia,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/oia,Oia
 2612,11,55500,USD,3298,state,portland,3490,country,jamaica,Jamaica,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/jamaica/portland,Portland
 2615,7,37400,EUR,2675,state,alpujarra-mountains,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/alpujarra-mountains,"Alpujarra Mountains"
 2617,14,19000,EUR,2968,country,ireland,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/ireland,Ireland
-2618,270,84000000,IDR,2354,state,bali,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/bali,Bali
+2618,273,84000000,IDR,2354,state,bali,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/bali,Bali
 2619,8,89500,USD,2554,state,san-marcos-la-laguna,3490,country,guatemala,Guatemala,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/guatemala/san-marcos-la-laguna,"San Marcos La Laguna"
-2623,51,25000,USD,2585,state,lakshman-jhula,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/lakshman-jhula,"Lakshman Jhula"
-2625,9,50000,GBP,2675,state,teulada,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/teulada,Teulada
-2627,12,50000,GBP,2675,state,moraira,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/moraira,Moraira
+2623,50,25000,USD,2585,state,lakshman-jhula,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/lakshman-jhula,"Lakshman Jhula"
+2625,9,46000,GBP,2675,state,teulada,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/teulada,Teulada
+2627,12,46000,GBP,2675,state,moraira,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/moraira,Moraira
 2631,6,1380000,INR,2585,state,auroville,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/auroville,Auroville
 2633,6,132000,USD,2650,state,cabo-san-lucas,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/cabo-san-lucas,"Cabo San Lucas"
 2636,3,49400,USD,2962,state,nassau,3490,country,bahamas,Bahamas,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/bahamas/nassau,Nassau
 2637,3,49400,USD,2962,state,new-providence,3490,country,bahamas,Bahamas,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/bahamas/new-providence,"New Providence"
 2638,8,18000,USD,3513,state,tambon-maret,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/tambon-maret,"Tambon Maret"
-2642,91,18000,USD,3513,state,koh-samui,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/koh-samui,"Koh Samui"
+2642,93,18000,USD,3513,state,koh-samui,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/koh-samui,"Koh Samui"
 2644,5,25000,GBP,2675,state,huerta-de-murcia,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/huerta-de-murcia,"Huerta de Murcia"
 2646,3,41400,USD,3298,state,westmoreland,3490,country,jamaica,Jamaica,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/jamaica/westmoreland,Westmoreland
-2650,78,283500,MXN,3490,country,mexico,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico,Mexico
+2650,77,283500,MXN,3490,country,mexico,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico,Mexico
 2651,6,19000,EUR,3276,state,peniche,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/peniche,Peniche
 2652,4,36100,EUR,3276,state,baleal,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/baleal,Baleal
 2653,8,19000,EUR,3276,state,oeste,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/oeste,Oeste
 2657,10,58000,EUR,3437,state,essaouira,3258,country,morocco,Morocco,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco/essaouira,Essaouira
 2658,9,25000,EUR,2675,state,asturias,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/asturias,Asturias
 2660,8,8300,EUR,2948,state,ispica,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/ispica,Ispica
-2661,5,5000,USD,2360,state,kathmandu-valley,2805,country,nepal,Nepal,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/nepal/kathmandu-valley,"Kathmandu Valley"
+2661,6,5000,USD,2360,state,kathmandu-valley,2805,country,nepal,Nepal,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/nepal/kathmandu-valley,"Kathmandu Valley"
 2662,7,22000,GBP,2675,state,catalonia,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/catalonia,Catalonia
 2663,3,54900,EUR,3437,state,imi-ouaddar,3258,country,morocco,Morocco,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco/imi-ouaddar,"Imi Ouaddar"
 2666,12,29500,USD,2360,state,kathmandu,2805,country,nepal,Nepal,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/nepal/kathmandu,Kathmandu
@@ -501,7 +508,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2669,8,54500,GBP,1324,state,gozo,2968,country,malta,Malta,0,continent,europe,www.bookyogaretreats.com/all/d/europe/malta/gozo,Gozo
 2670,3,142500,USD,3298,state,montego-bay,3490,country,jamaica,Jamaica,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/jamaica/montego-bay,"Montego Bay"
 2673,4,135000,EUR,2650,state,cancun,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/cancun,Cancun
-2675,473,13500,EUR,2968,country,spain,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/spain,Spain
+2675,474,10500,EUR,2968,country,spain,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/spain,Spain
 2677,3,71000,CHF,2799,state,graubunden,2968,country,switzerland,Switzerland,0,continent,europe,www.bookyogaretreats.com/all/d/europe/switzerland/graubunden,Graubunden
 2680,9,59900,USD,3470,state,new-mexico,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/new-mexico,"New Mexico"
 2681,5,140000,CAD,3490,country,cuba,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/cuba,Cuba
@@ -509,7 +516,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2685,19,21000,GBP,2675,state,murcia,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/murcia,Murcia
 2692,6,40000,EUR,2968,country,poland,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/poland,Poland
 2693,15,36500,USD,3490,country,puerto-rico,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/puerto-rico,"Puerto Rico"
-2702,5,31700,EUR,2360,state,phokara,2805,country,nepal,Nepal,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/nepal/phokara,Phokara
+2702,4,31700,EUR,2360,state,phokara,2805,country,nepal,Nepal,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/nepal/phokara,Phokara
 2708,4,22500,EUR,3258,country,kenya,0,continent,africa-and-the-middle-east,"Africa & the Middle East",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/kenya,Kenya
 2709,6,39900,EUR,3276,state,columbeira,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/columbeira,Columbeira
 2712,8,30000,GBP,3276,state,leiria,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/leiria,Leiria
@@ -522,35 +529,35 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2728,4,30000,EUR,2968,country,hungary,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/hungary,Hungary
 2731,3,69500,EUR,2948,state,orvieto,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/orvieto,Orvieto
 2741,15,56600,USD,2354,state,lovina,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/lovina,Lovina
-2743,146,1500000,INR,2585,state,rishikesh,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/rishikesh,Rishikesh
-2745,119,1500000,INR,2585,state,himalaya,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/himalaya,Himalaya
+2743,140,1500000,INR,2585,state,rishikesh,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/rishikesh,Rishikesh
+2745,113,1500000,INR,2585,state,himalaya,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/himalaya,Himalaya
 2751,4,195000,USD,3490,country,chile,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/chile,Chile
 2754,3,55000,EUR,2874,state,lentas,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/lentas,Lentas
-2760,4,37800,USD,3470,state,santa-ysabel,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/santa-ysabel,"Santa Ysabel"
+2760,5,28600,USD,3470,state,santa-ysabel,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/santa-ysabel,"Santa Ysabel"
 2762,8,7500,GBP,3383,state,wales,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/wales,Wales
 2767,3,79000,EUR,2948,state,venice,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/venice,Venice
 2768,24,13000,USD,3490,country,ecuador,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/ecuador,Ecuador
-2769,56,700000,THB,3513,state,phuket,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/phuket,Phuket
+2769,57,700000,THB,3513,state,phuket,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/phuket,Phuket
 2777,15,60000,USD,2585,state,karnataka,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/karnataka,Karnataka
-2784,3,55300,USD,2354,state,kerobokan,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/kerobokan,Kerobokan
+2784,4,55300,USD,2354,state,kerobokan,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/kerobokan,Kerobokan
 2785,7,55000,AUD,2354,state,candidasa,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/candidasa,Candidasa
 2786,11,321900000,IDR,2354,state,sanur,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/sanur,Sanur
 2789,17,800000,INR,2585,state,tamil-nadu,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/tamil-nadu,"Tamil Nadu"
 2790,12,21000,USD,2805,country,vietnam,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/vietnam,Vietnam
-2791,21,20000,EUR,2874,state,cyclades,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/cyclades,Cyclades
+2791,22,20000,EUR,2874,state,cyclades,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/cyclades,Cyclades
 2792,5,105000,EUR,2874,state,naousa,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/naousa,Naousa
 2795,26,72900,EUR,2354,state,buleleng,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/buleleng,Buleleng
 2796,3,79000,EUR,2874,state,santa-maria,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/santa-maria,"Santa Maria"
 2799,18,46500,CHF,2968,country,switzerland,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/switzerland,Switzerland
-2805,1397,5000,USD,0,continent,asia-and-oceania,NULL,NULL,NULL,NULL,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania,"Asia & Oceania"
+2805,1402,5000,USD,0,continent,asia-and-oceania,NULL,NULL,NULL,NULL,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania,"Asia & Oceania"
 2809,17,30000,EUR,2968,country,austria,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/austria,Austria
 2819,35,27000,USD,2585,state,trivandrum,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/trivandrum,Trivandrum
 2820,9,49000,EUR,2809,state,tyrol,2968,country,austria,Austria,0,continent,europe,www.bookyogaretreats.com/all/d/europe/austria/tyrol,Tyrol
-2821,92,19500,EUR,2675,state,andalusia,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/andalusia,Andalusia
+2821,93,19500,EUR,2675,state,andalusia,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/andalusia,Andalusia
 2822,28,10400,EUR,2968,country,germany,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/germany,Germany
 2826,28,14900,EUR,2968,country,netherlands,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/netherlands,Netherlands
 2829,13,28500,EUR,2675,state,estellencs,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/estellencs,Estellencs
-2830,124,9000,EUR,2585,state,goa,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/goa,Goa
+2830,125,9000,EUR,2585,state,goa,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/goa,Goa
 2832,24,67500,USD,3340,state,puerto-viejo,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/puerto-viejo,"Puerto Viejo"
 2844,4,100000,USD,3340,state,playa-guiones,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/playa-guiones,"Playa Guiones"
 2849,4,31500,USD,3470,state,oregon,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/oregon,Oregon
@@ -582,23 +589,23 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2919,3,39900,EUR,3276,state,regiao-de-leiria,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/regiao-de-leiria,"Regiao de Leiria"
 2923,8,27500,GBP,3383,state,cornwall,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/cornwall,Cornwall
 2925,10,26400,USD,2768,state,tumbaco,3490,country,ecuador,Ecuador,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/ecuador/tumbaco,Tumbaco
-2929,5,48000,EUR,2874,state,sfakia,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/sfakia,Sfakia
+2929,4,48000,EUR,2874,state,sfakia,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/sfakia,Sfakia
 2932,7,47500,GBP,2948,state,apulia,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/apulia,Apulia
 2933,4,45000,NZD,2373,state,tauranga,2805,country,new-zealand,"New Zealand",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/new-zealand/tauranga,Tauranga
 2941,3,55000,USD,2372,state,hambantota-district,2805,country,sri-lanka,"Sri Lanka",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka/hambantota-district,"Hambantota District"
 2942,3,2000000,INR,2585,state,munnar,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/munnar,Munnar
 2947,6,250000,USD,3466,state,lima,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/lima,Lima
-2948,220,8300,EUR,2968,country,italy,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/italy,Italy
+2948,219,8300,EUR,2968,country,italy,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/italy,Italy
 2951,4,10500,GBP,3383,state,wallingford,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/wallingford,Wallingford
 2955,32,40000,USD,2585,state,tapovan,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/tapovan,Tapovan
 2959,5,63000,GBP,2948,state,campania,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/campania,Campania
 2960,4,63000,GBP,2948,state,amalfi-coast,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/amalfi-coast,"Amalfi Coast"
-2961,23,12500,USD,3466,state,cusco,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/cusco,Cusco
+2961,24,12500,USD,3466,state,cusco,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/cusco,Cusco
 2962,11,49400,USD,3490,country,bahamas,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/bahamas,Bahamas
 2965,34,89000,TRY,3258,country,turkey,0,continent,africa-and-the-middle-east,"Africa & the Middle East",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/turkey,Turkey
 2967,22,69500,EUR,2948,state,umbria,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/umbria,Umbria
-2968,1477,8300,EUR,0,continent,europe,NULL,NULL,NULL,NULL,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe,Europe
-2974,16,25000,USD,2585,state,dehradun,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/dehradun,Dehradun
+2968,1481,8300,EUR,0,continent,europe,NULL,NULL,NULL,NULL,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe,Europe
+2974,15,25000,USD,2585,state,dehradun,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/dehradun,Dehradun
 2976,5,36000,EUR,3276,state,odemira,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/odemira,Odemira
 2978,58,9000,EUR,3437,state,agadir,3258,country,morocco,Morocco,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco/agadir,Agadir
 2979,3,55000,EUR,2692,state,krakow,2968,country,poland,Poland,0,continent,europe,www.bookyogaretreats.com/all/d/europe/poland/krakow,Krakow
@@ -609,27 +616,28 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 2996,10,39800,USD,3470,state,sedona,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/sedona,Sedona
 3005,15,35000,EUR,3235,state,midi-pyrenees,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/midi-pyrenees,Midi-Pyrenees
 3018,18,89000,TRY,2965,state,mugla,3258,country,turkey,Turkey,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/turkey/mugla,Mugla
-3019,3,54900,USD,3470,state,calistoga,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/calistoga,Calistoga
+3019,4,54900,USD,3470,state,calistoga,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/calistoga,Calistoga
 3020,27,16500,AUD,2722,state,queensland,2805,country,australia,Australia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/australia/queensland,Queensland
 3022,35,29900,GBP,2675,state,costa-blanca,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/costa-blanca,"Costa Blanca"
-3030,51,22500,EUR,2948,state,tuscany,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/tuscany,Tuscany
+3030,50,22500,EUR,2948,state,tuscany,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/tuscany,Tuscany
 3032,5,522500000,IDR,2354,state,sidemen,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/sidemen,Sidemen
 3035,4,55000,CAD,3484,state,vancouver,3490,country,canada,Canada,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/canada/vancouver,Vancouver
-3037,17,21000,EUR,2675,state,costa-del-sol,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/costa-del-sol,"Costa del Sol"
+3037,18,21000,EUR,2675,state,costa-del-sol,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/costa-del-sol,"Costa del Sol"
 3039,4,65000,EUR,2948,state,piedmont,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/piedmont,Piedmont
-3040,28,32900,CAD,3484,state,british-columbia,3490,country,canada,Canada,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/canada/british-columbia,"British Columbia"
+3040,27,32900,CAD,3484,state,british-columbia,3490,country,canada,Canada,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/canada/british-columbia,"British Columbia"
 3043,5,35600,USD,3513,state,hua-hin,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/hua-hin,"Hua Hin"
 3044,3,69500,GBP,2874,state,aegiali,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/aegiali,Aegiali
-3046,26,26000,EUR,2874,state,aegean-islands,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/aegean-islands,"Aegean Islands"
+3046,27,26000,EUR,2874,state,aegean-islands,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/aegean-islands,"Aegean Islands"
 3049,35,9500,EUR,3437,state,taghazout,3258,country,morocco,Morocco,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco/taghazout,Taghazout
+3052,3,47500,USD,3470,state,joshua-tree-national-park,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/joshua-tree-national-park,"Joshua Tree National Park"
 3057,55,30000,EUR,2675,state,alicante,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/alicante,Alicante
 3058,3,48500,EUR,2675,state,other-3,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/other-3,Other
 3059,24,12000,EUR,3276,state,centro,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/centro,Centro
 3060,9,58500,USD,3340,state,tamarindo,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/tamarindo,Tamarindo
 3063,53,22000,AUD,2722,state,new-south-wales,2805,country,australia,Australia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/australia/new-south-wales,"New South Wales"
-3064,27,33600,EUR,3276,state,lisbon,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/lisbon,Lisbon
+3064,26,33600,EUR,3276,state,lisbon,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/lisbon,Lisbon
 3070,5,29900,GBP,2675,state,altea,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/altea,Altea
-3075,3,65000,USD,2365,state,mafia-island,3258,country,tanzania,Tanzania,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/tanzania/mafia-island,"Mafia Island"
+3075,4,65000,USD,2365,state,mafia-island,3258,country,tanzania,Tanzania,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/tanzania/mafia-island,"Mafia Island"
 3080,8,110000,USD,2650,state,nayarit,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/nayarit,Nayarit
 3090,8,26600,USD,2464,state,san-juan-del-sur,3490,country,nicaragua,Nicaragua,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/nicaragua/san-juan-del-sur,"San Juan del Sur"
 3097,6,55500,USD,3298,state,long-bay,3490,country,jamaica,Jamaica,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/jamaica/long-bay,"Long Bay"
@@ -641,23 +649,25 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 3114,3,42000,AUD,2722,state,south-australia,2805,country,australia,Australia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/australia/south-australia,"South Australia"
 3119,51,18000,USD,3513,state,chumphon-archipelago,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/chumphon-archipelago,"Chumphon Archipelago"
 3120,12,39800,USD,3470,state,arizona,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/arizona,Arizona
-3121,22,12000,USD,3470,state,nevada-california,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/nevada-california,"Nevada, California"
+3121,26,12000,USD,3470,state,nevada-california,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/nevada-california,"Nevada, California"
+3123,3,26000,USD,3470,state,sierra,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/sierra,Sierra
 3128,3,109900,EUR,2948,state,capri,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/capri,Capri
 3131,3,54700,EUR,2675,state,hoya-de-huesca,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/hoya-de-huesca,"Hoya de Huesca"
-3132,7,20000,USD,3470,state,nevada,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/nevada,Nevada
+3132,6,22000,USD,3470,state,nevada,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/nevada,Nevada
 3133,5,77000,EUR,2874,state,mykonos,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/mykonos,Mykonos
+3134,3,50000,USD,3470,state,santa-cruz--2,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/santa-cruz--2,"Santa Cruz"
 3135,4,85000,USD,3470,state,kona,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/kona,Kona
 3140,15,89000,TRY,2965,state,fethiye,3258,country,turkey,Turkey,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/turkey/fethiye,Fethiye
 3143,7,449000,CZK,2968,country,czech-republic,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/czech-republic,"Czech Republic"
 3149,3,58500,USD,3340,state,santa-cruz,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/santa-cruz,"Santa Cruz"
-3150,59,19500,EUR,2675,state,malaga,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/malaga,Malaga
+3150,60,19500,EUR,2675,state,malaga,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/malaga,Malaga
 3151,19,60000,USD,3470,state,florida,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/florida,Florida
 3155,3,34000,GBP,3383,state,seaford,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/seaford,Seaford
-3162,116,28500,EUR,2675,state,balearic-islands,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/balearic-islands,"Balearic Islands"
-3166,39,56000,USD,3340,state,guanacaste,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/guanacaste,Guanacaste
+3162,115,28500,EUR,2675,state,balearic-islands,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/balearic-islands,"Balearic Islands"
+3166,29,56000,USD,3340,state,guanacaste,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/guanacaste,Guanacaste
 3172,9,49000,EUR,2675,state,marina-alta,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/marina-alta,"Marina Alta"
-3182,6,77000,GBP,2948,state,lucca,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/lucca,Lucca
-3183,7,65450,USD,3470,state,santa-margarita,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/santa-margarita,"Santa Margarita"
+3182,5,77000,GBP,2948,state,lucca,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/lucca,Lucca
+3183,8,65450,USD,3470,state,santa-margarita,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/santa-margarita,"Santa Margarita"
 3184,18,26000,USD,3490,country,panama,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/panama,Panama
 3187,17,10500,GBP,3383,state,south-east-england,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/south-east-england,"South East England"
 3189,19,209000,ZAR,3258,country,south-africa,0,continent,africa-and-the-middle-east,"Africa & the Middle East",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/south-africa,"South Africa"
@@ -666,23 +676,23 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 3213,13,48000,EUR,2675,state,orgiva,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/orgiva,Orgiva
 3228,5,55000,EUR,2874,state,heraklion,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/heraklion,Heraklion
 3234,10,47500,USD,3466,state,urubamba,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/urubamba,Urubamba
-3235,87,20000,EUR,2968,country,france,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/france,France
+3235,88,20000,EUR,2968,country,france,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/france,France
 3237,7,25000,GBP,3276,state,tavira,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/tavira,Tavira
 3238,18,522500000,IDR,2354,state,karangasem,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/karangasem,Karangasem
 3240,16,47500,USD,3466,state,sacred-valley,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/sacred-valley,"Sacred Valley"
-3241,9,37800,USD,3470,state,southern-california,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/southern-california,"Southern California"
+3241,36,27500,USD,3470,state,southern-california,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/southern-california,"Southern California"
 3242,5,33000,EUR,2675,state,denia,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/denia,Denia
 3246,4,37900,EUR,2948,state,val-dorcia,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/val-dorcia,"Val d'Orcia"
 3248,5,44000,GBP,1747,state,dubrovnik-neretva-county,2968,country,croatia,Croatia,0,continent,europe,www.bookyogaretreats.com/all/d/europe/croatia/dubrovnik-neretva-county,"Dubrovnik-Neretva County"
 3253,3,70000,USD,3470,state,santa-fe--2,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/santa-fe--2,"Santa Fe"
 3254,4,4000000,INR,2585,state,ladakh,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/ladakh,Ladakh
 3257,4,25000,GBP,2948,state,grosseto,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/grosseto,Grosseto
-3258,230,9000,EUR,0,continent,africa-and-the-middle-east,NULL,NULL,NULL,NULL,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/africa-and-the-middle-east,"Africa & the Middle East"
+3258,231,9000,EUR,0,continent,africa-and-the-middle-east,NULL,NULL,NULL,NULL,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/africa-and-the-middle-east,"Africa & the Middle East"
 3260,6,129500,USD,2354,state,sukawati,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/sukawati,Sukawati
 3263,10,305250000,IDR,2354,state,west-bali,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/west-bali,"West Bali"
 3264,18,21000,EUR,2675,state,san-lorenzo,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/san-lorenzo,"San Lorenzo"
 3273,5,69500,GBP,2874,state,amorgos,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/amorgos,Amorgos
-3276,200,12000,EUR,2968,country,portugal,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/portugal,Portugal
+3276,204,12000,EUR,2968,country,portugal,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/portugal,Portugal
 3279,3,30000,USD,2354,state,gili-trawangan,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/gili-trawangan,"Gili Trawangan"
 3280,7,89500,EUR,2948,state,perugia,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/perugia,Perugia
 3285,3,199500,USD,2948,state,gubbio,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/gubbio,Gubbio
@@ -698,10 +708,10 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 3311,3,55000,USD,3470,state,tennessee,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/tennessee,Tennessee
 3326,9,56000,USD,3340,state,playa-negra,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/playa-negra,"Playa Negra"
 3329,6,155000,AUD,1575,state,savusavu,2805,country,fiji,Fiji,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/fiji/savusavu,Savusavu
-3331,97,24000,EUR,3276,state,algarve,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/algarve,Algarve
+3331,101,24000,EUR,3276,state,algarve,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/algarve,Algarve
 3337,3,29500,GBP,2675,state,bilbao,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/bilbao,Bilbao
 3338,6,29500,EUR,2675,state,conil-de-la-frontera,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/conil-de-la-frontera,"Conil de la Frontera"
-3340,214,13000,USD,3490,country,costa-rica,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica,"Costa Rica"
+3340,204,13000,USD,3490,country,costa-rica,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica,"Costa Rica"
 3343,14,1700000,INR,2585,state,jaipur,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/jaipur,Jaipur
 3344,8,75000,EUR,2585,state,varanasi,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/varanasi,Varanasi
 3358,9,40000,EUR,2675,state,tenerife,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/tenerife,Tenerife
@@ -709,7 +719,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 3376,56,29900,EUR,2675,state,canary-islands,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/canary-islands,"Canary Islands"
 3383,122,7500,GBP,2968,country,united-kingdom,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/united-kingdom,"United Kingdom"
 3390,3,164900,USD,2768,state,mindo,3490,country,ecuador,Ecuador,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/ecuador/mindo,Mindo
-3397,32,30000,EUR,2585,state,himachal-pradesh,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/himachal-pradesh,"Himachal Pradesh"
+3397,33,30000,EUR,2585,state,himachal-pradesh,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/himachal-pradesh,"Himachal Pradesh"
 3398,6,39000,EUR,3235,state,languedoc-roussillon,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/languedoc-roussillon,Languedoc-Roussillon
 3399,17,45000,GBP,2948,state,puglia,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/puglia,Puglia
 3401,3,210000,USD,3470,state,kachemak-bay,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/kachemak-bay,"Kachemak Bay"
@@ -723,8 +733,9 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 3424,12,65000,EUR,2968,country,cyprus,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/cyprus,Cyprus
 3436,47,15000,USD,2805,country,cambodia,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia,Cambodia
 3437,132,9000,EUR,3258,country,morocco,0,continent,africa-and-the-middle-east,"Africa & the Middle East",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco,Morocco
+3443,4,250000,USD,3470,state,los-angeles,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/los-angeles,"Los Angeles"
 3444,102,34900,EUR,2675,state,ibiza,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/ibiza,Ibiza
-3445,124,1500000,INR,2585,state,uttarakhand,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/uttarakhand,Uttarakhand
+3445,119,1500000,INR,2585,state,uttarakhand,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/uttarakhand,Uttarakhand
 3446,3,29500,EUR,2675,state,jerez-de-la-frontera,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/jerez-de-la-frontera,"Jerez de la Frontera"
 3448,11,75000,USD,2650,state,baja-california-sur,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/baja-california-sur,"Baja California Sur"
 3458,7,54000,EUR,2948,state,arezzo,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/arezzo,Arezzo
@@ -732,39 +743,39 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 3462,4,85000,EUR,2965,state,gocek,3258,country,turkey,Turkey,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/turkey/gocek,Gocek
 3464,3,202500,USD,2464,state,laguna-de-apoyo,3490,country,nicaragua,Nicaragua,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/nicaragua/laguna-de-apoyo,"Laguna de Apoyo"
 3465,5,40000,GBP,3383,state,cumbria,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/cumbria,Cumbria
-3466,40,12500,USD,3490,country,peru,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru,Peru
+3466,41,12500,USD,3490,country,peru,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru,Peru
 3467,14,55000,AUD,2354,state,east-bali,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/east-bali,"East Bali"
 3468,7,36600,EUR,2675,state,playa-del-albir,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/playa-del-albir,"Playa del Albir"
-3470,270,11100,USD,3490,country,usa,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa,USA
-3471,3,1176000000,IDR,2354,state,denpasar,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/denpasar,Denpasar
+3470,272,11100,USD,3490,country,usa,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa,USA
+3471,4,1176000000,IDR,2354,state,denpasar,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/denpasar,Denpasar
 3475,24,1312500,INR,2585,state,pernem,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/pernem,Pernem
 3476,15,120000,USD,2650,state,yucatan-peninsula,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/yucatan-peninsula,"Yucatan Peninsula"
 3478,6,199500,USD,2948,state,chianti,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/chianti,Chianti
 3479,5,35600,USD,3513,state,prachuap-khiri-khan,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/prachuap-khiri-khan,"Prachuap Khiri Khan"
 3480,12,12000,EUR,3276,state,beira-baixa,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/beira-baixa,"Beira Baixa"
 3483,14,84000000,IDR,2354,state,kuta-north,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/kuta-north,"Kuta North"
-3484,56,30000,CAD,3490,country,canada,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/canada,Canada
+3484,55,30000,CAD,3490,country,canada,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/canada,Canada
 3486,21,50000,USD,2585,state,mandrem-beach,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/mandrem-beach,"Mandrem Beach"
-3490,839,11100,USD,0,continent,the-americas-and-caribbean,NULL,NULL,NULL,NULL,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean,"The Americas & Caribbean"
+3490,831,11100,USD,0,continent,the-americas-and-caribbean,NULL,NULL,NULL,NULL,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean,"The Americas & Caribbean"
 3491,15,26400,USD,2768,state,quito,3490,country,ecuador,Ecuador,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/ecuador/quito,Quito
 3492,4,41000,GBP,3235,state,rhone-alpes,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/rhone-alpes,Rhône-Alpes
 3493,3,74500,EUR,2675,state,ronda,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/ronda,Ronda
 3495,3,40000,GBP,3383,state,lake-district,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/lake-district,"Lake District"
 3496,9,86100,USD,3490,country,dominican-republic,0,continent,the-americas-and-caribbean,"The Americas & Caribbean",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/dominican-republic,"Dominican Republic"
 3497,31,2060000,THB,3513,state,mueang-phuket,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/mueang-phuket,"Mueang Phuket"
-3499,8,75000,USD,2650,state,sayulita,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/sayulita,Sayulita
+3499,7,110000,USD,2650,state,sayulita,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/sayulita,Sayulita
 3503,22,99500,USD,2650,state,tulum,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/tulum,Tulum
-3504,43,220000000,IDR,2354,state,gianyar,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/gianyar,Gianyar
+3504,44,220000000,IDR,2354,state,gianyar,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/gianyar,Gianyar
 3505,7,69000,EUR,3276,state,amieira,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/amieira,Amieira
 3506,10,87000,EUR,2968,country,iceland,0,continent,europe,Europe,NULL,NULL,NULL,www.bookyogaretreats.com/all/d/europe/iceland,Iceland
-3507,31,32900,EUR,3276,state,lagos,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/lagos,Lagos
+3507,31,34900,EUR,3276,state,lagos,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/lagos,Lagos
 3509,4,63000,GBP,2948,state,positano,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/positano,Positano
 3512,9,84900,USD,2650,state,jalisco,3490,country,mexico,Mexico,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico/jalisco,Jalisco
-3513,270,298000,THB,2805,country,thailand,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand,Thailand
+3513,277,298000,THB,2805,country,thailand,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand,Thailand
 3514,9,29500,USD,2354,state,tabanan,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/tabanan,Tabanan
 3516,6,35000,USD,3470,state,texas,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/texas,Texas
 3518,3,210000,USD,3470,state,killington,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/killington,Killington
-3519,127,18000,USD,3513,state,surat-thani,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/surat-thani,"Surat Thani"
+3519,129,18000,USD,3513,state,surat-thani,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/surat-thani,"Surat Thani"
 3521,10,38500,EUR,3276,state,mafra,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/mafra,Mafra
 3522,26,595000,PHP,2805,country,philippines,0,continent,asia-and-oceania,"Asia & Oceania",NULL,NULL,NULL,www.bookyogaretreats.com/all/d/asia-and-oceania/philippines,Philippines
 3523,5,41700,GBP,2948,state,sabina,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/sabina,Sabina
@@ -784,13 +795,16 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 3549,7,55000,GBP,3235,state,dordogne,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/dordogne,Dordogne
 3550,8,18900,GBP,3383,state,somerset,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/somerset,Somerset
 3552,7,46000,EUR,2874,state,chania,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/chania,Chania
-3554,25,46000,EUR,2874,state,crete,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/crete,Crete
+3554,24,46000,EUR,2874,state,crete,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/crete,Crete
 3557,4,1365000,THB,3513,state,chiang-rai-province,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/chiang-rai-province,"Chiang Rai Province"
 3558,5,4637000,THB,3513,state,amphoe-mueang-chiang-rai,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/amphoe-mueang-chiang-rai,"Amphoe Mueang Chiang Rai"
 3596,3,50000,GBP,2675,state,sitges,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/sitges,Sitges
 3597,5,180000,USD,2962,state,eleuthera,3490,country,bahamas,Bahamas,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/bahamas/eleuthera,Eleuthera
 3609,7,44500,USD,3340,state,dominical,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/dominical,Dominical
 3625,37,1400000,INR,2585,state,south-goa,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/south-goa,"South Goa"
+3626,5,101800,EUR,3276,state,praia-da-falesia,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/praia-da-falesia,"Praia da Falesia"
+3627,4,101800,EUR,3276,state,olhos-de-agua,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/olhos-de-agua,"Olhos de Agua"
+3628,6,69000,EUR,3276,state,albufeira,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/albufeira,Albufeira
 3636,6,78500,USD,3466,state,aguas-calientes,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/aguas-calientes,"Aguas Calientes"
 3661,3,109000,EUR,3437,state,taroudant,3258,country,morocco,Morocco,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco/taroudant,Taroudant
 3686,8,145000,USD,3470,state,florida-keys,3490,country,usa,USA,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/florida-keys,"Florida Keys"
@@ -804,11 +818,10 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 3879,3,19000,USD,3436,state,psa-ney,2805,country,cambodia,Cambodia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia/psa-ney,"Psa Ney"
 3913,3,134400,EUR,2585,state,kannur,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/kannur,Kannur
 3931,4,37200,EUR,3276,state,lourinha,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/lourinha,Lourinha
-3945,3,150000,USD,2360,state,bagmati,2805,country,nepal,Nepal,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/nepal/bagmati,Bagmati
+3945,4,150000,USD,2360,state,bagmati,2805,country,nepal,Nepal,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/nepal/bagmati,Bagmati
 3946,9,2898000,INR,2585,state,kollam,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/kollam,Kollam
 3966,4,805000,THB,3513,state,gulf-of-thailand,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/gulf-of-thailand,"Gulf of Thailand"
 3984,4,10500,GBP,3383,state,ipsden,2968,country,united-kingdom,"United Kingdom",0,continent,europe,www.bookyogaretreats.com/all/d/europe/united-kingdom/ipsden,Ipsden
-3985,3,8000000,INR,2585,state,western-ghats,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/western-ghats,"Western Ghats"
 3993,27,42000,USD,2585,state,ganges,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/ganges,Ganges
 4028,6,42500,USD,2354,state,berawa-beach,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/berawa-beach,"Berawa Beach"
 4043,3,70000,EUR,3276,state,luzianes-gare,2968,country,portugal,Portugal,0,continent,europe,www.bookyogaretreats.com/all/d/europe/portugal/luzianes-gare,Luzianes-Gare
@@ -819,8 +832,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 4089,9,73500,EUR,2675,state,villaverde,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/villaverde,Villaverde
 4107,4,40500,NZD,2373,state,abel-tasman-national-park,2805,country,new-zealand,"New Zealand",0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/new-zealand/abel-tasman-national-park,"Abel Tasman National Park"
 4113,4,140000,GBP,2452,state,inle-lake,2805,country,burma,Burma,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/burma/inle-lake,"Inle Lake"
-4140,7,19000,USD,3436,state,phnom-penh,2805,country,cambodia,Cambodia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia/phnom-penh,"Phnom Penh"
-4193,3,19000,USD,3436,state,phnom-kulen,2805,country,cambodia,Cambodia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia/phnom-kulen,"Phnom Kulen"
+4140,6,19000,USD,3436,state,phnom-penh,2805,country,cambodia,Cambodia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia/phnom-penh,"Phnom Penh"
 4253,10,3070000,THB,3513,state,ban-phang-ka,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/ban-phang-ka,"Ban Phang Ka"
 4276,6,1000000,INR,2585,state,mulanthuruthy,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/mulanthuruthy,Mulanthuruthy
 4277,4,1000000,INR,2585,state,karikode,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/karikode,Karikode
@@ -884,7 +896,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 5790,9,22500,EUR,3437,state,paradise-valley,3258,country,morocco,Morocco,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco/paradise-valley,"Paradise Valley"
 5791,3,59500,EUR,2675,state,velez-malaga,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/velez-malaga,Vélez-Málaga
 5792,6,4000000,INR,2585,state,new-delhi,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/new-delhi,"New Delhi"
-5826,3,55000,GBP,2965,state,kabak,3258,country,turkey,Turkey,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/turkey/kabak,Kabak
+5826,3,65000,EUR,2965,state,kabak,3258,country,turkey,Turkey,0,continent,africa-and-the-middle-east,www.bookyogaretreats.com/all/d/africa-and-the-middle-east/turkey/kabak,Kabak
 5892,9,42500,USD,2354,state,canggu-beach,2805,country,indonesia,Indonesia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/canggu-beach,"Canggu Beach"
 5903,5,78500,USD,3466,state,maras,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/maras,Maras
 5905,4,187000,USD,3466,state,moray,3490,country,peru,Peru,0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/peru/moray,Moray
@@ -900,9 +912,9 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 6080,3,24500,EUR,2874,state,thesprotia,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/thesprotia,Thesprotia
 6091,3,13300,EUR,2948,state,pescosolido,2968,country,italy,Italy,0,continent,europe,www.bookyogaretreats.com/all/d/europe/italy/pescosolido,Pescosolido
 6174,3,21000,GBP,2675,state,cartagena-1,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/cartagena-1,Cartagena
-6216,4,19000,USD,3436,state,phnom-voar,2805,country,cambodia,Cambodia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia/phnom-voar,"Phnom Voar"
+6216,3,19000,USD,3436,state,phnom-voar,2805,country,cambodia,Cambodia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia/phnom-voar,"Phnom Voar"
 6263,3,99200,USD,3340,state,tambor,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/tambor,Tambor
-6344,15,20000,EUR,2874,state,aegean-sea-area,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/aegean-sea-area,"Aegean Sea area"
+6344,16,20000,EUR,2874,state,aegean-sea-area,2968,country,greece,Greece,0,continent,europe,www.bookyogaretreats.com/all/d/europe/greece/aegean-sea-area,"Aegean Sea area"
 6408,4,31500,EUR,2617,state,county-clare,2968,country,ireland,Ireland,0,continent,europe,www.bookyogaretreats.com/all/d/europe/ireland/county-clare,"County Clare"
 6419,3,58500,USD,3340,state,huacas,3490,country,costa-rica,"Costa Rica",0,continent,the-americas-and-caribbean,www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica/huacas,Huacas
 6421,5,25000,EUR,2675,state,avin,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/avin,Avin
@@ -918,7 +930,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 6635,3,70000,EUR,2809,state,grossglockner-area,2968,country,austria,Austria,0,continent,europe,www.bookyogaretreats.com/all/d/europe/austria/grossglockner-area,"Grossglockner area"
 6636,3,70000,EUR,2809,state,hohe-tauern-national-park,2968,country,austria,Austria,0,continent,europe,www.bookyogaretreats.com/all/d/europe/austria/hohe-tauern-national-park,"Hohe Tauern National Park"
 6638,3,70000,EUR,2809,state,kals-am-grossglockner-1,2968,country,austria,Austria,0,continent,europe,www.bookyogaretreats.com/all/d/europe/austria/kals-am-grossglockner-1,"Kals am Grossglockner"
-6651,4,19000,USD,3436,state,tapoul-village,2805,country,cambodia,Cambodia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia/tapoul-village,"Tapoul Village"
+6651,3,19000,USD,3436,state,tapoul-village,2805,country,cambodia,Cambodia,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia/tapoul-village,"Tapoul Village"
 6669,7,39000,EUR,3235,state,lempaut,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/lempaut,Lempaut
 6685,3,29500,EUR,3235,state,limoges,2968,country,france,France,0,continent,europe,www.bookyogaretreats.com/all/d/europe/france/limoges,Limoges
 6726,5,58000,EUR,2675,state,port-de-soller,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/port-de-soller,"Port de Sóller"
@@ -957,4 +969,7 @@ destination_id,nr_listings,from_price,currency_code,parent_id1,type1,slug1,paren
 7842,3,34900,EUR,2822,state,list-auf-sylt,2968,country,germany,Germany,0,continent,europe,www.bookyogaretreats.com/all/d/europe/germany/list-auf-sylt,"List auf Sylt"
 7883,3,145000,USD,2585,state,upper-tapovan,2805,country,india,India,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/india/upper-tapovan,"Upper Tapovan"
 7908,3,49000,EUR,2822,state,mecklenburg-vorpommern,2968,country,germany,Germany,0,continent,europe,www.bookyogaretreats.com/all/d/europe/germany/mecklenburg-vorpommern,Mecklenburg-Vorpommern
-7995,15,2898000,THB,3513,state,laem-sor-beach,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/laem-sor-beach,"Laem Sor Beach"
+7995,17,2898000,THB,3513,state,laem-sor-beach,2805,country,thailand,Thailand,0,continent,asia-and-oceania,www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/laem-sor-beach,"Laem Sor Beach"
+8072,3,52000,EUR,2675,state,tejina,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/tejina,Tejina
+8073,3,52000,EUR,2675,state,san-cristobal-de-la-laguna,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/san-cristobal-de-la-laguna,"San Cristóbal de La Laguna"
+8087,3,52000,EUR,2675,state,anaga-mountains,2968,country,spain,Spain,0,continent,europe,www.bookyogaretreats.com/all/d/europe/spain/anaga-mountains,"Anaga Mountains"
