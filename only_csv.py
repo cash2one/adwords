@@ -448,6 +448,9 @@ for i in range(len(comb2)):
     
 results = comb + comb2
 
+for i in range(len(results)):
+    results[i] = results[i].replace(',', '')
+    results[i] = results[i].replace('-', ' ')
 
 #prepare to export csv
 ad_group_max_cpc = [0.10]
@@ -478,280 +481,80 @@ for i in range(len(kw_rows)):
     
 kw_rows = set(kw_rows)
 
+import math
 
-export_name = 'SQL_kws.csv'
-new_export = open(export_name, 'w')
-export_object = csv.writer(new_export)
+limit = 19994
+cut = math.ceil(len(results) / limit)
 
-export_object.writerow(kw_column_titles)
-export_object.writerows(kw_rows)
+if len(results) > limit:
+    for i in range(cut):
+        export_name = 'SQL_kws_%i.csv' %(i+1)
+        new_export = open(export_name, 'w')
+        export_object = csv.writer(new_export)
 
-new_export.close()
+        export_object.writerow(kw_column_titles)
+        export_object.writerows(kw_rows[0:limit*(i+1)])
+        new_export.close()
 
-print('%i keywords for %i destinations have been created please check your current directory for the csv output' %(len(kw_rows), len(ready_urls)))
 
-######################################################################################################################################################################################################
+#export_name = 'SQL_kws.csv'
+#new_export = open(export_name, 'w')
+#export_object = csv.writer(new_export)
 
-#split csv by 19994 rows per file (adwords bulk upload maximum limit)
-import os
+# export_object.writerow(kw_column_titles)
+# export_object.writerows(kw_rows)
 
-def split(filehandler, delimiter=',', row_limit=19994, 
-    output_name_template='SQL_kws_%s.csv', output_path='.', keep_headers=True):
-    """
-    Splits a CSV file into multiple pieces.
+# new_export.close()
+
+print('%i keywords for %i destinations have been created in %i file(s) please check your current directory for the csv output' %(len(results), len(ready_urls), len(cut)))
+
+# ######################################################################################################################################################################################################
+
+# #split csv by 19994 rows per file (adwords bulk upload maximum limit)
+# import os
+
+# def split(filehandler, delimiter=',', row_limit=19994, 
+#     output_name_template='SQL_kws_%s.csv', output_path='.', keep_headers=True):
+#     """
+#     Splits a CSV file into multiple pieces.
     
-    A quick bastardization of the Python CSV library.
-    Arguments:
-        `row_limit`: The number of rows you want in each output file. 10,000 by default.
-        `output_name_template`: A %s-style template for the numbered output files.
-        `output_path`: Where to stick the output files.
-        `keep_headers`: Whether or not to print the headers in each output file.
-    Example usage:
+#     A quick bastardization of the Python CSV library.
+#     Arguments:
+#         `row_limit`: The number of rows you want in each output file. 19994 by default.
+#         `output_name_template`: A %s-style template for the numbered output files.
+#         `output_path`: Where to stick the output files.
+#         `keep_headers`: Whether or not to print the headers in each output file.
+#     Example usage:
     
-        >> from toolbox import csv_splitter;
-        >> csv_splitter.split(open('/home/ben/input.csv', 'r'));
+#         >> from toolbox import csv_splitter;
+#         >> csv_splitter.split(open('/home/ben/input.csv', 'r'));
     
-    """
-    import csv
-    reader = csv.reader(filehandler, delimiter=delimiter)
-    current_piece = 1
-    current_out_path = os.path.join(
-         output_path,
-         output_name_template  % current_piece
-    )
-    current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
-    current_limit = row_limit
-    if keep_headers:
-        headers = reader.__next__()
-        current_out_writer.writerow(headers)
-    for i, row in enumerate(reader):
-        if i + 1 > current_limit:
-            current_piece += 1
-            current_limit = row_limit * current_piece
-            current_out_path = os.path.join(
-               output_path,
-               output_name_template  % current_piece
-            )
-            current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
-            if keep_headers:
-                current_out_writer.writerow(headers)
-        current_out_writer.writerow(row)
+#     """
+#     import csv
+#     reader = csv.reader(filehandler, delimiter=delimiter)
+#     current_piece = 1
+#     current_out_path = os.path.join(
+#          output_path,
+#          output_name_template  % current_piece
+#     )
+#     current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
+#     current_limit = row_limit
+#     if keep_headers:
+#         headers = reader.__next__()
+#         current_out_writer.writerow(headers)
+#     for i, row in enumerate(reader):
+#         if i + 1 > current_limit:
+#             current_piece += 1
+#             current_limit = row_limit * current_piece
+#             current_out_path = os.path.join(
+#                output_path,
+#                output_name_template  % current_piece
+#             )
+#             current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
+#             if keep_headers:
+#                 current_out_writer.writerow(headers)
+#         current_out_writer.writerow(row)
 
-if len(results) > 19994:
-    split(open(export_name), 'r')
-    print('SQL_kw csv file has been split into multiple files, each including 19994 keywords please check your current directory for the output csv files')
-
-###############################################################################################################################################################
-#prepare to open campaigns and ad groups
-
-#----------------------------------------------#
-camps = list(set(kw_campaign)) #campaign names
-
-for i in range(len(camps)):
-    camps[i] = camps[i].split()
-
-camps = sorted(camps, key=lambda x: x[-1]) #sort it alphabetically by the last word 
-
-for i in range(len(camps)):
-    camps[i] = ' '.join(camps[i])
-  
-# #----------------------------------------------#
-# a = []
-# b = []
-
-# for item in camps:
-#     a.append(item.split()[-1])
-
-# for item in groups:
-#     b.append(item.split()[-1])
-
-# for i in range(len(camps)):
-#     if a[i] != b[i]:
-#         #print('trouble')
-#         print(a[i], b[i], i)
-###############################################################################################################################################################
-
-#1. open campaigns
-
-import datetime
-import uuid
-from googleads import adwords
-
-campaign_ids = [] #campaign id storage for later
-campaign_names = [] #campaign name storage for later
-ad_group_ids = [] #ad group id storage for later
-ad_group_names = []#ad group name storage for later
-
-if __name__ == '__main__':
-  
-  # Initialize client object.
-  adwords_client = adwords.AdWordsClient.LoadFromStorage()
-
-  client = adwords_client
-
-  campaign_service = client.GetService('CampaignService', version='v201603')
-  budget_service = client.GetService('BudgetService', version='v201603')
-
-  for i in range(len(camps)):
-    
-    # Create a budget, which can be shared by multiple campaigns.
-    budget = {
-        'name': 'Budget #%s' % uuid.uuid4(),
-        #'name': '100 %s' % float(i/100),
-        'amount': {
-            'microAmount': '100000000' #100 euros
-        },
-        'deliveryMethod': 'STANDARD'
-    }
-
-    budget_operations = [{
-        'operator': 'ADD',
-        'operand': budget
-    }]
-
-    # Add the budget.
-    budget_id = budget_service.mutate(budget_operations)['value'][0][
-        'budgetId']
-
-    # Construct operations and add campaigns.
-    operations = [{
-        'operator': 'ADD',
-        'operand': {
-            #'name': 'Interplanetary Cruise #%s' % uuid.uuid4(),
-            'name': '%s' % camps[i],
-            'status': 'ENABLED',
-            'advertisingChannelType': 'SEARCH',
-            'biddingStrategyConfiguration': {
-                'biddingStrategyType': 'MANUAL_CPC',
-            },
-            'endDate': (datetime.datetime.now() +
-                        datetime.timedelta(365)).strftime('20371230'),
-            # Note that only the budgetId is required
-            'budget': {
-                'budgetId': budget_id
-            },
-            'networkSetting': {
-                'targetGoogleSearch': 'true',
-                'targetSearchNetwork': 'true',
-                'targetContentNetwork': 'false',
-                'targetPartnerSearchNetwork': 'false'
-            },
-            # Optional fields
-            'startDate': (datetime.datetime.now() +
-                          datetime.timedelta(1)).strftime('%Y%m%d'),
-            'adServingOptimizationStatus': 'ROTATE',
-            'frequencyCap': {
-                'impressions': '5',
-                'timeUnit': 'DAY',
-                'level': 'ADGROUP'
-            },
-            'settings': [
-                {
-                    'xsi_type': 'GeoTargetTypeSetting',
-                    'positiveGeoTargetType': 'DONT_CARE',
-                    'negativeGeoTargetType': 'DONT_CARE'
-                }
-            ]
-        }
-    }]
-
-    
-
-    campaigns = campaign_service.mutate(operations)
-
-    # Display results.
-    for campaign in campaigns['value']:
-      print ('Campaign with name \'%s\' and id \'%s\' was added.'
-             % (campaign['name'], campaign['id']))
-      campaign_names.append(campaign['name'])
-      campaign_ids.append(campaign['id'])
-
-print(campaign_names)
-print(campaign_ids)
-
-########################################
-
-groups = []
-
-for i in range(len(campaign_names)):
-    campaign_names[i] = campaign_names[i].split()
-    if '-' in campaign_names[i]: #if the destination is a state
-        dash = campaign_names[i].index('-')
-        groups.append('Longtail Retreats %s' %' '.join(campaign_names[i][dash+1:]))
-    else: #if the destination is a country
-        groups.append('Longtail Retreats %s' %' '.join(campaign_names[i][1:]))
-    campaign_names[i] = ' '.join(campaign_names[i]) #join the items in camps again
-
-########################################
-
-
-#2.open ad groups
-
-if __name__ == '__main__':
-  adwords_client = adwords.AdWordsClient.LoadFromStorage()
-  #main(adwords_client)
-  client = adwords_client
-
-  # Initialize appropriate service.
-  ad_group_service = client.GetService('AdGroupService', version='v201603')
-
-  for i in range(len(camps)):
-    campaign_id = campaign_ids[i]
-
-    operations = [{
-      'operator': 'ADD',
-      'operand': {
-          'campaignId': campaign_ids[i],
-          #'name': 'Earth to Mars Cruises #%s' % uuid.uuid4(),
-          'name': '%s' %groups[i],
-          #'label': 'type=dest' .  
-          'status': 'ENABLED',
-          'biddingStrategyConfiguration': {
-              'bids': [
-                  {
-                      'xsi_type': 'CpcBid',
-                      'bid': {
-                          'microAmount': '1000000'
-                      },
-                  }
-              ]
-          },
-          'settings': [
-              {
-                  # Targeting restriction settings. Depending on the
-                  # criterionTypeGroup value, most TargetingSettingDetail only
-                  # affect Display campaigns. However, the
-                  # USER_INTEREST_AND_LIST value works for RLSA campaigns -
-                  # Search campaigns targeting using a remarketing list.
-                  'xsi_type': 'TargetingSetting',
-                  'details': [
-                      # Restricting to serve ads that match your ad group
-                      # placements. This is equivalent to choosing
-                      # "Target and bid" in the UI.
-                      {
-                          'xsi_type': 'TargetingSettingDetail',
-                          'criterionTypeGroup': 'PLACEMENT',
-                          'targetAll': 'false',
-                      },
-                      # Using your ad group verticals only for bidding. This is
-                      # equivalent to choosing "Bid only" in the UI.
-                      {
-                          'xsi_type': 'TargetingSettingDetail',
-                          'criterionTypeGroup': 'VERTICAL',
-                          'targetAll': 'true',
-                      },
-                  ]
-              }
-          ]
-      }
-    }]
-
-    ad_groups = ad_group_service.mutate(operations)
-
-    # Display results.
-    for ad_group in ad_groups['value']:
-        print ('Ad group with name \'%s\' and id \'%s\' was added.'
-               % (ad_group['name'], ad_group['id']))
-
-print(len(camps))
-print(len(groups))
+# if len(results) > 19994:
+#     split(open(export_name), 'r')
+#     print('SQL_kw csv file has been split into multiple files, each including 19994 keywords please check your current directory for the output csv files')
