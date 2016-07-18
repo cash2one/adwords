@@ -1,3 +1,13 @@
+#this script will open campaigns and adgroups for all listings specified in a csv file (pulled from destinatinos table in SQL)
+#the script also generates 4 ads per destination and around 500 longtail keywords per landing page
+#which are saved as csv files in home directory
+#these csv files have to be uploaded manually by spreadsheet upload on google adwords
+#all requisites (e.g. campaign name, ad group name, max_cpc, etc) are automatically generated and stored in the csv file
+#along with the ads and the keywords
+
+#preparations
+
+#list of landing pages who already have a camapign (i.e. don't creae campaigns/adgroups/ads/keywords for the following landing pages)
 done_urls = [
 "www.bookyogaretreats.com/all/c/short/d/europe",
 "www.bookyogaretreats.com/all/d/asia-and-oceania/philippines",
@@ -102,17 +112,17 @@ done_urls = [
 import csv
 import codecs
 
+#read SQL file
 file_name = '20160712.csv'
 
-#setup dictionaries 
+#setup dictionaries accordingly
 basic_dict = {} #destination id: destination name
-ready_dict = {} #destination id: 
+ready_dict = {} #destination id: destination name, destination type, number of listings, url, parent name, slug, parent slug, parent name, 'in [destination name]'
 
 names = [] #all destination names 
 ready_names = [] #all destinations that are not advertised yet
 ready_urls = [] #all urls (landing pages) that are not advertised yet
 ready_ids = [] #all destinaiton ids that are not advertised yet
-
 
 #setup basic_dict, names, ready_names, ready_urls, ready_ids
 with codecs.open(file_name, 'r', encoding = 'utf-8', errors = 'ignore') as csvfile:
@@ -134,6 +144,10 @@ with codecs.open(file_name, 'r', encoding = 'utf-8', errors = 'ignore') as csvfi
 #ready_dict['key'][4] = country name
 #ready_dict['key'][5] = destination slug
 #ready_dict['key'][6] = parent slug
+#ready_dict['key'][7] = parent name
+#ready_dict['key'][8] = 'in + destination name'
+
+#setup ready_dict (the main dictionary)
 with codecs.open(file_name, 'r', encoding = 'utf-8', errors = 'ignore') as csvfile:
     reader=csv.DictReader(csvfile)
     for row in reader:
@@ -158,7 +172,7 @@ final_url = []
 campaign = []
 ad_group = []
 
-#create ads
+#create text ads
 for i in range(len(ready_ids)):
     headline1.append('Book Yoga Retreats Online')
     headline2.append('Best Yoga Retreats 2016')
@@ -180,7 +194,8 @@ for i in range(len(ready_ids)):
         campaign.append("Longtail %s" %ready_dict[ready_ids[i]][0])
     if ready_dict[ready_ids[i]][1] == 'state':
         campaign.append("Longtail %s - %s" %(ready_dict[ready_ids[i]][4], ready_dict[ready_ids[i]][0]))
-    
+
+#take out unintentional double spaces    
 for i in range(len(ad_group)):
     ad_group[i] = ad_group[i].replace("  ", " ")
     campaign[i] = campaign[i].replace("  ", " ")
@@ -222,7 +237,7 @@ for i in range(len(desc21)):
     if len(desc21[i]) > 38:
         print(desc21[i], len(desc21[i]))
 
-#prepare to export  
+#prepare to export text ads
 headlines = (headline1 + headline2) * 2
 d1 = (desc11 + desc21) * 2
 d2 = (desc12 + desc22) * 2
@@ -241,6 +256,7 @@ dev_all = ['All'] * int(how_many_ads/2)
 dev_mobile = ['Mobile'] * int(how_many_ads/2)
 dev_pref = dev_all + dev_mobile
 
+#prepare column titles
 ad_column_titles = ["Ad state",
                     "Ad",
                     "Description line 1",
@@ -252,6 +268,7 @@ ad_column_titles = ["Ad state",
                     "Ad group",
                     "Ad type"] 
 
+#prepare row values
 ad_rows = []
 
 for i in range(how_many_ads):
@@ -267,6 +284,7 @@ for i in range(how_many_ads):
         ad_group[i],
         ad_type[i]])        
 
+#export text ads
 export_name = 'SQL_ads.csv'
 new_export = open(export_name, 'w')
 export_object = csv.writer(new_export)
@@ -276,6 +294,7 @@ export_object.writerows(ad_rows)
 
 new_export.close()
 
+#confirm message
 print('%i ads for %i destinations have been created (4 ads per destination: 2 for mobile, 2 for desktop) please check your current directory for the csv output' %(len(d1), len(ready_urls)))
 
 ######################################################################################################################################################################################################
@@ -355,6 +374,7 @@ kw_ad_group = []
 
 keyword_max_cpc = []
 
+#assign campaigns and ad groups for destination back
 for i in range(len(comb)):
     if ready_dict[int(comb[i][-1])][1] == 'state':
         kw_campaign.append("Longtail %s - %s" %(ready_dict[int(comb[i][-1])][-2], ready_dict[int(comb[i][-1])][0]))
@@ -402,6 +422,7 @@ for i in range(len(comb)):
     comb[i] = tuple(x for x in comb[i] if x != '')
     comb[i] = '[' + (' '.join(comb[i])) + ']'
 
+#assign campaigns and ad groups for destination front
 for i in range(len(comb2)):
     if ready_dict[int(comb2[i][0])][1] == 'state':
         kw_campaign.append("Longtail %s - %s" %(ready_dict[int(comb2[i][0])][-2], ready_dict[int(comb2[i][0])][0]))
@@ -448,13 +469,18 @@ for i in range(len(comb2)):
     
 results = comb + comb2
 
+#get rid of puncutaitons in keywords
+for i in range(len(results)):
+    results[i] = results[i].replace(',', '')
+    results[i] = results[i].replace('-', ' ')
 
-#prepare to export csv
+#prepare to export keywords 
 ad_group_max_cpc = [0.10]
 keyword_state = ['enabled'] * len(results)
 match_type = ['Exact'] * len(results)
 ad_group_max_cpc = ad_group_max_cpc * len(results)
 
+#prepare column titles
 kw_column_titles = ['Keyword state',
                    'Keyword',
                    'Match type',
@@ -463,6 +489,7 @@ kw_column_titles = ['Keyword state',
                    'Keyword max CPC',
                    'Ad group max CPC']
 
+#prepare row values
 kw_rows = []
 for i in range(len(results)):
     kw_rows.append([keyword_state[i],
@@ -472,79 +499,40 @@ for i in range(len(results)):
                   kw_ad_group[i],
                   keyword_max_cpc[i],
                   ad_group_max_cpc[i]])
-    
+
+#remove duplicates then listify    
 for i in range(len(kw_rows)):
     kw_rows[i] = tuple(kw_rows[i])
     
 kw_rows = set(kw_rows)
+kw_rows = list(kw_rows)
 
+#chop files by the unit of 19994 (maximum upload limit on adwords spreadsheet upload)
+import math
 
-export_name = 'SQL_kws.csv'
-new_export = open(export_name, 'w')
-export_object = csv.writer(new_export)
+limit = 19994
+cut = math.ceil(len(results) / limit)
 
-export_object.writerow(kw_column_titles)
-export_object.writerows(kw_rows)
+if len(results) > limit:
+    low_limit = 0
+    for i in range(cut):
+        export_name = 'SQL_kws_%i.csv' %(i+1)
+        new_export = open(export_name, 'w', encoding='utf-8')
+        export_object = csv.writer(new_export)
 
-new_export.close()
+        export_object.writerow(kw_column_titles)
+        
+        export_object.writerows(kw_rows[low_limit:limit*(i+1)])
+        low_limit = low_limit + limit 
+        
+        new_export.close()
 
-print('%i keywords for %i destinations have been created please check your current directory for the csv output' %(len(kw_rows), len(ready_urls)))
-
-######################################################################################################################################################################################################
-
-#split csv by 19994 rows per file (adwords bulk upload maximum limit)
-import os
-
-def split(filehandler, delimiter=',', row_limit=19994, 
-    output_name_template='SQL_kws_%s.csv', output_path='.', keep_headers=True):
-    """
-    Splits a CSV file into multiple pieces.
-    
-    A quick bastardization of the Python CSV library.
-    Arguments:
-        `row_limit`: The number of rows you want in each output file. 10,000 by default.
-        `output_name_template`: A %s-style template for the numbered output files.
-        `output_path`: Where to stick the output files.
-        `keep_headers`: Whether or not to print the headers in each output file.
-    Example usage:
-    
-        >> from toolbox import csv_splitter;
-        >> csv_splitter.split(open('/home/ben/input.csv', 'r'));
-    
-    """
-    import csv
-    reader = csv.reader(filehandler, delimiter=delimiter)
-    current_piece = 1
-    current_out_path = os.path.join(
-         output_path,
-         output_name_template  % current_piece
-    )
-    current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
-    current_limit = row_limit
-    if keep_headers:
-        headers = reader.__next__()
-        current_out_writer.writerow(headers)
-    for i, row in enumerate(reader):
-        if i + 1 > current_limit:
-            current_piece += 1
-            current_limit = row_limit * current_piece
-            current_out_path = os.path.join(
-               output_path,
-               output_name_template  % current_piece
-            )
-            current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
-            if keep_headers:
-                current_out_writer.writerow(headers)
-        current_out_writer.writerow(row)
-
-if len(results) > 19994:
-    split(open(export_name), 'r')
-    print('SQL_kw csv file has been split into multiple files, each including 19994 keywords please check your current directory for the output csv files')
+#confirm message
+print('%i keywords for %i destinations have been created in %i file(s) please check your current directory for the csv output' %(len(kw_rows), len(ready_urls), cut))
 
 ###############################################################################################################################################################
-#prepare to open campaigns and ad groups
 
-#----------------------------------------------#
+#prepare to open campaigns and ad groups
 camps = list(set(kw_campaign)) #campaign names
 
 for i in range(len(camps)):
@@ -554,8 +542,7 @@ camps = sorted(camps, key=lambda x: x[-1]) #sort it alphabetically by the last w
 
 for i in range(len(camps)):
     camps[i] = ' '.join(camps[i])
-  
-# #----------------------------------------------#
+
 # a = []
 # b = []
 
@@ -569,6 +556,7 @@ for i in range(len(camps)):
 #     if a[i] != b[i]:
 #         #print('trouble')
 #         print(a[i], b[i], i)
+
 ###############################################################################################################################################################
 
 #1. open campaigns
@@ -663,14 +651,18 @@ if __name__ == '__main__':
     for campaign in campaigns['value']:
       print ('Campaign with name \'%s\' and id \'%s\' was added.'
              % (campaign['name'], campaign['id']))
-      campaign_names.append(campaign['name'])
-      campaign_ids.append(campaign['id'])
+      campaign_names.append(campaign['name']) #store campaign names for later
+      campaign_ids.append(campaign['id']) #store campaign ids for later
 
+#confirm results
 print(campaign_names)
 print(campaign_ids)
 
-########################################
+###############################################################################################################################
 
+#2.open ad groups
+
+#prepare ad group names based on campaign names
 groups = []
 
 for i in range(len(campaign_names)):
@@ -682,10 +674,6 @@ for i in range(len(campaign_names)):
         groups.append('Longtail Retreats %s' %' '.join(campaign_names[i][1:]))
     campaign_names[i] = ' '.join(campaign_names[i]) #join the items in camps again
 
-########################################
-
-
-#2.open ad groups
 
 if __name__ == '__main__':
   adwords_client = adwords.AdWordsClient.LoadFromStorage()
@@ -751,7 +739,8 @@ if __name__ == '__main__':
     # Display results.
     for ad_group in ad_groups['value']:
         print ('Ad group with name \'%s\' and id \'%s\' was added.'
-               % (ad_group['name'], ad_group['id']))
+               % (ad_group['name'], ad_group['id'])) 
 
+#confirm info
 print(len(camps))
 print(len(groups))

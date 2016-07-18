@@ -480,81 +480,29 @@ for i in range(len(kw_rows)):
     kw_rows[i] = tuple(kw_rows[i])
     
 kw_rows = set(kw_rows)
+kw_rows = list(kw_rows)
 
 import math
 
 limit = 19994
 cut = math.ceil(len(results) / limit)
 
+#import unicodecsv as csv
+
 if len(results) > limit:
+    low_limit = 0
     for i in range(cut):
         export_name = 'SQL_kws_%i.csv' %(i+1)
-        new_export = open(export_name, 'w')
+        new_export = open(export_name, 'w', encoding='utf-8')
         export_object = csv.writer(new_export)
 
         export_object.writerow(kw_column_titles)
-        export_object.writerows(kw_rows[0:limit*(i+1)])
+        
+        export_object.writerows(kw_rows[low_limit:limit*(i+1)])
+        low_limit = low_limit + limit 
+        
         new_export.close()
 
 
-#export_name = 'SQL_kws.csv'
-#new_export = open(export_name, 'w')
-#export_object = csv.writer(new_export)
 
-# export_object.writerow(kw_column_titles)
-# export_object.writerows(kw_rows)
-
-# new_export.close()
-
-print('%i keywords for %i destinations have been created in %i file(s) please check your current directory for the csv output' %(len(results), len(ready_urls), len(cut)))
-
-# ######################################################################################################################################################################################################
-
-# #split csv by 19994 rows per file (adwords bulk upload maximum limit)
-# import os
-
-# def split(filehandler, delimiter=',', row_limit=19994, 
-#     output_name_template='SQL_kws_%s.csv', output_path='.', keep_headers=True):
-#     """
-#     Splits a CSV file into multiple pieces.
-    
-#     A quick bastardization of the Python CSV library.
-#     Arguments:
-#         `row_limit`: The number of rows you want in each output file. 19994 by default.
-#         `output_name_template`: A %s-style template for the numbered output files.
-#         `output_path`: Where to stick the output files.
-#         `keep_headers`: Whether or not to print the headers in each output file.
-#     Example usage:
-    
-#         >> from toolbox import csv_splitter;
-#         >> csv_splitter.split(open('/home/ben/input.csv', 'r'));
-    
-#     """
-#     import csv
-#     reader = csv.reader(filehandler, delimiter=delimiter)
-#     current_piece = 1
-#     current_out_path = os.path.join(
-#          output_path,
-#          output_name_template  % current_piece
-#     )
-#     current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
-#     current_limit = row_limit
-#     if keep_headers:
-#         headers = reader.__next__()
-#         current_out_writer.writerow(headers)
-#     for i, row in enumerate(reader):
-#         if i + 1 > current_limit:
-#             current_piece += 1
-#             current_limit = row_limit * current_piece
-#             current_out_path = os.path.join(
-#                output_path,
-#                output_name_template  % current_piece
-#             )
-#             current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
-#             if keep_headers:
-#                 current_out_writer.writerow(headers)
-#         current_out_writer.writerow(row)
-
-# if len(results) > 19994:
-#     split(open(export_name), 'r')
-#     print('SQL_kw csv file has been split into multiple files, each including 19994 keywords please check your current directory for the output csv files')
+print('%i keywords for %i destinations have been created in %i file(s) please check your current directory for the csv output' %(len(kw_rows), len(ready_urls), cut))
