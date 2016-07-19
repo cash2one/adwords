@@ -1,3 +1,6 @@
+#read SQL file
+file_name = '20160719.csv'
+
 #this script will open campaigns and adgroups for all listings specified in a csv file (pulled from destinatinos table in SQL)
 #the script also generates 4 ads per destination and around 500 longtail keywords per landing page
 #which are saved as csv files in home directory
@@ -111,9 +114,6 @@ done_urls = [
 
 import csv
 import codecs
-
-#read SQL file
-file_name = '20160712.csv'
 
 #setup dictionaries accordingly
 basic_dict = {} #destination id: destination name
