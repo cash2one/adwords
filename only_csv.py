@@ -1,118 +1,136 @@
-done_urls = [
-"www.bookyogaretreats.com/all/c/short/d/europe",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/philippines",
-"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/india/goa",
-"www.bookyogaretreats.com/all/c|/budget-retreats/d/asia-and-oceania",
-"www.bookyogaretreats.com/all/d/europe/croatia",
-"www.bookyogaretreats.com/all/c/budget-retreats/d/the-americas-and-caribbean/usa",
-"www.bookyogaretreats.com/all/c/budget-retreats/d/europe/united-kingdom",
-"www.bookyogateachertraining.com/all/s/yoga-vinyasa",
-"www.bookyogaretreats.com/all/c/holidays/d/europe",
-"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa/hawaii",
-"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa/florida",
-"www.bookyogaretreats.com/all/s/vinyasa-yoga",
-"www.bookyogaretreats.com/all/c/yoga-detox-retreats",
-"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico",
-"www.bookyogaretreats.com/all/c/short/d/the-americas-and-caribbean/usa/california",
-"www.bookyogateachertraining.com/all/d/europe",
-"www.bookyogaretreats.com/all/c/budget-retreats/d/asia-and-oceania/indonesia/bali",
-"www.bookyogaretreats.com/?arrival_date=2017-02-15&flexible=15",
-"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/indonesia",
-"www.bookyogaretreats.com/all/c/yoga-meditation-retreats",
-"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/india",
-"www.bookyogaretreats.com/?arrival_date=2017-03-15&flexible=15",
-"www.bookyogaretreats.com/all/c/yoga-meditation-retreats/d/the-americas-and-caribbean/usa/florida",
-"www.bookyogaretreats.com/all/c/budget-retreats/d/the-americas-and-caribbean",
-"www.bookyogaretreats.com/all/c/yoga-surf/d/the-americas-and-caribbean/costa-rica",
-"www.bookyogaretreats.com/?arrival_date=2016-05-15&flexible=15",
-"www.bookyogateachertraining.com/all/d/asia-and-oceania/thailand",
-"www.bookyogaretreats.com/all/c/short",
-"www.bookyogaretreats.com/all/c/short/d/the-americas-and-caribbean/usa",
-"www.bookyogaretreats.com/all/s/bikram-hot-yoga",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/india",
-"www.bookyogaretreats.com/?arrival_date=2016-12-15&flexible=15",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/india/goa",
-"www.bookyogaretreats.com/all/c/budget-retreats/d/asia-and-oceania/thailand",
-"www.bookyogaretreats.com/all/c/beach-retreats/d/the-americas-and-caribbean",
-"www.bookyogaretreats.com/all/c/yoga-surf",
-"www.bookyogaretreats.com/all/c/budget-retreats",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/vietnam",
-"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean",
-"www.bookyogaretreats.com/all/c/holidays/d/europe/united-kingdom",
-"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/hawaii",
-"www.bookyogaretreats.com/?arrival_date=2016-06-15&flexible=15",
-"www.bookyogaretreats.com/all/d/europe/united-kingdom/england",
-"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/indonesia/bali",
-"www.bookyogaretreats.com/all/d/europe/france",
-"www.bookyogaretreats.com/all/c/holidays/d/europe/greece",
-"www.bookyogaretreats.com/all/d/europe/greece",
-"www.bookyogaretreats.com/?arrival_date=2016-07-15&flexible=15",
-"www.bookyogaretreats.com/?arrival_date=2016-10-15&flexible=15",
-"www.bookyogaretreats.com/?arrival_date=2016-09-15&flexible=15",
-"www.bookyogaretreats.com/all/c/holidays/d/africa-and-the-middle-east/morocco",
-"www.bookyogaretreats.com/?arrival_date=2016-11-15&flexible=15",
-"www.bookyogaretreats.com/?arrival_date=2017-01-15&flexible=15",
-"www.bookyogaretreats.com/all/d/the-americas-and-caribbean",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/nepal",
-"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa/california",
-"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/india/kerala",
-"www.bookyogaretreats.com/?arrival_date=2016-08-15&flexible=15",
-"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/thailand",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia",
-"www.bookyogaretreats.com/all/d/europe/spain/ibiza",
-"www.bookyogaretreats.com/all/c/short/d/the-americas-and-caribbean",
-"www.bookyogaretreats.com/all/d/europe/spain/mallorca",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/bali",
-"www.bookyogaretreats.com/all/c/holidays/d/europe/spain/canary-islands",
-"www.bookyogaretreats.com/all/c/yoga-surf/d/asia-and-oceania/indonesia/bali",
-"www.bookyogaretreats.com/all/d/europe/spain",
-"www.bookyogaretreats.com/all/c/holidays/d/europe/spain",
-"www.bookyogaretreats.com/all/c/holidays/d/europe/portugal",
-"www.bookyogaretreats.com/all/s/ashtanga-yoga",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/india/kerala",
-"www.bookyogaretreats.com/all/d/europe/italy",
-"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/vietnam",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/new-zealand",
-"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa",
-"www.bookyogaretreats.com/all/d/europe",
-"www.bookyogaretreats.com/all/d/europe/spain/canary-islands",
-"www.bookyogaretreats.com/all/c/holidays/d/europe/spain/ibiza",
-"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/sri-lanka",
-"www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/costa-rica",
-"www.bookyogateachertraining.com/",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/australia",
-"www.bookyogaretreats.com/?arrival_date=2016-04-15&flexible=15",
-"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/USA",
-"www.bookyogaretreats.com/all/d/europe/portugal",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka",
-"www.bookyogaretreats.com",
-"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/cambodia",
-"www.bookyogateachertraining.com/all/d/the-americas-and-caribbean",
-"www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco",
-"www.bookyogaretreats.com/all/d/africa-and-the-middle-east",
-"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica",
-"www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/australia",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia",
-"www.bookyogateachertraining.com/all/d/the-americas-and-caribbean/costa-rica",
-"www.bookyogaretreats.com/all/d/europe/united-kingdom",
-"www.bookyogaretreats.com/all/d/asia-and-oceania/thailand",
-"www.bookyogaretreats.com/all/d/asia-and-oceania"
-]
+#read SQL file
+file_name = '20160719.csv'
 
+#this script will open campaigns and adgroups for all listings specified in a csv file (pulled from destinatinos table in SQL)
+#the script also generates 4 ads per destination and around 500 longtail keywords per landing page
+#which are saved as csv files in home directory
+#these csv files have to be uploaded manually by spreadsheet upload on google adwords
+#all requisites (e.g. campaign name, ad group name, max_cpc, etc) are automatically generated and stored in the csv file
+#along with the ads and the keywords
+
+#preparations
+
+#list of landing pages who already have a camapign (i.e. don't creae campaigns/adgroups/ads/keywords for the following landing pages)
+
+import done_url
+
+
+done_urls = done_url.done_urls
+
+# done_urls = [
+# "www.bookyogaretreats.com/all/c/short/d/europe",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/philippines",
+# "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/india/goa",
+# "www.bookyogaretreats.com/all/c|/budget-retreats/d/asia-and-oceania",
+# "www.bookyogaretreats.com/all/d/europe/croatia",
+# "www.bookyogaretreats.com/all/c/budget-retreats/d/the-americas-and-caribbean/usa",
+# "www.bookyogaretreats.com/all/c/budget-retreats/d/europe/united-kingdom",
+# "www.bookyogateachertraining.com/all/s/yoga-vinyasa",
+# "www.bookyogaretreats.com/all/c/holidays/d/europe",
+# "www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa/hawaii",
+# "www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa/florida",
+# "www.bookyogaretreats.com/all/s/vinyasa-yoga",
+# "www.bookyogaretreats.com/all/c/yoga-detox-retreats",
+# "www.bookyogaretreats.com/all/d/the-americas-and-caribbean/mexico",
+# "www.bookyogaretreats.com/all/c/short/d/the-americas-and-caribbean/usa/california",
+# "www.bookyogateachertraining.com/all/d/europe",
+# "www.bookyogaretreats.com/all/c/budget-retreats/d/asia-and-oceania/indonesia/bali",
+# "www.bookyogaretreats.com/?arrival_date=2017-02-15&flexible=15",
+# "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/indonesia",
+# "www.bookyogaretreats.com/all/c/yoga-meditation-retreats",
+# "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/india",
+# "www.bookyogaretreats.com/?arrival_date=2017-03-15&flexible=15",
+# "www.bookyogaretreats.com/all/c/yoga-meditation-retreats/d/the-americas-and-caribbean/usa/florida",
+# "www.bookyogaretreats.com/all/c/budget-retreats/d/the-americas-and-caribbean",
+# "www.bookyogaretreats.com/all/c/yoga-surf/d/the-americas-and-caribbean/costa-rica",
+# "www.bookyogaretreats.com/?arrival_date=2016-05-15&flexible=15",
+# "www.bookyogateachertraining.com/all/d/asia-and-oceania/thailand",
+# "www.bookyogaretreats.com/all/c/short",
+# "www.bookyogaretreats.com/all/c/short/d/the-americas-and-caribbean/usa",
+# "www.bookyogaretreats.com/all/s/bikram-hot-yoga",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/india",
+# "www.bookyogaretreats.com/?arrival_date=2016-12-15&flexible=15",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/india/goa",
+# "www.bookyogaretreats.com/all/c/budget-retreats/d/asia-and-oceania/thailand",
+# "www.bookyogaretreats.com/all/c/beach-retreats/d/the-americas-and-caribbean",
+# "www.bookyogaretreats.com/all/c/yoga-surf",
+# "www.bookyogaretreats.com/all/c/budget-retreats",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/vietnam",
+# "www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean",
+# "www.bookyogaretreats.com/all/c/holidays/d/europe/united-kingdom",
+# "www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/hawaii",
+# "www.bookyogaretreats.com/?arrival_date=2016-06-15&flexible=15",
+# "www.bookyogaretreats.com/all/d/europe/united-kingdom/england",
+# "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/indonesia/bali",
+# "www.bookyogaretreats.com/all/d/europe/france",
+# "www.bookyogaretreats.com/all/c/holidays/d/europe/greece",
+# "www.bookyogaretreats.com/all/d/europe/greece",
+# "www.bookyogaretreats.com/?arrival_date=2016-07-15&flexible=15",
+# "www.bookyogaretreats.com/?arrival_date=2016-10-15&flexible=15",
+# "www.bookyogaretreats.com/?arrival_date=2016-09-15&flexible=15",
+# "www.bookyogaretreats.com/all/c/holidays/d/africa-and-the-middle-east/morocco",
+# "www.bookyogaretreats.com/?arrival_date=2016-11-15&flexible=15",
+# "www.bookyogaretreats.com/?arrival_date=2017-01-15&flexible=15",
+# "www.bookyogaretreats.com/all/d/the-americas-and-caribbean",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/nepal",
+# "www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa/california",
+# "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/india/kerala",
+# "www.bookyogaretreats.com/?arrival_date=2016-08-15&flexible=15",
+# "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/thailand",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/cambodia",
+# "www.bookyogaretreats.com/all/d/europe/spain/ibiza",
+# "www.bookyogaretreats.com/all/c/short/d/the-americas-and-caribbean",
+# "www.bookyogaretreats.com/all/d/europe/spain/mallorca",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia/bali",
+# "www.bookyogaretreats.com/all/c/holidays/d/europe/spain/canary-islands",
+# "www.bookyogaretreats.com/all/c/yoga-surf/d/asia-and-oceania/indonesia/bali",
+# "www.bookyogaretreats.com/all/d/europe/spain",
+# "www.bookyogaretreats.com/all/c/holidays/d/europe/spain",
+# "www.bookyogaretreats.com/all/c/holidays/d/europe/portugal",
+# "www.bookyogaretreats.com/all/s/ashtanga-yoga",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/india/kerala",
+# "www.bookyogaretreats.com/all/d/europe/italy",
+# "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/vietnam",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/new-zealand",
+# "www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/usa",
+# "www.bookyogaretreats.com/all/d/europe",
+# "www.bookyogaretreats.com/all/d/europe/spain/canary-islands",
+# "www.bookyogaretreats.com/all/c/holidays/d/europe/spain/ibiza",
+# "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/sri-lanka",
+# "www.bookyogaretreats.com/all/c/holidays/d/the-americas-and-caribbean/costa-rica",
+# "www.bookyogateachertraining.com/",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/australia",
+# "www.bookyogaretreats.com/?arrival_date=2016-04-15&flexible=15",
+# "www.bookyogaretreats.com/all/d/the-americas-and-caribbean/USA",
+# "www.bookyogaretreats.com/all/d/europe/portugal",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/sri-lanka",
+# "www.bookyogaretreats.com",
+# "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/cambodia",
+# "www.bookyogateachertraining.com/all/d/the-americas-and-caribbean",
+# "www.bookyogaretreats.com/all/d/africa-and-the-middle-east/morocco",
+# "www.bookyogaretreats.com/all/d/africa-and-the-middle-east",
+# "www.bookyogaretreats.com/all/d/the-americas-and-caribbean/costa-rica",
+# "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/australia",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/indonesia",
+# "www.bookyogateachertraining.com/all/d/the-americas-and-caribbean/costa-rica",
+# "www.bookyogaretreats.com/all/d/europe/united-kingdom",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania/thailand",
+# "www.bookyogaretreats.com/all/d/asia-and-oceania",
+# "www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/california",
+# "www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/florida",
+# "www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa"
+# ]
 import csv
 import codecs
 
-file_name = '20160712.csv'
-
-#setup dictionaries 
+#setup dictionaries accordingly
 basic_dict = {} #destination id: destination name
-ready_dict = {} #destination id: 
+ready_dict = {} #destination id: destination name, destination type, number of listings, url, parent name, slug, parent slug, parent name, 'in [destination name]'
 
 names = [] #all destination names 
 ready_names = [] #all destinations that are not advertised yet
 ready_urls = [] #all urls (landing pages) that are not advertised yet
 ready_ids = [] #all destinaiton ids that are not advertised yet
-
 
 #setup basic_dict, names, ready_names, ready_urls, ready_ids
 with codecs.open(file_name, 'r', encoding = 'utf-8', errors = 'ignore') as csvfile:
@@ -134,6 +152,10 @@ with codecs.open(file_name, 'r', encoding = 'utf-8', errors = 'ignore') as csvfi
 #ready_dict['key'][4] = country name
 #ready_dict['key'][5] = destination slug
 #ready_dict['key'][6] = parent slug
+#ready_dict['key'][7] = parent name
+#ready_dict['key'][8] = 'in + destination name'
+
+#setup ready_dict (the main dictionary)
 with codecs.open(file_name, 'r', encoding = 'utf-8', errors = 'ignore') as csvfile:
     reader=csv.DictReader(csvfile)
     for row in reader:
@@ -158,7 +180,7 @@ final_url = []
 campaign = []
 ad_group = []
 
-#create ads
+#create text ads
 for i in range(len(ready_ids)):
     headline1.append('Book Yoga Retreats Online')
     headline2.append('Best Yoga Retreats 2016')
@@ -180,7 +202,8 @@ for i in range(len(ready_ids)):
         campaign.append("Longtail %s" %ready_dict[ready_ids[i]][0])
     if ready_dict[ready_ids[i]][1] == 'state':
         campaign.append("Longtail %s - %s" %(ready_dict[ready_ids[i]][4], ready_dict[ready_ids[i]][0]))
-    
+
+#take out unintentional double spaces    
 for i in range(len(ad_group)):
     ad_group[i] = ad_group[i].replace("  ", " ")
     campaign[i] = campaign[i].replace("  ", " ")
@@ -222,7 +245,7 @@ for i in range(len(desc21)):
     if len(desc21[i]) > 38:
         print(desc21[i], len(desc21[i]))
 
-#prepare to export  
+#prepare to export text ads
 headlines = (headline1 + headline2) * 2
 d1 = (desc11 + desc21) * 2
 d2 = (desc12 + desc22) * 2
@@ -241,6 +264,7 @@ dev_all = ['All'] * int(how_many_ads/2)
 dev_mobile = ['Mobile'] * int(how_many_ads/2)
 dev_pref = dev_all + dev_mobile
 
+#prepare column titles
 ad_column_titles = ["Ad state",
                     "Ad",
                     "Description line 1",
@@ -252,6 +276,7 @@ ad_column_titles = ["Ad state",
                     "Ad group",
                     "Ad type"] 
 
+#prepare row values
 ad_rows = []
 
 for i in range(how_many_ads):
@@ -267,6 +292,7 @@ for i in range(how_many_ads):
         ad_group[i],
         ad_type[i]])        
 
+#export text ads
 export_name = 'SQL_ads.csv'
 new_export = open(export_name, 'w')
 export_object = csv.writer(new_export)
@@ -276,6 +302,7 @@ export_object.writerows(ad_rows)
 
 new_export.close()
 
+#confirm message
 print('%i ads for %i destinations have been created (4 ads per destination: 2 for mobile, 2 for desktop) please check your current directory for the csv output' %(len(d1), len(ready_urls)))
 
 ######################################################################################################################################################################################################
@@ -355,6 +382,7 @@ kw_ad_group = []
 
 keyword_max_cpc = []
 
+#assign campaigns and ad groups for destination back
 for i in range(len(comb)):
     if ready_dict[int(comb[i][-1])][1] == 'state':
         kw_campaign.append("Longtail %s - %s" %(ready_dict[int(comb[i][-1])][-2], ready_dict[int(comb[i][-1])][0]))
@@ -402,6 +430,7 @@ for i in range(len(comb)):
     comb[i] = tuple(x for x in comb[i] if x != '')
     comb[i] = '[' + (' '.join(comb[i])) + ']'
 
+#assign campaigns and ad groups for destination front
 for i in range(len(comb2)):
     if ready_dict[int(comb2[i][0])][1] == 'state':
         kw_campaign.append("Longtail %s - %s" %(ready_dict[int(comb2[i][0])][-2], ready_dict[int(comb2[i][0])][0]))
@@ -448,16 +477,18 @@ for i in range(len(comb2)):
     
 results = comb + comb2
 
+#get rid of puncutaitons in keywords
 for i in range(len(results)):
     results[i] = results[i].replace(',', '')
     results[i] = results[i].replace('-', ' ')
 
-#prepare to export csv
+#prepare to export keywords 
 ad_group_max_cpc = [0.10]
 keyword_state = ['enabled'] * len(results)
 match_type = ['Exact'] * len(results)
 ad_group_max_cpc = ad_group_max_cpc * len(results)
 
+#prepare column titles
 kw_column_titles = ['Keyword state',
                    'Keyword',
                    'Match type',
@@ -466,6 +497,7 @@ kw_column_titles = ['Keyword state',
                    'Keyword max CPC',
                    'Ad group max CPC']
 
+#prepare row values
 kw_rows = []
 for i in range(len(results)):
     kw_rows.append([keyword_state[i],
@@ -475,19 +507,19 @@ for i in range(len(results)):
                   kw_ad_group[i],
                   keyword_max_cpc[i],
                   ad_group_max_cpc[i]])
-    
+
+#remove duplicates then listify    
 for i in range(len(kw_rows)):
     kw_rows[i] = tuple(kw_rows[i])
     
 kw_rows = set(kw_rows)
 kw_rows = list(kw_rows)
 
+#chop files by the unit of 19994 (maximum upload limit on adwords spreadsheet upload)
 import math
 
 limit = 19994
-cut = math.ceil(len(results) / limit)
-
-#import unicodecsv as csv
+cut = math.ceil(len(set(results)) / limit)
 
 if len(results) > limit:
     low_limit = 0
@@ -503,6 +535,16 @@ if len(results) > limit:
         
         new_export.close()
 
-
-
+#confirm message
 print('%i keywords for %i destinations have been created in %i file(s) please check your current directory for the csv output' %(len(kw_rows), len(ready_urls), cut))
+
+######################################################################################################################################################################################################
+
+for i in range(len(ready_urls)):
+    done_urls.append(ready_urls[i])
+    
+text = str('done_urls = ') + str(done_urls)
+
+with open('done_url.py', 'w') as f:
+    f.write(text)
+    print('done_url has been updated')

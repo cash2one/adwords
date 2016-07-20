@@ -2,7 +2,7 @@ done_urls = [
 "www.bookyogaretreats.com/all/c/short/d/europe",
 "www.bookyogaretreats.com/all/d/asia-and-oceania/philippines",
 "www.bookyogaretreats.com/all/c/holidays/d/asia-and-oceania/india/goa",
-"www.bookyogaretreats.com/all/c/budget-retreats/d/asia-and-oceania",
+"www.bookyogaretreats.com/all/c|/budget-retreats/d/asia-and-oceania",
 "www.bookyogaretreats.com/all/d/europe/croatia",
 "www.bookyogaretreats.com/all/c/budget-retreats/d/the-americas-and-caribbean/usa",
 "www.bookyogaretreats.com/all/c/budget-retreats/d/europe/united-kingdom",
@@ -96,5 +96,8 @@ done_urls = [
 "www.bookyogateachertraining.com/all/d/the-americas-and-caribbean/costa-rica",
 "www.bookyogaretreats.com/all/d/europe/united-kingdom",
 "www.bookyogaretreats.com/all/d/asia-and-oceania/thailand",
-"https://www.bookyogaretreats.com/all/d/asia-and-oceania"
+"www.bookyogaretreats.com/all/d/asia-and-oceania",
+"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/california",
+"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa/florida",
+"www.bookyogaretreats.com/all/d/the-americas-and-caribbean/usa"
 ]
