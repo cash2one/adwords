@@ -12,10 +12,10 @@ file_name = '20160719.csv'
 
 #list of landing pages who already have a camapign (i.e. don't creae campaigns/adgroups/ads/keywords for the following landing pages)
 
-import done_url
+import original_done_url
 
 
-done_urls = done_url.done_urls
+done_urls = original_done_url.done_urls
 
 # done_urls = [
 # "www.bookyogaretreats.com/all/c/short/d/europe",
@@ -303,7 +303,7 @@ export_object.writerows(ad_rows)
 new_export.close()
 
 #confirm message
-print('%i ads for %i destinations have been created (4 ads per destination: 2 for mobile, 2 for desktop) please check your current directory for the csv output' %(len(d1), len(ready_urls)))
+print('%i ads for %i destinations have been created (4 ads per destination: 2 for mobile, 2 for desktop) please check your home directory for the csv output' %(len(d1), len(ready_urls)))
 
 ######################################################################################################################################################################################################
 
@@ -536,7 +536,7 @@ if len(results) > limit:
         new_export.close()
 
 #confirm message
-print('%i keywords for %i destinations have been created in %i file(s) please check your current directory for the csv output' %(len(kw_rows), len(ready_urls), cut))
+print('%i keywords for %i destinations have been created in %i file(s) please check your home directory for the csv output' %(len(kw_rows), len(ready_urls), cut))
 
 ######################################################################################################################################################################################################
 
@@ -547,4 +547,4 @@ text = str('done_urls = ') + str(done_urls)
 
 with open('done_url.py', 'w') as f:
     f.write(text)
-    print('done_url has been updated')
+    print('done_url has been updated in your home directory')
