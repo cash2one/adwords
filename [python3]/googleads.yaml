@@ -1,0 +1,61 @@
+# AdWordsClient configurations
+adwords:
+  #############################################################################
+  # Required Fields                                                           #
+  #############################################################################
+  developer_token: 'di0u5He3oK14ef0dMs97FA'
+  user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.5.17 (KHTML, like Gecko) Version/9.1 Safari/601.5.17'
+  #############################################################################
+  # Optional Fields                                                           #
+  #############################################################################
+  client_customer_id: '724-765-0179'
+  # partial_failure: True
+  # validate_only: True
+  #############################################################################
+  # OAuth2 Configuration                                                   #
+  # Below you may provide credentials for either the installed application or #
+  # service account flows. Remove or comment the lines for the flow you're    #
+  # not using.                                                                #
+  #############################################################################
+  # The following values configure the client for the installed application
+  # flow.
+  client_id: '281298418254-lpnd3ujbjg8253ne9t5c007mjo2vktua.apps.googleusercontent.com'
+  client_secret: 'byaA8IX7zEoI9lOpSyNa8uC-'
+  refresh_token: '1/S_fOzuYQ07FdXFdhDBXjz3xJivh0tgSu08j4o5ZZ-g4'
+  # The following values configure the client for the service account flow.
+  # service_account_email: INSERT_SERVICE_ACCOUNT_EMAIL_HERE
+  # path_to_private_key_file: INSERT_PATH_TO_FILE_HERE
+
+
+# DfpClient configurations
+dfp:
+  #############################################################################
+  # Required Fields                                                           #
+  #############################################################################
+  application_name: INSERT_APPLICATION_NAME_HERE
+  # The following values are required for all services except NetworkService,
+  # unless the network code is set directly on the DfpClient object:
+  # network_code: INSERT_NETWORK_CODE_HERE
+  #############################################################################
+  # OAuth2 Configuration                                                   #
+  # Below you may provide credentials for either the installed application or #
+  # service account flows. Remove or comment the lines for the flow you're    #
+  # not using.                                                                #
+  #############################################################################
+  # The following values configure the client for the installed application
+  # flow.
+  client_id: INSERT_OAUTH_2_CLIENT_ID_HERE
+  client_secret: INSERT_CLIENT_SECRET_HERE
+  refresh_token: INSERT_REFRESH_TOKEN_HERE
+  # The following values configure the client for the service account flow.
+  # service_account_email: INSERT_SERVICE_ACCOUNT_EMAIL_HERE
+  # path_to_private_key_file: INSERT_PATH_TO_FILE_HERE
+
+
+# Proxy configurations (optional)
+# proxy_info:
+#  host: INSERT_HOST_HERE
+#  port: INSERT_PROXY_PORT_HERE
+# The following values are optional:
+#  disable_ssl_certificate_validation: False
+#  ca_certs: INSERT_PATH_HERE
